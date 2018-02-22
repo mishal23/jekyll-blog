@@ -1,44 +1,47 @@
 var string = "";
-string+="In NRZ-L the level of voltage determines the value of the bit.<br>"
+string+="A variation of AMI encoding is called pseudoternanry.<br>"
 string+="Rules:<br>"
-string+="• 0 bit is represented by +V<br>"
-string+="• 1 bit is represented by -V."
+string+="• 1 bit is encoded as a neutral zero voltage<br>"
+string+="• 0 bit is encoded as alternating positive and negative voltages."
 
 // Typing Content
-$("#about_nrz-l").typed({
+$("#about_pseudoternary").typed({
     strings: [
       string
     ],
     typeSpeed: 0,
   });
 
+
+
 $(document).ready(function () {
 
 	particlesJS.load('particles-js', '../particles.json', function() {
 		console.log('callback - particles.json config loaded');
 	});
+	$('#terminal').height(1.5 * $('#data-entry').height());
 
-	$('#terminal').height(1.3 * $('#data-entry').height());
 	$('#submit').click(function(){
 		var data_bit = $('#data_bit').val();
 		var voltage = $("#voltage").val();
 		if(data_bit==="" && voltage==="")
 		{
-			 Materialize.toast('Please enter data bits and voltage', 1000, 'black')
+			 Materialize.toast('Please enter data bits and voltage', 1000)
 		}
 		else if(data_bit==="")
 		{
-			Materialize.toast('Please enter data bits', 1000, 'black')	
+			Materialize.toast('Please enter data bits', 1000)	
 		}
 		else if(voltage==="")
 		{
-			Materialize.toast('Please enter voltage', 1000, 'black')	
+			Materialize.toast('Please enter voltage', 1000)	
 		}
 		else
 		{
 			console.log(data_bit);
 			console.log(voltage);	
 			arr_databit = data_bit.toString();
+			console.log(arr_databit);
 			var proper = true;
 			var count=0;
 			for(i=0;i<arr_databit.length;i++)
@@ -66,33 +69,63 @@ $(document).ready(function () {
 			}
 			else
 			{
-				console.log(arr_databit);
 				var x_axis=[];
 				var y_axis = [];
 				var i=0;
 				var k=0;
+				var prev=0;
 				if(arr_databit[0]==0)
 				{
 					x_axis[k] = k;
-					y_axis[k] = 1*voltage;
+					y_axis[k] = 0;
 				}
 				else
 				{
 					x_axis[k] = k;
-					y_axis[k] = -1*voltage;	
+					y_axis[k] = 1*voltage;	
 				}
 				k++;
 				for(var i=0;i<arr_databit.length;i++)
 				{	
-					if(arr_databit[i]==1)
+					if(arr_databit[i]==0 && i==0)
 					{	
 						x_axis[k] = k;
-						y_axis[k] = -1*voltage;
+						y_axis[k] = 1*voltage;
+						prev=1;
 					}
 					else
 					{
-						x_axis[k] = k;
-						y_axis[k] = 1*voltage;	
+					  if(arr_databit[i]==0)
+					  {
+						  if(prev==-1)
+						  {
+							  x_axis[k]=k;
+							  y_axis[k]=1*voltage;
+							  prev=1;
+							  
+						  }
+						  else if (prev==1)
+						  {
+							  x_axis[k]=k;
+							  y_axis[k]=-1*voltage;
+							  prev=-1;
+							  
+					      }
+						  else
+						  {
+							  x_axis[k]=k;
+							  y_axis[k]=1*voltage;
+							  prev=1;
+						  }
+					  }
+					  else
+					  {
+						  x_axis[k]=k;
+						  y_axis[k]=0;
+						  
+					  }
+						  
+	                    					  
 					}
 					k++;
 				}
@@ -119,7 +152,7 @@ $(document).ready(function () {
 				    yref: 'paper'
 				}};
 
-				Plotly.newPlot('nrz_l', data, layout);
+				Plotly.newPlot('pseudoternary', data, layout);
 			}
 		}
 		
