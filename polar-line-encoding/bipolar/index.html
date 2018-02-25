@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Pseudoternary</title>
+	<title>Polar Line Encoding</title>
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,900' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
@@ -15,14 +15,14 @@
   <link rel="stylesheet" type="text/css" href="../topics.css">
 </head>
 <body>
+  
   <header>
     <div class="container" style="margin: 0;">
       <div class="header-section">
         <div id="particles-js">
         </div>
         <div class="header-font center-align">
-          
-          <span class="topic">Pseudoternary</span>
+            <span class="topic">Bipolar Line Encoding</span>
         </div>
       </div>
     </div>
@@ -32,10 +32,10 @@
     <div class="row" style="margin-top: 30px; margin-bottom: 40px;">
       <div class="col s12 m12 l6">
         <div style="background-color: #DEDEDE;" id="terminal">
-          <center>About Pseudoternary</center>
+          <center>About Bipolar Line Encoding</center>
           <div class="black white-text" id="black-screen">
             <div class="details">
-              <span id="about_pseudoternary"></span>
+              <span id="about_bipolar"></span>
             </div>
           </div>
         </div>
@@ -59,9 +59,15 @@
       </div>
     </div>
   </div>
-  <div id="pseudoternary">
-  
-  </div>
+
+  <h3 class="plot">Plot for AMI</h3>
+    <div id="ami">
+    </div>
+
+  <h3 class="plot">Plot for NRZ-I</h3>
+    <div id="pseudoternary">
+    </div>
+
 
   <!-- Floating button -->
   <div class="fixed-action-btn">
@@ -86,7 +92,7 @@
       </ul>
     </div>
   </div>
-<!-- End of floating button -->
+  <!-- End of floating button -->
 </body>
 <script type="text/javascript" src="index.js"></script>
 </html>
