@@ -67,6 +67,10 @@ $(document).ready(function () {
 			{
 				Materialize.toast('Please enter binary databits only', 2000, 'black');
 			}
+			else if(arr_databit.length>10000)
+			{
+				Materialize.toast('Please limit the length to 10000', 2000, 'black');	
+			}
 			else
 			{
 				var x_axis=[];
