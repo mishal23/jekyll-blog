@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Chaos Engineering - Mishal Shah</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Mishal Shah</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="education.html">Education</a></li>
+								<li><a href="experience.html">Experience</a></li>
+								<li><a href="projects.html">Projects</a></li>
+								<li><a href="blog.html">Blog</a></li>
+								<!-- <li><a href="#">Log In</a></li>
+								<li><a href="#">Sign Up</a></li> -->
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Chaos Engineering</h2>
+								<p>Chaos Engineering is the discipline of experimenting on a distributed system in order to build confidence in the system’s capability to withstand turbulent conditions in production.</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+									<h3 class="major">Introduction</h3>
+									<p>Many of us would have heard about the two major WhatsApp outages recently when it was down for about an hour each time. For the general public, WhatsApp was down for an hour. But for software engineers, WhatsApp was back within an hour. This made me wonder what it was, that enabled the engineers working at WhatsApp to restore the services so fast.</p>
+									<p>What if I tell you, it was a very normal turbulent production failure for them. Yes, huge companies like Netflix, Facebook and Google use a method of engineering called Chaos Engineering.
+
+To explain Chaos Engineering in layman terms :
+
+To be good at something , if one practices it in extreme conditions then it would get easier for the person to perform in normal conditions. Similarly if a software engineer has seen extreme conditions in production, it becomes a challenge for him/her to code in such a way that their service fails if such an extreme condition occurs. If at all it comes, they would have experienced it before and so it becomes easy to bring the services back.</p>
+									<h3 class="major">PRINCIPLES OF CHAOS ENGINEERING</h3>
+									<p>The main idea of Chaos Engineering is to intentionally inject failures so as to be prepared for the worst conditions.
+
+A formal definition for Chaos Engineering given by Netflix:
+
+Chaos Engineering is the discipline of experimenting on a distributed system in order to build confidence in the system’s capability to withstand turbulent conditions in production.
+
+Chaos Engineering can be thought of as the facilitation of experiments to uncover systemic weaknesses. These experiments follow four steps:
+
+Start by defining ‘steady state’ as some measurable output of a system that indicates normal behavior.
+Hypothesize that this steady state will continue in both the control group and the experimental group.
+Introduce variables that reflect real world events like servers that crash, hard drives that malfunction, network connections that are severed, etc.
+Try to disprove the hypothesis by looking for a difference in steady state between the control group and the experimental group.
+The harder it is to disrupt the steady state, the more confidence we have in the behavior of the system. If a weakness is uncovered, we now have a target for improvement before that behavior manifests in the system at large.
+
+In layman terms: Break your system, see the difference between steady state and experimental state, lesser the difference, lesser it will break in production. If the difference is more, you have a target for improvement before actually experiencing it in production.</p>
+									<h3 class="major">Practical Use</h3>
+									<p>Netflix, a pioneer in the field of Chaos Engineering, uses a tool called Chaos Monkey. It randomly picks a server from production deployment on AWS (Amazon Web Services) and kills it. Executives at Netflix knew that server failures are guaranteed to happen and they wanted servers to fail during working-hours so that it could be fixed it in the presence of their engineers. They knew that they could rely on engineers to build resilient solutions if they were given context to expect servers to fail. If they could align their engineers to build services that survive a server failure, then when it actually happened, it wouldn’t be a big deal.</p>
+									
+									<h3 class="major">How can it help you?</h3>
+									<p>Suppose your team has built the next wave of advancement the whole world has been waiting for. You are to launch your service but there are questions rumbling in your mind:
+
+Is your application ready for production?
+Will the system survive the failures of other companies you are dependent on?
+Will the system survive the failure of your own configurations?
+The truth is : You can never be sure . There will always be something that can be wrong or will go wrong. Some things aren’t in your control like denial-of-service attacks or network failures. Sometimes, bad things just happen.
+
+Possibly The only solution for it is to build quality software that is resilient to failures. As the saying goes - "Hope for the best, prepare for the worst"
+
+But how can your team be sure that your system is ready for production and is ready to face all difficulties/failures?
+
+This is where Chaos Engineering comes into picture.</p>
+
+									<h3 class="major">DOES THIS SEEM LIKE TESTING?</h3>
+									<p>
+It may indeed sound like it, but it definitely isn’t testing. Chaos Engineering is an experiment on the production environment and there is certainly no way to accurately duplicate production environment at scale (as in testing). The experiment itself is going to have a systemic effect that could change your results, so the only way to accurately build conflict in the system that you have now is to experiment on it.</p>
+
+									<h3 class="major">Conclusion</h3>
+									<p>The purpose of Chaos Engineering is to experience disastrous conditions. This might sound like a difficult task and it does require a lot of creativity but the extra effort is worth it. You must inject failures in your system such that certain part of your infrastructure becomes unavailable. Some examples are : terminate cluster machines, kill worker processes, delete database tables, cut off access to internal-external services, etc. Later you can also simulate events capable of disrupting steady state like high latency due to slow networks.
+
+These experiments are a bit difficult but whatever you decide to do, you’ll be surprised at how much you can learn from chaos.
+
+There are a lot of tools worth mentioning :
+
+Chaos Monkey - A resiliency tool that helps applications tolerate random instance failures
+The Simian Army - A suite of tools for keeping your cloud operating in top form orchestrator - MySQL replication topology management and HA
+kube-monkey - An implementation of Netflix's Chaos Monkey for Kubernetes clusters
+Gremlin Inc. - Failure as a Service
+Pumba - Chaos testing and network emulation for Docker containers (and clusters)
+Chaos Toolkit - A chaos engineering toolkit to help you build confidence in your software system
+I hope you got an idea about Chaos Engineering - a powerful approach to build resilient systems!</p>
+
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<!-- <li class="fa-home">
+									Permanent Address:<br />
+									1234 Somewhere Road Suite #2894<br />
+									Nashville, TN 00000-0000
+								</li> -->
+								<!-- <li class="fa-phone">(000) 000-0000</li> -->
+								<li class="fa-envelope"><a href="mailto:shahmishal1998@gmail.com">shahmishal1998@gmail.com</a></li>
+								<li class="fa-github"><a href="https://github.com/mishal23" target="blank">github.com/mishal23</a></li>
+								<li class="fa-linkedin"><a href="https://www.linkedin.com/in/mishal23/" target="blank">linkedin.com/in/mishal23</a></li>
+								<li class="fa-facebook"><a href="https://www.facebook.com/mishal.shah.7731" target="blank">facebook.com/mishal.shah.7731</a></li>
+								<li class="fa-instagram"><a href="https://www.instagram.com/shahmishal1998/" target="blank">instagram.com/shahmishal1998</a></li>
+								<li class="fa-twitter"><a href="https://twitter.com/1998Mishal" target="blank">twitter.com/1998Mishal</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Mishal Shah. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
