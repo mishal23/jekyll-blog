@@ -363,6 +363,9 @@ input, select, textarea {
 	.align-right {
 		text-align: right;
 	}
+	.center{
+	    width: 48%;
+	}
 
 /* Row */
 
