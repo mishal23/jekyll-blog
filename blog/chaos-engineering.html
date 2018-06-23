@@ -20,10 +20,17 @@
 
 		  gtag('config', 'UA-110715968-2');
 		</script>
-
+		<script data-cfasync="false" type="text/javascript" src="../assets/js/form-submission-handler.js"></script>
 	</head>
 	<body class="is-preload">
-
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=165511020689910&autoLogAppEvents=1';
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
@@ -132,17 +139,22 @@
 										<li><a href="https://github.com/github/orchestrator" target="_blank">orchestrator</a> - MySQL replication topology management and HA</li>
 									</ul>
 									I hope you got an idea about Chaos Engineering - a powerful approach to build resilient systems!</p>
-
+									<div class="fb-comments" data-width="700px" data-colorscheme="dark" data-href="https://mishal23.github.io" data-numposts="5"></div>
 								</div>
+
 							</div>
-
+							
 					</section>
-
+					
 				<!-- Footer -->
 					<section id="footer">
 						<div class="inner">
 							<h2 class="major">Get in touch</h2>
-							<form method="post" action="#">
+							<div style="display: none;" id="thankyou_message">
+								<h2><em>Thanks</em> for contacting!
+								I'll get back to you soon</h2>
+							</div>
+							<form id="gform" method="post" action="https://script.google.com/macros/s/AKfycby53ihfksP3PB_oZLHxcIoQtPmruVoOfkoOghZc/exec">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
@@ -152,6 +164,10 @@
 										<label for="email">Email</label>
 										<input type="email" name="email" id="email" />
 									</div>
+									<!-- <div class="field"> -->
+										<label class="sr-only" for="spam">Keep this field blank</label>
+  										<input id="honeypot" type="text" name="honeypot" value="" />
+  									<!-- </div> -->
 									<div class="field">
 										<label for="message">Message</label>
 										<textarea name="message" id="message" rows="4"></textarea>

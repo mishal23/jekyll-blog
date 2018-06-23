@@ -1,12 +1,6 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
 
-/*
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -31,6 +25,10 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+}
+
+#honeypot {
+  display: none; /*makes the field not visible to humans*/
 }
 
 ol, ul {
@@ -3345,6 +3343,11 @@ input, select, textarea {
 
 	#banner {
 		padding: 10em 0 4.75em 0 ;
+		background-color: #2e3141;
+		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/background.jpg");
+		background-size: auto, cover;
+		background-position: center, center;
+		margin-bottom: -6.5em;
 	}
 
 		#banner .inner {
@@ -3432,7 +3435,7 @@ input, select, textarea {
 			#banner {
 				padding: 7em 0 8.25em 0 ;
 				background-color: #2e3141;
-				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
+				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/nature.jpg");
 				background-size: auto, cover;
 				background-position: center, center;
 				margin-bottom: -6.5em;
@@ -3514,6 +3517,11 @@ input, select, textarea {
 
 	#wrapper > header {
 		padding: 11em 0 2.25em 0 ;
+		background-color: #2e3141;
+		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/nature.jpg");
+		background-size: auto, cover;
+		background-position: center, 0% 30%;
+		margin-bottom: -6.5em;
 	}
 
 		#wrapper > header .inner {
@@ -3542,7 +3550,7 @@ input, select, textarea {
 		#wrapper > header {
 			padding: 9em 0 6.25em 0 ;
 			background-color: #2e3141;
-			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
+			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/nature.jpg");
 			background-size: auto, cover;
 			background-position: center, 0% 30%;
 			margin-bottom: -6.5em;
@@ -3556,6 +3564,7 @@ input, select, textarea {
 			padding: 11em 3em 7.375em 3em ;
 			background-size: auto, cover;
 			background-position: center, 0% 0%;
+			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/nature.jpg");
 			margin-bottom: -4.75em;
 		}
 
@@ -3570,6 +3579,7 @@ input, select, textarea {
 		#wrapper > header {
 			padding: 6.5em 2em 3em 2em ;
 			background-size: auto, 125%;
+			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/nature.jpg");
 			margin-bottom: -2.5em;
 		}
 
@@ -3965,6 +3975,14 @@ input, select, textarea {
 		}
 
 /* Footer */
+	#footer {
+			background-color: #2e3141;
+			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/nature.jpg");
+			background-size: auto, cover;
+			background-position: center, center;
+			margin-top: -6.5em;
+			padding-top: 6.5em;
+		}
 
 	#footer .inner {
 		padding: 5em 0 3em 0 ;
@@ -3982,6 +4000,7 @@ input, select, textarea {
 		flex-wrap: wrap;
 		margin: 0 auto;
 		width: 55em;
+
 	}
 
 		#footer .inner > * {
@@ -4030,7 +4049,7 @@ input, select, textarea {
 
 		#footer {
 			background-color: #2e3141;
-			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
+			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/nature.jpg");
 			background-size: auto, cover;
 			background-position: center, center;
 			margin-top: -6.5em;
