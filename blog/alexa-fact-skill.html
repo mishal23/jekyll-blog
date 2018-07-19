@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Alexa Fact Skill - Mishal Shah</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-2"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-110715968-2');
+		</script>
+		<script data-cfasync="false" type="text/javascript" src="../assets/js/form-submission-handler.js"></script>
+	</head>
+	<body class="is-preload">
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=165511020689910&autoLogAppEvents=1';
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Mishal Shah</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="../index.html">Home</a></li>
+								<li><a href="../about.html">About</a></li>
+								<li><a href="../education.html">Education</a></li>
+								<!-- <li><a href="experience.html">Experience</a></li> -->
+								<li><a href="../projects.html">Projects</a></li>
+								<li><a href="../blog.html">Blog</a></li>
+								<!-- <li><a href="#">Log In</a></li>
+								<li><a href="#">Sign Up</a></li> -->
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Alexa Fact Skill</h2>
+								<p>Alexa, Build me a fact skill!</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+									<h3 class="major">Introduction</h3>
+									<p>Learning to build voice user interface is a great skill to have as devices like the Amazon Echo and Google Home are gaining popularity. Amazon is currently running a competiiton this July for people developing Alexa Skills. You develop a new skill and get a limited-edition Alexa developer T-shirt! If more than 100 customers enable and use your skill in the first 30 days of publication, you could also receive an Echo Dot.</p>
+									<span class="image fit">
+										<img src="../images/july-incentive.png" alt="Alexa Developer Promotion India">
+									</span>
+									<p>Sounds pretty cool right? Apart from the T-shirt or Echo Dot, you'll also learn developing something for voice assistant. If this seems like a good opportunity, read ahead!</p>
+									<h3 class="major">What is Alexa and how does it work?</h3>
+									<p>Alexa is a cloud-based voice service that powers millions of voice experiences in the home. Devices Alexa powers includes Amazon Echo, Echo Dot, Amazon Tap and Amazon Fire TV.</p>
+
+									<p>What is a <strong>"skill"</strong>? They are basically apps(programs) that extend Echo's functionality and features. There are lot of amazing skills already being developed by Alexa developers from over the world. Check them out <a href="https://www.amazon.com/alexa-skills/b?ie=UTF8&node=13727921011">here</a>. They can answer questions, play trivia games, play music, set alarms, tell jokes and many more. Here is how it works:</p>
+									<ul>
+										<li>User speaks something</li>
+										<li>The skill(defined on the Amazon Developer Site) matches the question(keywords) with an <strong>Intent</strong>(what the user is trying to ask) and then sends this Intent to an endpoint(an API call to the server like <strong>AWS Lambda</strong>	)</li>
+										<li>Lambda or your own server is where the <strong>data</strong> is stored. It has code to take the Intent and return the relevant response, taken from the data.</li>
+										<li>Echo speaks back this response to the user.</li>
+									</ul>
+									<h3 class="major">What do you need to start?</h3>
+									<ul>
+										<li>An <a href="https://developer.amazon.com/">Amazon Developer account</a>, to create a skill.</li>
+										<li>An <a href="https://aws.amazon.com/">Amazon AWS account</a>, to create a Lambda function.</li>
+										<li>An idea! The skill you create is an app, and just like any other app in the market your app should have a good use case.</li>
+									</ul>
+									
+									<h3 class="major">Creating the skill</h3>
+									<p>I'll explain how to create a fact skill in this blog post, you can dive into deeper to create some awesome skills. At the end, there is a list of amazing tutorials for you to learn more.</p>
+									<p>Go to <a href="https://developer.amazon.com/">Amazon Developer Account</a> and sign in, and select Alexa.</p>
+									<span class="image fit">
+										<img src="../images/alexa-amazon.png">
+									</span>
+									
+									<p>On the Alexa Page, on the top-right, hover over the "Your Alexa Consoles" and click <strong>Skills</strong>.</p>
+									<span class="image fit">
+										<img src="../images/skill.png">
+									</span>
+									<p>Click on the "Create Skill" button.</p>
+									<span class="image fit">
+										<img src="../images/create-skill.png">
+									</span>
+									<p>
+									Fill out the information, 
+									<ul>
+										<li>Skill Name: Number Fact</li>
+										<li>Skill Model: Custom</li>
+										<li>Skill Language: English(U.S.) </li>
+									</ul>
+									Click, Create Skill and you'll see a page similar to this.</p>
+									<span class="image fit">
+										<img src="../images/skill-home.png">
+									</span>
+									<p>
+									Now click Invocation in the left hand navigation panel, and set the Invocation Name. Invocation Name is what your user will need to say to start the skill. As the skill is number facts, setting the Invocation Name to: Number Facts, Click on Save Model and move to JSON Editor for the Interaction Model.<br>
+									<span class="image fit">
+										<img src="../images/skill-invocation.png">
+									</span>
+									This is now the core of the skill, Here we define,
+									<ul>
+										<li>an Intent Schema</li>
+										<li>Custom Slot Types</li>
+										<li>Sample Utterances</li>
+									</ul>
+									
+									<h4>Intent Schema</h4>
+									These are the "intents" of the Skill, which define the "intent" or purpose of something the user says to the Skill. So we may have a "GetNewFactIntent" intent, which signifies that the user wants to know an fact. They are defined in this format:
+									<pre>
+										<code>
+ 	{
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent"
+        },
+        {
+          "name": "AMAZON.HelpIntent"
+        },
+        {
+          "name": "AMAZON.StopIntent"
+        },
+        {
+          "name": "AMAZON.FallbackIntent"
+        },
+        {
+          "name": "GetNewFactIntent"
+        }
+      ]
+    }
+										</code>
+									</pre>
+									
+									The AMAZON.HelpIntent is a default Amazon intent that you can use to handle any "Help" type questions. Likewise, AMAZON.StopIntent is a inbuilt intent to handle "stop" intents.
+									
+									<h4>Custom Slot Types</h4>
+									<p>
+										We don’t actually need any Custom Slot Types for this basic Skill. These are used when you have a lists of related values — like colours, or makes of cars or countries. You can read more about them <a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/defining-the-voice-interface#custom-slot-types">here</a>.
+									</p>
+
+									<h4>Sample Utterances</h4>
+									<p>Here we give examples of "utterances" - what the user may say for each intent. Each utterance goes on its own line and starts with the intent it is associated with e.g.</p>
+									<blockquote>a fact</blockquote>
+									For each intent, we list the maximum possible ways that users may say it:
+									<blockquote>
+										"a fact",<br>
+            "a number fact",<br>
+            "tell me a fact",<br>
+            "tell me a number fact",<br>
+            "give me a fact",<br>
+            "give me a number fact",<br>
+            "give me some number information"
+									</blockquote>
+									We put all this in the JSON Editor and hit Save Model, and then Build Model. Your JSON should look similar to <a href="https://gist.github.com/mishal23/1204d1d2afa39c5a6d64c5f28b899ad1">this</a>
+									<p>You'll see a message like: </p>
+									<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="../images/build-progress.png" alt="" /></span></div>
+											<div class="col-2">then...</div>
+											<div class="col-4"><span class="image fit"><img src="../images/build-success.png" alt="" /></span></div>
+										</div>
+									</div>
+									Now, it's time to set the endpoint, Click on "Endpoint" button in the left navigation bar.
+									This where we specify where the Intent information goes when the user asks a question. The options are:
+									<ul>
+										<li>AWS Lambda - a Lambda endpoint</li>
+										<li>HTTPS - your own endpoint</li>
+									</ul>
+									We'll be using AWS Lambda here.<br><br>
+									<h3 class="major">AWS Lambda</h3>
+									<p>If you haven’t used AWS Lambda before, it’s a service that allows you to host code with its own endpoint, without a server. More info <a href="https://aws.amazon.com/lambda/">here</a>. Heard of Serverless apps?</p>
+									<p>Go to <a href=" https://aws.amazon.com/">Amazon Web Services</a> and sign in the portal, and go to Lambda service.</p>
+									<span class="image fit">
+										<img src="../images/aws-home.png">
+									</span>
+
+									<br>Once on Lambda home page, click on the orange button to create the Lambda function.
+									<span class="image fit">
+										<img src="../images/create-lambda.png">
+									</span>
+									
+
+									Choose "Author from Scratch", and then name your function in camelCase, for me, <strong>numberFactFunction</strong>.<br> Choose, RunTime as Node.js 8.10, and in Role dropdown, choose, <strong>Create a Custom Role</strong>. This will open a new window, in that click on Allow. Read more about IAM Roles <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">here</a><br>
+									<span class="image fit">
+										<img src="../images/custom-role.png">
+									</span>
+									 <p>Then on the back on Lambda Page, select <strong>lambda_basic_execution</strong> in the Existing Role, and click "Create Function".</p>
+									
+									<p>Now, we need to add Trigger, for we are developing Alexa Skill Kit, click on Alexa Skill Kit in the left navigation.</p>
+									<span class="image fit">
+										<img src="../images/trigger.png">
+									</span>
+
+									<p>In Configure trigger, copy the Skill ID from the Developer Console, and paste it here, and click on Add. Skill ID will be in the form <strong>amzn1.ask.skill......</strong> After this is done, click on the numberFactFunction where we added the trigger, this will show the Function Code at the bottom.</p>
+									<span class="image fit">
+										<img src="../images/function-code.png">
+									</span>
+
+									<p>Add the index.js code from <a href="https://gist.github.com/mishal23/4499d20a24e3e5ce6f5db11bd02277a9">here</a>, also add the AlexaSkill.js from the same link in the function code by creating a new file.</p>
+
+									<p>File AlexaSkill.js has specific event handlers. It specifies the output, prompt and speech. The Index.js file lets you customize meet the needs of your Skill. Click on Save.</p>
+
+									<p>From the right-top of the page, copy the ARN value, it's of the form arn:aws:lambda:<i>region</i>:function:<i>nameOfFunction</i>. 
+									Go to Amazon Developer Console, Select your skill and click on Endpoint	in the left navigation bar. Select AWS Lambda ARN and paste the ARN code copied in the default region input box. Click on Save Endpoints. And you'll see a popup similar to the below image saying Skill Manifest Saved Successfully.</p>
+									<span class="image fit">
+										<img src="../images/skill-save.png">
+									</span>
+									<p>In the top navigation bar, click on Test tab. If the test is disabled, enable it and either speak or type the Open Invocation Name , for this skill, "Open Number Facts", and watch Alexa speaking the fact. :D</p>
+									<span class="image fit">
+										<img src="../images/test-skill.png">
+									</span>
+
+									<p>Enter the distribution and Certification details as required, and submit the skill for certification. It takes a few days to hear back from the Amazon Developer Team. If your Skill is approved then everything works and all of the information is agreeing to their standards. Your Skill will be certified and published and available for others to use. If not, you will receive feedback and suggestions on what you need to to to resolve any issues so you can re-submit.</p>
+
+									<p>If your skill is unique across the alexa skills present, you'll also receive the limited edition T-Shirt.</p>
+
+									<p>Hope you learned on how to build skills, if you develop more you'll have more familiarity with JavaScript and Node.js. It’s very different creating something that is voice activated by an end user as compared to reading on a screen. Hoping to see more Alexa developers, feel free to contact in case there is any issue developing a skill.</p>
+									
+									<div class="fb-comments" data-width="700px" data-colorscheme="dark" data-href="https://mishal23.github.io" data-numposts="5"></div>
+								</div>
+
+							</div>
+							
+					</section>
+					
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<div style="display: none;" id="thankyou_message">
+								<h2><em>Thanks</em> for contacting!
+								I'll get back to you soon</h2>
+							</div>
+							<form id="gform" method="post" action="https://script.google.com/macros/s/AKfycby53ihfksP3PB_oZLHxcIoQtPmruVoOfkoOghZc/exec">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<!-- <div class="field"> -->
+										<label class="sr-only" for="spam">Keep this field blank</label>
+  										<input id="honeypot" type="text" name="honeypot" value="" />
+  									<!-- </div> -->
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<!-- <li class="fa-home">
+									Permanent Address:<br />
+									1234 Somewhere Road Suite #2894<br />
+									Nashville, TN 00000-0000
+								</li> -->
+								<!-- <li class="fa-phone">(000) 000-0000</li> -->
+								<li class="fa-envelope"><a href="mailto:shahmishal1998@gmail.com">shahmishal1998@gmail.com</a></li>
+								<li class="fa-github"><a href="https://github.com/mishal23" target="blank">github.com/mishal23</a></li>
+								<li class="fa-linkedin"><a href="https://www.linkedin.com/in/mishal23/" target="blank">linkedin.com/in/mishal23</a></li>
+								<li class="fa-facebook"><a href="https://www.facebook.com/mishal.shah.7731" target="blank">facebook.com/mishal.shah.7731</a></li>
+								<li class="fa-instagram"><a href="https://www.instagram.com/shahmishal1998/" target="blank">instagram.com/shahmishal1998</a></li>
+								<li class="fa-twitter"><a href="https://twitter.com/1998Mishal" target="blank">twitter.com/1998Mishal</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Mishal Shah. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
