@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Alexa Fact Skill - Mishal Shah</title>
+	<meta name="description" content="Learning to build voice user interface is a great skill to have as devices like the Amazon Echo and Google Home are gaining popularity. Find out more on how to develop a basic fact skill for Amazon Alexa.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#2d2a2a">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#2d2a2a">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#2d2a2a">
+
+	<link href="https://fonts.googleapis.com/css?family=Finger+Paint|PT+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <aside class="sidebar">
+
+  <div class="sidebar-container">
+    <div class="sidebar-logo">
+      <a href="/" class="logo">Mishal Shah</a>
+    </div>
+
+    <menu class="sidebar-menu">
+      <li class="menu-items"><a class="menu-links" href="/">Home</a></li>
+      <li class="menu-items"><a class="menu-links" href="/about/">About</a></li>
+      <li class="menu-items"><a class="menu-links" href="/projects/">Projects</a></li>
+      <li class="menu-items"><a class="menu-links" href="/contact/">Contact</a></li>
+    </menu>
+
+    <div class="sidebar-social">
+      <li class="social-items"><a href="mailto:shahmishal1998@gmail.com" class="social-links"><i class="social-icons fa fa-envelope" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://github.com/mishal23" class="social-links"><i class="social-icons fa fa-github" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://linkedin.com/in/mishal23/" class="social-links"><i class="social-icons fa fa-linkedin" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://www.facebook.com/mishal.shah.7731" class="social-links"><i class="social-icons fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://twitter.com/1998Mishal" class="social-links"><i class="social-icons fa fa-twitter" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://plus.google.com/u/0/101714954506157781527" class="social-links"><i class="social-icons fa fa-google-plus" aria-hidden="true"></i></a></li>
+    </div>
+
+  </div>
+</aside>
+
+  <main role="main">
+    <div class="content">
+      <article class="page-article">
+  <div class="wrap-content">
+    <header class="page-header">
+      <h1 class="page-title">Alexa Fact Skill</h1>
+      <div class="page-date"><span>2018, Jul 26&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+    </header>
+    <div class="page-content">
+      
+      <h2 id="introduction">Introduction</h2>
+<p>Learning to build voice user interface is a great skill to have as devices like the Amazon Echo and Google Home are gaining popularity. Amazon is currently running an incentive program this July(2018) for people developing Alexa Skills. You develop a new skill and get a limited-edition Alexa developer T-shirt! If more than 100 customers enable and use your skill in the first 30 days of publication, you could also receive an Echo Dot.</p>
+
+<p><img src="/assets/img/july-incentive.png" alt="July Incentive" /></p>
+
+<p>Sounds pretty cool right? Apart from the T-shirt or Echo Dot, you’ll also learn developing something for voice assistant. If this seems like a good opportunity, read ahead!</p>
+
+<h2 id="what-is-alexa-and-how-does-it-work">What is Alexa and how does it work?</h2>
+
+<p>Alexa is a cloud-based voice service that powers millions of voice experiences in the home. Devices Alexa powers includes Amazon Echo, Echo Dot, Amazon Tap and Amazon Fire TV.</p>
+
+<p>What is a <strong>skill</strong>? They are basically apps(programs) that extend Echo’s functionality and features. There are lot of amazing skills already being developed by Alexa developers from over the world. Check them out <a href="https://www.amazon.com/alexa-skills/b?ie=UTF8&amp;node=13727921011">here</a>. They can answer questions, play trivia games, play music, set alarms, tell jokes and many more. Here is how it works:</p>
+
+<ul>
+  <li>User speaks something</li>
+  <li>The skill(defined on the Amazon Developer Site) matches the question(keywords) with an Intent(what the user is trying to ask) and then sends this Intent to an endpoint(an API call to the server like AWS Lambda)</li>
+  <li>Lambda or your own server is where the data is stored. It has code to take the Intent and return the relevant response, taken from the data.</li>
+  <li>Echo speaks back this response to the user.</li>
+</ul>
+
+<h2 id="what-do-you-need-to-start">What do you need to start?</h2>
+
+<ul>
+  <li>An <a href="https://developer.amazon.com/">Amazon Developer account</a>, to create a skill.</li>
+  <li>An <a href="https://developer.amazon.com/">Amazon AWS account</a>, to create a Lambda function.</li>
+  <li>An idea! The skill you create is an app, and just like any other app in the market your app should have a good use case.</li>
+</ul>
+
+<h2 id="creating-the-skill">Creating the skill</h2>
+
+<p>I’ll explain how to create a fact skill in this blog post, you can dive into deeper to create some awesome skills. At the end, there is a list of amazing tutorials for you to learn more.</p>
+
+<p>Go to <a href="https://developer.amazon.com/">Amazon Developer Account</a> and sign in, and select Alexa.
+<img src="/assets/img/alexa-amazon.png" alt="Alexa Amazon" /></p>
+
+<p>On the Alexa Page, on the top-right, hover over the <code class="highlighter-rouge">Your Alexa Consoles</code> and click Skills.
+<img src="/assets/img/skill.png" alt="Alexa Skills" /></p>
+
+<p>Click on the <code class="highlighter-rouge">Create Skill</code> button.
+<img src="/assets/img/create-skill.png" alt="Alexa Create Skill" /></p>
+
+<p>Fill out the information,</p>
+<ul>
+  <li>Skill Name: Number Fact</li>
+  <li>Skill Model: Custom</li>
+  <li>Skill Language: English(U.S.)</li>
+</ul>
+
+<p>Click, Create Skill and you’ll see a page similar to this.</p>
+
+<p><img src="/assets/img/skill-home.png" alt="Alexa Home" /></p>
+
+<p>Now click Invocation in the left hand navigation panel, and set the Invocation Name. Invocation Name is what your user will need to say to start the skill. As the skill is number facts, setting the Invocation Name to: Number Facts, Click on Save Model and move to JSON Editor for the Interaction Model.</p>
+
+<p><img src="/assets/img/skill-invocation.png" alt="Skill Invocation" /></p>
+
+<p>This is now the core of the skill, Here we define,</p>
+
+<ul>
+  <li>an Intent Schema</li>
+  <li>Custom Slot Types</li>
+  <li>Sample Utterances</li>
+</ul>
+
+<h3 id="intent-schema">Intent Schema</h3>
+
+<p>These are the “intents” of the Skill, which define the “intent” or purpose of something the user says to the Skill. So we may have a <code class="highlighter-rouge">GetNewFactIntent</code> intent, which signifies that the user wants to know an fact. They are defined in this format:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"intents"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AMAZON.CancelIntent"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AMAZON.HelpIntent"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AMAZON.StopIntent"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AMAZON.FallbackIntent"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GetNewFactIntent"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+ </span><span class="p">}</span></code></pre></figure>
+
+<p>The AMAZON.HelpIntent is a default Amazon intent that you can use to handle any <strong>Help</strong> type questions. Likewise, AMAZON.StopIntent is a inbuilt intent to handle “stop” intents.</p>
+
+<h3 id="custom-slot-types">Custom Slot Types</h3>
+
+<p>Here we give examples of “utterances” - what the user may say for each intent. Each utterance goes on its own line and starts with the intent it is associated with e.g.</p>
+
+<blockquote>
+  <p>a fact</p>
+</blockquote>
+
+<p>For each intent, we list the maximum possible ways that users may say it:</p>
+
+<blockquote>
+  <p>“a fact”,<br />
+“a number fact”,<br />
+“tell me a fact”,<br />
+“tell me a number fact”,<br />
+“give me a fact”,<br />
+“give me a number fact”,<br />
+“give me some number information”</p>
+</blockquote>
+
+<p>We put all this in the JSON Editor and hit Save Model, and then Build Model. Your JSON should look similar to this. You’ll see a message like:</p>
+
+<p><img src="/assets/img/build-progress.png" alt="Build Progress" /></p>
+
+<p>then</p>
+
+<p><img src="/assets/img/build-success.png" alt="Build Success" /></p>
+
+<p>Now, it’s time to set the endpoint, Click on <code class="highlighter-rouge">Endpoint</code> button in the left navigation bar. This where we specify where the Intent information goes when the user asks a question. The options are:</p>
+<ul>
+  <li>AWS Lambda - a Lambda endpoint</li>
+  <li>HTTPS - your own endpoint</li>
+</ul>
+
+<p>We’ll be using AWS Lambda here.</p>
+
+<h2 id="aws-lambda">AWS Lambda</h2>
+
+<p>If you haven’t used AWS Lambda before, it’s a service that allows you to host code with its own endpoint, without a server. More info here. Heard of Serverless apps?</p>
+
+<p>Go to <a href="https://aws.amazon.com/">Amazon Web Services</a> and sign in the portal, and go to Lambda service.</p>
+
+<p><img src="/assets/img/aws-home.png" alt="AWS Home" /></p>
+
+<p>Once on Lambda home page, click on the orange button to create the Lambda function.</p>
+
+<p><img src="/assets/img/create-lambda.png" alt="Create Lambda" /></p>
+
+<p>Choose <code class="highlighter-rouge">Author from Scratch</code>, and then name your function in camelCase, for me, <strong>numberFactFunction</strong>.
+Choose, RunTime as Node.js 8.10, and in Role dropdown, choose, <strong>Create a Custom Role</strong>. This will open a new window, in that click on Allow. Read more about IAM Roles <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">here</a>.</p>
+
+<p><img src="/assets/img/custom-role.png" alt="Custom Roles" /></p>
+
+<p>Then on the back on Lambda Page, select <strong>lambda_basic_execution</strong> in the Existing Role, and click <code class="highlighter-rouge">Create Function</code>.</p>
+
+<p>Now, we need to add Trigger, for we are developing Alexa Skill Kit, click on Alexa Skill Kit in the left navigation.</p>
+
+<p><img src="/assets/img/trigger.png" alt="Trigger" /></p>
+
+<p>In Configure trigger, copy the Skill ID from the Developer Console, and paste it here, and click on Add. Skill ID will be in the form <strong>amzn1.ask.skill……</strong> After this is done, click on the numberFactFunction where we added the trigger, this will show the Function Code at the bottom.</p>
+
+<p><img src="/assets/img/function-code.png" alt="Function code" /></p>
+
+<p>Add the <code class="highlighter-rouge">index.js</code> code from <a href="https://gist.github.com/mishal23/4499d20a24e3e5ce6f5db11bd02277a9">here</a>, also add the <code class="highlighter-rouge">AlexaSkill.js</code> from the same link in the function code by creating a new file.</p>
+
+<p>File <code class="highlighter-rouge">AlexaSkill.js</code> has specific event handlers. It specifies the output, prompt and speech. The Index.js file lets you customize meet the needs of your Skill. Click on Save.</p>
+
+<p>From the right-top of the page, copy the ARN value, it’s of the form <code class="highlighter-rouge">arn:aws:lambda:region:function:nameOfFunction</code>. Go to Amazon Developer Console, Select your skill and click on Endpoint	in the left navigation bar. Select AWS Lambda ARN and paste the ARN code copied in the default region input box. Click on Save Endpoints. And you’ll see a popup similar to the below image saying Skill Manifest Saved Successfully.</p>
+
+<p><img src="/assets/img/skill-save.png" alt="Skill save" /></p>
+
+<p>In the top navigation bar, click on Test tab. If the test is disabled, enable it and either speak or type the Open Invocation Name , for this skill, <code class="highlighter-rouge">Open Number Facts</code>, and watch Alexa speaking the fact. :D</p>
+
+<p><img src="/assets/img/test-skill.png" alt="Skill Test" /></p>
+
+<p>Enter the distribution and Certification details as required, and submit the skill for certification. It takes a few days to hear back from the Amazon Developer Team. If your Skill is approved then everything works and all of the information is agreeing to their standards. Your Skill will be certified and published and available for others to use. If not, you will receive feedback and suggestions on what you need to to to resolve any issues so you can re-submit.</p>
+
+<p>If your skill is unique across the alexa skills present, you’ll also receive the limited edition T-Shirt.</p>
+
+<p>Hope you learned on how to build skills, if you develop more you’ll have more familiarity with JavaScript and Node.js. It’s very different creating something that is voice activated by an end user as compared to reading on a screen. Hoping to see more Alexa developers, feel free to contact in case there is any issue developing a skill.</p>
+
+<!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk]. -->
+
+
+    </div>
+    
+
+  </div>
+</article>
+
+    </div>
+  </main>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110715968-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>

@@ -1,4 +1,0 @@
-site_name: Virtual Clinic
-pages:
-    - README: index.md
-theme: readthedocs

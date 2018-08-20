@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Chaos Engineering - Mishal Shah</title>
+	<meta name="description" content="What does it take to build confidence in your system's behaviour while in production? How do companies like Netflix, Google and Twilio find unknown weaknesses in their production systems?">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#2d2a2a">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#2d2a2a">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#2d2a2a">
+
+	<link href="https://fonts.googleapis.com/css?family=Finger+Paint|PT+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <aside class="sidebar">
+
+  <div class="sidebar-container">
+    <div class="sidebar-logo">
+      <a href="/" class="logo">Mishal Shah</a>
+    </div>
+
+    <menu class="sidebar-menu">
+      <li class="menu-items"><a class="menu-links" href="/">Home</a></li>
+      <li class="menu-items"><a class="menu-links" href="/about/">About</a></li>
+      <li class="menu-items"><a class="menu-links" href="/projects/">Projects</a></li>
+      <li class="menu-items"><a class="menu-links" href="/contact/">Contact</a></li>
+    </menu>
+
+    <div class="sidebar-social">
+      <li class="social-items"><a href="mailto:shahmishal1998@gmail.com" class="social-links"><i class="social-icons fa fa-envelope" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://github.com/mishal23" class="social-links"><i class="social-icons fa fa-github" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://linkedin.com/in/mishal23/" class="social-links"><i class="social-icons fa fa-linkedin" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://www.facebook.com/mishal.shah.7731" class="social-links"><i class="social-icons fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://twitter.com/1998Mishal" class="social-links"><i class="social-icons fa fa-twitter" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://plus.google.com/u/0/101714954506157781527" class="social-links"><i class="social-icons fa fa-google-plus" aria-hidden="true"></i></a></li>
+    </div>
+
+  </div>
+</aside>
+
+  <main role="main">
+    <div class="content">
+      <article class="page-article">
+  <div class="wrap-content">
+    <header class="page-header">
+      <h1 class="page-title">Chaos Engineering</h1>
+      <div class="page-date"><span>2017, Dec 19&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+    </header>
+    <div class="page-content">
+      
+      <h2 id="introduction">Introduction</h2>
+
+<p>Many of us would have heard about the two major WhatsApp outages recently when it was down for about an hour each time. For the general public, WhatsApp was down for an hour. But for software engineers, WhatsApp was back within an hour. This made me wonder what it was, that enabled the engineers working at WhatsApp to restore the services so fast.</p>
+
+<p><img src="/assets/img/whatsapp-outage.png" alt="WhatsApp Outage" /></p>
+
+<p>What if I tell you, it was a very <strong>normal</strong> turbulent production failure for them. Yes, huge companies like <a href="https://www.netflix.com/in/">Netflix</a>, <a href="https://www.facebook.com/">Facebook</a> and <a href="https://www.google.co.in/">Google</a> use a method of engineering called <strong>Chaos Engineering</strong>.</p>
+
+<p>To explain Chaos Engineering in layman terms :
+To be good at something , if one practices it in extreme conditions then it would get easier for the person to perform in normal conditions. Similarly if a software engineer has seen extreme conditions in production, it becomes a challenge for him/her to code in such a way that their service fails if such an extreme condition occurs. If at all it comes, they would have experienced it before and so it becomes easy to bring the services back.</p>
+
+<p><img src="/assets/img/chaos-engineering.png" alt="Chaos Engineering" /></p>
+
+<h2 id="principle-of-chaos-engineering">Principle of Chaos Engineering</h2>
+
+<p>The main idea of Chaos Engineering is to intentionally inject failures so as to be prepared for the worst conditions.
+A formal definition for Chaos Engineering given by Netflix:</p>
+<blockquote>
+  <p>Chaos Engineering is the discipline of experimenting on a distributed system in order to build confidence in the system’s capability to withstand turbulent conditions in production.</p>
+</blockquote>
+
+<p>Chaos Engineering can be thought of as the facilitation of experiments to uncover systemic weaknesses. These experiments follow four steps:</p>
+
+<ol>
+  <li>Start by defining ‘steady state’ as some measurable output of a system that indicates normal behavior.</li>
+  <li>Hypothesize that this steady state will continue in both the control group and the experimental group.</li>
+  <li>Introduce variables that reflect real world events like servers that crash, hard drives that malfunction, network connections that are severed, etc.</li>
+  <li>Try to disprove the hypothesis by looking for a difference in steady state between the control group and the experimental group.</li>
+</ol>
+
+<p>The harder it is to disrupt the steady state, the more confidence we have in the behavior of the system. If a weakness is uncovered, we now have a target for improvement before that behavior manifests in the system at large.
+In layman terms: Break your system, see the difference between steady state and experimental state, lesser the difference, lesser it will break in production. If the difference is more, you have a target for improvement before actually experiencing it in production.</p>
+
+<h2 id="practical-use">Practical Use</h2>
+
+<p>Netflix, a pioneer in the field of Chaos Engineering, uses a tool called Chaos Monkey. It randomly picks a server from production deployment on AWS (Amazon Web Services) and kills it. Executives at Netflix knew that server failures are guaranteed to happen and they wanted servers to fail during working-hours so that it could be fixed it in the presence of their engineers. They knew that they could rely on engineers to build resilient solutions if they were given context to expect servers to fail. If they could align their engineers to build services that survive a server failure, then when it actually happened, it wouldn’t be a big deal.</p>
+
+<h2 id="how-can-it-help-you">How can it help you?</h2>
+
+<p>Suppose your team has built the next wave of advancement the whole world has been waiting for. You are to launch your service but there are questions rumbling in your mind:</p>
+
+<ul>
+  <li>Is your application ready for production?</li>
+  <li>Will the system survive the failures of other companies you are dependent on?</li>
+  <li>Will the system survive the failure of your own configurations?</li>
+</ul>
+
+<p>The truth is : You can never be sure . There will always be something that can be wrong or will go wrong. Some things aren’t in your control like denial-of-service attacks or network failures. Sometimes, bad things just happen.</p>
+
+<p>Possibly The only solution for it is to build quality software that is resilient to failures. As the saying goes - <em>“Hope for the best, prepare for the worst”</em>
+But how can your team be sure that your system is ready for production and is ready to face all difficulties/failures? <em>This is where Chaos Engineering comes into picture.</em></p>
+
+<h2 id="does-this-seem-like-testing">Does this seem like testing?</h2>
+
+<p>It may indeed sound like it, but it definitely isn’t testing. Chaos Engineering is an experiment on the production environment and there is certainly no way to accurately duplicate production environment at scale (as in testing). The experiment itself is going to have a systemic effect that could change your results, so the only way to accurately build conflict in the system that you have now is to experiment on it.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The purpose of Chaos Engineering is to experience disastrous conditions. This might sound like a difficult task and it does require a lot of creativity but the extra effort is worth it. You must inject failures in your system such that certain part of your infrastructure becomes unavailable. Some examples are : terminate cluster machines, kill worker processes, delete database tables, cut off access to internal-external services, etc. Later you can also simulate events capable of disrupting steady state like high latency due to slow networks.</p>
+
+<p>These experiments are a bit difficult but whatever you decide to do, you’ll be surprised at how much you can learn from chaos.
+There are a lot of tools worth mentioning :</p>
+
+<ul>
+  <li><a href="https://github.com/Netflix/chaosmonkey">Chaos Monkey</a> - A resiliency tool that helps applications tolerate random instance failures</li>
+  <li><a href="https://github.com/Netflix/SimianArmy">The Simian Army</a> - A suite of tools for keeping your cloud operating in top form</li>
+  <li><a href="https://github.com/asobti/kube-monkey">kube-monkey</a> - An implementation of Netflix’s Chaos Monkey for Kubernetes clusters</li>
+  <li><a href="https://www.gremlin.com/">Gremlin Inc.</a> - Failure as a Service</li>
+  <li><a href="https://github.com/alexei-led/pumba">Pumba</a> - Chaos testing and network emulation for Docker containers (and clusters)</li>
+  <li><a href="https://github.com/chaostoolkit/chaostoolkit">Chaos Toolkit</a> - A chaos engineering toolkit to help you build confidence in your software system</li>
+  <li><a href="https://github.com/github/orchestrator">orchestrator</a> - MySQL replication topology management and HA</li>
+</ul>
+
+<p>I hope you got an idea about Chaos Engineering - a powerful approach to build resilient systems!</p>
+
+<!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
+ -->
+
+    </div>
+    
+
+  </div>
+</article>
+
+    </div>
+  </main>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110715968-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>

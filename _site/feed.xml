@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-20T20:04:00+05:30</updated><id>http://localhost:4000/</id><title type="html">Mishal Shah</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><entry><title type="html">Alexa Fact Skill</title><link href="http://localhost:4000/alexa-fact-skill/" rel="alternate" type="text/html" title="Alexa Fact Skill" /><published>2018-07-26T01:02:40+05:30</published><updated>2018-07-26T01:02:40+05:30</updated><id>http://localhost:4000/alexa-fact-skill</id><content type="html" xml:base="http://localhost:4000/alexa-fact-skill/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Learning to build voice user interface is a great skill to have as devices like the Amazon Echo and Google Home are gaining popularity. Amazon is currently running an incentive program this July(2018) for people developing Alexa Skills. You develop a new skill and get a limited-edition Alexa developer T-shirt! If more than 100 customers enable and use your skill in the first 30 days of publication, you could also receive an Echo Dot.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/july-incentive.png&quot; alt=&quot;July Incentive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sounds pretty cool right? Apart from the T-shirt or Echo Dot, you’ll also learn developing something for voice assistant. If this seems like a good opportunity, read ahead!&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-alexa-and-how-does-it-work&quot;&gt;What is Alexa and how does it work?&lt;/h2&gt;
+
+&lt;p&gt;Alexa is a cloud-based voice service that powers millions of voice experiences in the home. Devices Alexa powers includes Amazon Echo, Echo Dot, Amazon Tap and Amazon Fire TV.&lt;/p&gt;
+
+&lt;p&gt;What is a &lt;strong&gt;skill&lt;/strong&gt;? They are basically apps(programs) that extend Echo’s functionality and features. There are lot of amazing skills already being developed by Alexa developers from over the world. Check them out &lt;a href=&quot;https://www.amazon.com/alexa-skills/b?ie=UTF8&amp;amp;node=13727921011&quot;&gt;here&lt;/a&gt;. They can answer questions, play trivia games, play music, set alarms, tell jokes and many more. Here is how it works:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;User speaks something&lt;/li&gt;
+  &lt;li&gt;The skill(defined on the Amazon Developer Site) matches the question(keywords) with an Intent(what the user is trying to ask) and then sends this Intent to an endpoint(an API call to the server like AWS Lambda)&lt;/li&gt;
+  &lt;li&gt;Lambda or your own server is where the data is stored. It has code to take the Intent and return the relevant response, taken from the data.&lt;/li&gt;
+  &lt;li&gt;Echo speaks back this response to the user.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-do-you-need-to-start&quot;&gt;What do you need to start?&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;An &lt;a href=&quot;https://developer.amazon.com/&quot;&gt;Amazon Developer account&lt;/a&gt;, to create a skill.&lt;/li&gt;
+  &lt;li&gt;An &lt;a href=&quot;https://developer.amazon.com/&quot;&gt;Amazon AWS account&lt;/a&gt;, to create a Lambda function.&lt;/li&gt;
+  &lt;li&gt;An idea! The skill you create is an app, and just like any other app in the market your app should have a good use case.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;creating-the-skill&quot;&gt;Creating the skill&lt;/h2&gt;
+
+&lt;p&gt;I’ll explain how to create a fact skill in this blog post, you can dive into deeper to create some awesome skills. At the end, there is a list of amazing tutorials for you to learn more.&lt;/p&gt;
+
+&lt;p&gt;Go to &lt;a href=&quot;https://developer.amazon.com/&quot;&gt;Amazon Developer Account&lt;/a&gt; and sign in, and select Alexa.
+&lt;img src=&quot;/assets/img/alexa-amazon.png&quot; alt=&quot;Alexa Amazon&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;On the Alexa Page, on the top-right, hover over the &lt;code class=&quot;highlighter-rouge&quot;&gt;Your Alexa Consoles&lt;/code&gt; and click Skills.
+&lt;img src=&quot;/assets/img/skill.png&quot; alt=&quot;Alexa Skills&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click on the &lt;code class=&quot;highlighter-rouge&quot;&gt;Create Skill&lt;/code&gt; button.
+&lt;img src=&quot;/assets/img/create-skill.png&quot; alt=&quot;Alexa Create Skill&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Fill out the information,&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Skill Name: Number Fact&lt;/li&gt;
+  &lt;li&gt;Skill Model: Custom&lt;/li&gt;
+  &lt;li&gt;Skill Language: English(U.S.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Click, Create Skill and you’ll see a page similar to this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/skill-home.png&quot; alt=&quot;Alexa Home&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now click Invocation in the left hand navigation panel, and set the Invocation Name. Invocation Name is what your user will need to say to start the skill. As the skill is number facts, setting the Invocation Name to: Number Facts, Click on Save Model and move to JSON Editor for the Interaction Model.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/skill-invocation.png&quot; alt=&quot;Skill Invocation&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is now the core of the skill, Here we define,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;an Intent Schema&lt;/li&gt;
+  &lt;li&gt;Custom Slot Types&lt;/li&gt;
+  &lt;li&gt;Sample Utterances&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;intent-schema&quot;&gt;Intent Schema&lt;/h3&gt;
+
+&lt;p&gt;These are the “intents” of the Skill, which define the “intent” or purpose of something the user says to the Skill. So we may have a &lt;code class=&quot;highlighter-rouge&quot;&gt;GetNewFactIntent&lt;/code&gt; intent, which signifies that the user wants to know an fact. They are defined in this format:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;intents&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;AMAZON.CancelIntent&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;AMAZON.HelpIntent&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;AMAZON.StopIntent&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;AMAZON.FallbackIntent&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;GetNewFactIntent&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The AMAZON.HelpIntent is a default Amazon intent that you can use to handle any &lt;strong&gt;Help&lt;/strong&gt; type questions. Likewise, AMAZON.StopIntent is a inbuilt intent to handle “stop” intents.&lt;/p&gt;
+
+&lt;h3 id=&quot;custom-slot-types&quot;&gt;Custom Slot Types&lt;/h3&gt;
+
+&lt;p&gt;Here we give examples of “utterances” - what the user may say for each intent. Each utterance goes on its own line and starts with the intent it is associated with e.g.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;a fact&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For each intent, we list the maximum possible ways that users may say it:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“a fact”,&lt;br /&gt;
+“a number fact”,&lt;br /&gt;
+“tell me a fact”,&lt;br /&gt;
+“tell me a number fact”,&lt;br /&gt;
+“give me a fact”,&lt;br /&gt;
+“give me a number fact”,&lt;br /&gt;
+“give me some number information”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We put all this in the JSON Editor and hit Save Model, and then Build Model. Your JSON should look similar to this. You’ll see a message like:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/build-progress.png&quot; alt=&quot;Build Progress&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;then&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/build-success.png&quot; alt=&quot;Build Success&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, it’s time to set the endpoint, Click on &lt;code class=&quot;highlighter-rouge&quot;&gt;Endpoint&lt;/code&gt; button in the left navigation bar. This where we specify where the Intent information goes when the user asks a question. The options are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;AWS Lambda - a Lambda endpoint&lt;/li&gt;
+  &lt;li&gt;HTTPS - your own endpoint&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We’ll be using AWS Lambda here.&lt;/p&gt;
+
+&lt;h2 id=&quot;aws-lambda&quot;&gt;AWS Lambda&lt;/h2&gt;
+
+&lt;p&gt;If you haven’t used AWS Lambda before, it’s a service that allows you to host code with its own endpoint, without a server. More info here. Heard of Serverless apps?&lt;/p&gt;
+
+&lt;p&gt;Go to &lt;a href=&quot;https://aws.amazon.com/&quot;&gt;Amazon Web Services&lt;/a&gt; and sign in the portal, and go to Lambda service.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/aws-home.png&quot; alt=&quot;AWS Home&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once on Lambda home page, click on the orange button to create the Lambda function.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/create-lambda.png&quot; alt=&quot;Create Lambda&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Choose &lt;code class=&quot;highlighter-rouge&quot;&gt;Author from Scratch&lt;/code&gt;, and then name your function in camelCase, for me, &lt;strong&gt;numberFactFunction&lt;/strong&gt;.
+Choose, RunTime as Node.js 8.10, and in Role dropdown, choose, &lt;strong&gt;Create a Custom Role&lt;/strong&gt;. This will open a new window, in that click on Allow. Read more about IAM Roles &lt;a href=&quot;https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/custom-role.png&quot; alt=&quot;Custom Roles&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then on the back on Lambda Page, select &lt;strong&gt;lambda_basic_execution&lt;/strong&gt; in the Existing Role, and click &lt;code class=&quot;highlighter-rouge&quot;&gt;Create Function&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, we need to add Trigger, for we are developing Alexa Skill Kit, click on Alexa Skill Kit in the left navigation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/trigger.png&quot; alt=&quot;Trigger&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In Configure trigger, copy the Skill ID from the Developer Console, and paste it here, and click on Add. Skill ID will be in the form &lt;strong&gt;amzn1.ask.skill……&lt;/strong&gt; After this is done, click on the numberFactFunction where we added the trigger, this will show the Function Code at the bottom.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/function-code.png&quot; alt=&quot;Function code&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Add the &lt;code class=&quot;highlighter-rouge&quot;&gt;index.js&lt;/code&gt; code from &lt;a href=&quot;https://gist.github.com/mishal23/4499d20a24e3e5ce6f5db11bd02277a9&quot;&gt;here&lt;/a&gt;, also add the &lt;code class=&quot;highlighter-rouge&quot;&gt;AlexaSkill.js&lt;/code&gt; from the same link in the function code by creating a new file.&lt;/p&gt;
+
+&lt;p&gt;File &lt;code class=&quot;highlighter-rouge&quot;&gt;AlexaSkill.js&lt;/code&gt; has specific event handlers. It specifies the output, prompt and speech. The Index.js file lets you customize meet the needs of your Skill. Click on Save.&lt;/p&gt;
+
+&lt;p&gt;From the right-top of the page, copy the ARN value, it’s of the form &lt;code class=&quot;highlighter-rouge&quot;&gt;arn:aws:lambda:region:function:nameOfFunction&lt;/code&gt;. Go to Amazon Developer Console, Select your skill and click on Endpoint	in the left navigation bar. Select AWS Lambda ARN and paste the ARN code copied in the default region input box. Click on Save Endpoints. And you’ll see a popup similar to the below image saying Skill Manifest Saved Successfully.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/skill-save.png&quot; alt=&quot;Skill save&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the top navigation bar, click on Test tab. If the test is disabled, enable it and either speak or type the Open Invocation Name , for this skill, &lt;code class=&quot;highlighter-rouge&quot;&gt;Open Number Facts&lt;/code&gt;, and watch Alexa speaking the fact. :D&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/test-skill.png&quot; alt=&quot;Skill Test&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Enter the distribution and Certification details as required, and submit the skill for certification. It takes a few days to hear back from the Amazon Developer Team. If your Skill is approved then everything works and all of the information is agreeing to their standards. Your Skill will be certified and published and available for others to use. If not, you will receive feedback and suggestions on what you need to to to resolve any issues so you can re-submit.&lt;/p&gt;
+
+&lt;p&gt;If your skill is unique across the alexa skills present, you’ll also receive the limited edition T-Shirt.&lt;/p&gt;
+
+&lt;p&gt;Hope you learned on how to build skills, if you develop more you’ll have more familiarity with JavaScript and Node.js. It’s very different creating something that is voice activated by an end user as compared to reading on a screen. Hoping to see more Alexa developers, feel free to contact in case there is any issue developing a skill.&lt;/p&gt;
+
+&lt;!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk]. --&gt;</content><author><name></name></author><summary type="html">Introduction Learning to build voice user interface is a great skill to have as devices like the Amazon Echo and Google Home are gaining popularity. Amazon is currently running an incentive program this July(2018) for people developing Alexa Skills. You develop a new skill and get a limited-edition Alexa developer T-shirt! If more than 100 customers enable and use your skill in the first 30 days of publication, you could also receive an Echo Dot.</summary></entry><entry><title type="html">Chaos Engineering</title><link href="http://localhost:4000/chaos-engineering/" rel="alternate" type="text/html" title="Chaos Engineering" /><published>2017-12-19T21:32:40+05:30</published><updated>2017-12-19T21:32:40+05:30</updated><id>http://localhost:4000/chaos-engineering</id><content type="html" xml:base="http://localhost:4000/chaos-engineering/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Many of us would have heard about the two major WhatsApp outages recently when it was down for about an hour each time. For the general public, WhatsApp was down for an hour. But for software engineers, WhatsApp was back within an hour. This made me wonder what it was, that enabled the engineers working at WhatsApp to restore the services so fast.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/whatsapp-outage.png&quot; alt=&quot;WhatsApp Outage&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What if I tell you, it was a very &lt;strong&gt;normal&lt;/strong&gt; turbulent production failure for them. Yes, huge companies like &lt;a href=&quot;https://www.netflix.com/in/&quot;&gt;Netflix&lt;/a&gt;, &lt;a href=&quot;https://www.facebook.com/&quot;&gt;Facebook&lt;/a&gt; and &lt;a href=&quot;https://www.google.co.in/&quot;&gt;Google&lt;/a&gt; use a method of engineering called &lt;strong&gt;Chaos Engineering&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;To explain Chaos Engineering in layman terms :
+To be good at something , if one practices it in extreme conditions then it would get easier for the person to perform in normal conditions. Similarly if a software engineer has seen extreme conditions in production, it becomes a challenge for him/her to code in such a way that their service fails if such an extreme condition occurs. If at all it comes, they would have experienced it before and so it becomes easy to bring the services back.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/chaos-engineering.png&quot; alt=&quot;Chaos Engineering&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;principle-of-chaos-engineering&quot;&gt;Principle of Chaos Engineering&lt;/h2&gt;
+
+&lt;p&gt;The main idea of Chaos Engineering is to intentionally inject failures so as to be prepared for the worst conditions.
+A formal definition for Chaos Engineering given by Netflix:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Chaos Engineering is the discipline of experimenting on a distributed system in order to build confidence in the system’s capability to withstand turbulent conditions in production.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Chaos Engineering can be thought of as the facilitation of experiments to uncover systemic weaknesses. These experiments follow four steps:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Start by defining ‘steady state’ as some measurable output of a system that indicates normal behavior.&lt;/li&gt;
+  &lt;li&gt;Hypothesize that this steady state will continue in both the control group and the experimental group.&lt;/li&gt;
+  &lt;li&gt;Introduce variables that reflect real world events like servers that crash, hard drives that malfunction, network connections that are severed, etc.&lt;/li&gt;
+  &lt;li&gt;Try to disprove the hypothesis by looking for a difference in steady state between the control group and the experimental group.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The harder it is to disrupt the steady state, the more confidence we have in the behavior of the system. If a weakness is uncovered, we now have a target for improvement before that behavior manifests in the system at large.
+In layman terms: Break your system, see the difference between steady state and experimental state, lesser the difference, lesser it will break in production. If the difference is more, you have a target for improvement before actually experiencing it in production.&lt;/p&gt;
+
+&lt;h2 id=&quot;practical-use&quot;&gt;Practical Use&lt;/h2&gt;
+
+&lt;p&gt;Netflix, a pioneer in the field of Chaos Engineering, uses a tool called Chaos Monkey. It randomly picks a server from production deployment on AWS (Amazon Web Services) and kills it. Executives at Netflix knew that server failures are guaranteed to happen and they wanted servers to fail during working-hours so that it could be fixed it in the presence of their engineers. They knew that they could rely on engineers to build resilient solutions if they were given context to expect servers to fail. If they could align their engineers to build services that survive a server failure, then when it actually happened, it wouldn’t be a big deal.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-can-it-help-you&quot;&gt;How can it help you?&lt;/h2&gt;
+
+&lt;p&gt;Suppose your team has built the next wave of advancement the whole world has been waiting for. You are to launch your service but there are questions rumbling in your mind:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Is your application ready for production?&lt;/li&gt;
+  &lt;li&gt;Will the system survive the failures of other companies you are dependent on?&lt;/li&gt;
+  &lt;li&gt;Will the system survive the failure of your own configurations?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The truth is : You can never be sure . There will always be something that can be wrong or will go wrong. Some things aren’t in your control like denial-of-service attacks or network failures. Sometimes, bad things just happen.&lt;/p&gt;
+
+&lt;p&gt;Possibly The only solution for it is to build quality software that is resilient to failures. As the saying goes - &lt;em&gt;“Hope for the best, prepare for the worst”&lt;/em&gt;
+But how can your team be sure that your system is ready for production and is ready to face all difficulties/failures? &lt;em&gt;This is where Chaos Engineering comes into picture.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;does-this-seem-like-testing&quot;&gt;Does this seem like testing?&lt;/h2&gt;
+
+&lt;p&gt;It may indeed sound like it, but it definitely isn’t testing. Chaos Engineering is an experiment on the production environment and there is certainly no way to accurately duplicate production environment at scale (as in testing). The experiment itself is going to have a systemic effect that could change your results, so the only way to accurately build conflict in the system that you have now is to experiment on it.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;The purpose of Chaos Engineering is to experience disastrous conditions. This might sound like a difficult task and it does require a lot of creativity but the extra effort is worth it. You must inject failures in your system such that certain part of your infrastructure becomes unavailable. Some examples are : terminate cluster machines, kill worker processes, delete database tables, cut off access to internal-external services, etc. Later you can also simulate events capable of disrupting steady state like high latency due to slow networks.&lt;/p&gt;
+
+&lt;p&gt;These experiments are a bit difficult but whatever you decide to do, you’ll be surprised at how much you can learn from chaos.
+There are a lot of tools worth mentioning :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Netflix/chaosmonkey&quot;&gt;Chaos Monkey&lt;/a&gt; - A resiliency tool that helps applications tolerate random instance failures&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Netflix/SimianArmy&quot;&gt;The Simian Army&lt;/a&gt; - A suite of tools for keeping your cloud operating in top form&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/asobti/kube-monkey&quot;&gt;kube-monkey&lt;/a&gt; - An implementation of Netflix’s Chaos Monkey for Kubernetes clusters&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.gremlin.com/&quot;&gt;Gremlin Inc.&lt;/a&gt; - Failure as a Service&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/alexei-led/pumba&quot;&gt;Pumba&lt;/a&gt; - Chaos testing and network emulation for Docker containers (and clusters)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/chaostoolkit/chaostoolkit&quot;&gt;Chaos Toolkit&lt;/a&gt; - A chaos engineering toolkit to help you build confidence in your software system&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/github/orchestrator&quot;&gt;orchestrator&lt;/a&gt; - MySQL replication topology management and HA&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I hope you got an idea about Chaos Engineering - a powerful approach to build resilient systems!&lt;/p&gt;
+
+&lt;!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
+ --&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry></feed>
