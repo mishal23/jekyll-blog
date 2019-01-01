@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Alexa Fact Skill"
-date:   2018-07-25 21:32:40 +0200
+date:   2018-07-25 21:32:40 +0530
 img: 
 description: Learning to build voice user interface is a great skill to have as devices like the Amazon Echo and Google Home are gaining popularity. Find out more on how to develop a basic fact skill for Amazon Alexa.
 ---
