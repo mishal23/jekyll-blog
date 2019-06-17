@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>My GSoC Project - Mishal Shah</title>
+	<meta name="description" content="A brief into the project, the organization and the gains out of the community bonding period.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#2d2a2a">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#2d2a2a">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#2d2a2a">
+
+	<link href="https://fonts.googleapis.com/css?family=Finger+Paint|PT+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <aside class="sidebar">
+
+  <div class="sidebar-container">
+    <div class="sidebar-logo">
+      <a href="/" class="logo">Mishal Shah</a>
+    </div>
+
+    <menu class="sidebar-menu">
+      <li class="menu-items"><a class="menu-links" href="/">Home</a></li>
+      <li class="menu-items"><a class="menu-links" href="/about/">About</a></li>
+      <li class="menu-items"><a class="menu-links" href="/projects/">Projects</a></li>
+      <li class="menu-items"><a class="menu-links" href="/contact/">Contact</a></li>
+    </menu>
+
+    <div class="sidebar-social">
+      <li class="social-items"><a href="mailto:shahmishal1998@gmail.com" class="social-links"><i class="social-icons fa fa-envelope" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://github.com/mishal23" class="social-links"><i class="social-icons fa fa-github" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://linkedin.com/in/mishal23/" class="social-links"><i class="social-icons fa fa-linkedin" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://www.facebook.com/mishal.shah.7731" class="social-links"><i class="social-icons fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://twitter.com/1998Mishal" class="social-links"><i class="social-icons fa fa-twitter" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://plus.google.com/u/0/101714954506157781527" class="social-links"><i class="social-icons fa fa-google-plus" aria-hidden="true"></i></a></li>
+    </div>
+
+  </div>
+</aside>
+
+  <main role="main">
+    <div class="content">
+      <article class="page-article">
+  <div class="wrap-content">
+    <header class="page-header">
+      <h1 class="page-title">My GSoC Project</h1>
+      <div class="page-date"><span>2019, May 28&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+    </header>
+    <div class="page-content">
+      
+      <p>Excerpt from the <a href="../journey-to-gsoc-2019">previous post</a>: Got accepted for GSoC 2019 with the <a href="https://summerofcode.withgoogle.com/organizations/4845767460651008/">ns-3 organization</a>.</p>
+
+<p>The previous post mainly covered about my journey to GSoC 2019, but didn’t speak anything about the organization and the project. This post is targetted to cover that.</p>
+
+<h2 id="what-is-ns-3">What is ns-3?</h2>
+
+<p><img src="/assets/img/gsoc/ns-3.png" alt="ns-3 org logo" /></p>
+
+<p>ns-3 is a discrete-event network simulator for Internet systems, targeted primarily for research and educational use. ns-3 is publicly available for research, development, and use.</p>
+
+<p>The goal of the ns-3 project is to develop a preferred, open simulation environment for networking research: it should be aligned with the simulation needs of modern networking research and should encourage community contribution, peer review, and validation of the software.</p>
+
+<p>I had previously worked with ns-3 to implement <a href="https://github.com/mishal23/Implementation-of-TCP-New-Vegas-in-ns3/">TCP New Vegas in ns-3</a> in the Computer Networks course project.</p>
+
+<p>The project that I’ll be working on during GSoC is: <a href="https://summerofcode.withgoogle.com/projects/#5385832846852096">Improving the ns-3 AppStore and linking with Bake</a></p>
+
+<h2 id="what-is-ns-3-appstore">What is ns-3 AppStore?</h2>
+
+<p>The ns-3 AppStore is a supplemental web site allowing users to find and learn about extensions to the mainline ns-3 releases.</p>
+
+<h3 id="motivations-for-the-ns-3-appstore">Motivations for the ns-3 AppStore</h3>
+
+<ul>
+  <li>Provide a central place for structured information about ns-3 extensions,</li>
+  <li>Move the ns-3 project towards a more federated development environment with a smaller core,</li>
+  <li>Provide guidelines to reduce the software incompatibility between various extensions.</li>
+</ul>
+
+<h2 id="what-is-bake">What is Bake?</h2>
+
+<p>Bake was developed to automate the reproducible build of ns-3 taking into account that this build may be composed of a number of interdependent projects. Bake was developed to simplify the assembly of these pieces of software in a coherent and useful way. It is a tool for coordinated software building from multiple repositories, developed for the ns-3 project.</p>
+
+<h3 id="existing-features-in-bake">Existing Features in Bake</h3>
+
+<ul>
+  <li>Automatic handling of dependencies</li>
+  <li>Automatic download of the required sources</li>
+  <li>Automatic correct build of the required modules</li>
+  <li>Off-line installation and build capabilities</li>
+</ul>
+
+<h2 id="gsoc-project">GSoC Project</h2>
+
+<p>ns-3 has certain modules into it’s core and quite of them are also made by researchers/developers, however to reduce the size of the core not all modules are merged into the mainline of the ns-3 and are maintained seperately with the flexibilty to use them by downloading the module in the <code class="highlighter-rouge">contrib/</code> directory of the ns-3. The AppStore maintains the modules developed by the researchers/developers. Although the ns-3-AppStore and the Bake build system exists, both of them function independently. If the AppStore and the Bake build system start interacting with each other, it would make it easier for the developers to install the new modules. That’s the project goal! Make it easier for the ns-developers to install new modules. While install of a module is done other features such as update the module, search for a module, fetch the module configuration file also will be supported. For that the AppStore will be needed to send necessary configuration file and other details through REST APIs and then add command line features to bake which would eventually download the module repo, install the necessary dependencies and finally build the source tree.</p>
+
+<p>Since the ns-3-AppStore uses Python2.7 and Django 1.8, one of the tasks will also be to upgrade it to the latest versions to keep up with the technology and also since Python2.7 support is going to end by January, 2020. Some additional features to the ns-3-AppStore such as multi-threaded comments and download statistics for the modules are also planned.</p>
+
+<h2 id="community-bonding-period">Community Bonding Period</h2>
+
+<p>The community bonding period has ended and it mainly focused on setting up development environment and understanding the code base of the Bake build system, testing and understanding the existing functionalities, and the work flow. My mentor also suggested me to research about the various cases and build a strong plan, so that the coding period stays smooth. I also started documenting the ns-3-AppStore: user-workflow and the user-guide, which helped me better understand the exisiting functionalities of the AppStore.</p>
+
+
+    </div>
+    
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    this.page.url = 'http://localhost:4000/my-gsoc-project/';
+    this.page.identifier = 'http://localhost:4000/my-gsoc-project/';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://mishal23.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  </div>
+</article>
+
+    </div>
+  </main>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110715968-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>
