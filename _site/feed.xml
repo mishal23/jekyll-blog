@@ -1,54 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-17T17:48:30+05:30</updated><id>http://localhost:4000/</id><title type="html">Mishal Shah</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><entry><title type="html">My GSoC Project</title><link href="http://localhost:4000/my-gsoc-project/" rel="alternate" type="text/html" title="My GSoC Project" /><published>2019-05-28T21:32:40+05:30</published><updated>2019-05-28T21:32:40+05:30</updated><id>http://localhost:4000/my-gsoc-project</id><content type="html" xml:base="http://localhost:4000/my-gsoc-project/">&lt;p&gt;Excerpt from the &lt;a href=&quot;../journey-to-gsoc-2019&quot;&gt;previous post&lt;/a&gt;: Got accepted for GSoC 2019 with the &lt;a href=&quot;https://summerofcode.withgoogle.com/organizations/4845767460651008/&quot;&gt;ns-3 organization&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-20T01:58:36+05:30</updated><id>http://localhost:4000/</id><title type="html">Mishal Shah</title><subtitle>Mishal Shah</subtitle><entry><title type="html">My GSoC Project</title><link href="http://localhost:4000/my-gsoc-project/" rel="alternate" type="text/html" title="My GSoC Project" /><published>2019-05-28T21:32:40+05:30</published><updated>2019-05-28T21:32:40+05:30</updated><id>http://localhost:4000/my-gsoc-project</id><content type="html" xml:base="http://localhost:4000/my-gsoc-project/">Excerpt from the [previous post](../journey-to-gsoc-2019): Got accepted for GSoC 2019 with the [ns-3 organization][ns3-gsoc].
 
-&lt;p&gt;The previous post mainly covered about my journey to GSoC 2019, but didn’t speak anything about the organization and the project. This post is targetted to cover that.&lt;/p&gt;
+The previous post mainly covered about my journey to GSoC 2019, but didn't speak anything about the organization and the project. This post is targetted to cover that.
 
-&lt;h2 id=&quot;what-is-ns-3&quot;&gt;What is ns-3?&lt;/h2&gt;
+## What is ns-3?
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/gsoc/ns-3.png&quot; alt=&quot;ns-3 org logo&quot; /&gt;&lt;/p&gt;
+![ns-3 org logo]({{&quot;/assets/img/gsoc/ns-3.png&quot;}})
 
-&lt;p&gt;ns-3 is a discrete-event network simulator for Internet systems, targeted primarily for research and educational use. ns-3 is publicly available for research, development, and use.&lt;/p&gt;
+ns-3 is a discrete-event network simulator for Internet systems, targeted primarily for research and educational use. ns-3 is publicly available for research, development, and use.
 
-&lt;p&gt;The goal of the ns-3 project is to develop a preferred, open simulation environment for networking research: it should be aligned with the simulation needs of modern networking research and should encourage community contribution, peer review, and validation of the software.&lt;/p&gt;
+The goal of the ns-3 project is to develop a preferred, open simulation environment for networking research: it should be aligned with the simulation needs of modern networking research and should encourage community contribution, peer review, and validation of the software.
 
-&lt;p&gt;I had previously worked with ns-3 to implement &lt;a href=&quot;https://github.com/mishal23/Implementation-of-TCP-New-Vegas-in-ns3/&quot;&gt;TCP New Vegas in ns-3&lt;/a&gt; in the Computer Networks course project.&lt;/p&gt;
+I had previously worked with ns-3 to implement [TCP New Vegas in ns-3][tcp-newvegas] in the Computer Networks course project. 
 
-&lt;p&gt;The project that I’ll be working on during GSoC is: &lt;a href=&quot;https://summerofcode.withgoogle.com/projects/#5385832846852096&quot;&gt;Improving the ns-3 AppStore and linking with Bake&lt;/a&gt;&lt;/p&gt;
+The project that I'll be working on during GSoC is: [Improving the ns-3 AppStore and linking with Bake][gsoc-project]
 
-&lt;h2 id=&quot;what-is-ns-3-appstore&quot;&gt;What is ns-3 AppStore?&lt;/h2&gt;
+## What is ns-3 AppStore?
 
-&lt;p&gt;The ns-3 AppStore is a supplemental web site allowing users to find and learn about extensions to the mainline ns-3 releases.&lt;/p&gt;
+The ns-3 AppStore is a supplemental web site allowing users to find and learn about extensions to the mainline ns-3 releases.
 
-&lt;h3 id=&quot;motivations-for-the-ns-3-appstore&quot;&gt;Motivations for the ns-3 AppStore&lt;/h3&gt;
+### Motivations for the ns-3 AppStore
 
-&lt;ul&gt;
-  &lt;li&gt;Provide a central place for structured information about ns-3 extensions,&lt;/li&gt;
-  &lt;li&gt;Move the ns-3 project towards a more federated development environment with a smaller core,&lt;/li&gt;
-  &lt;li&gt;Provide guidelines to reduce the software incompatibility between various extensions.&lt;/li&gt;
-&lt;/ul&gt;
+* Provide a central place for structured information about ns-3 extensions,
+* Move the ns-3 project towards a more federated development environment with a smaller core,
+* Provide guidelines to reduce the software incompatibility between various extensions.
 
-&lt;h2 id=&quot;what-is-bake&quot;&gt;What is Bake?&lt;/h2&gt;
+## What is Bake?
 
-&lt;p&gt;Bake was developed to automate the reproducible build of ns-3 taking into account that this build may be composed of a number of interdependent projects. Bake was developed to simplify the assembly of these pieces of software in a coherent and useful way. It is a tool for coordinated software building from multiple repositories, developed for the ns-3 project.&lt;/p&gt;
+Bake was developed to automate the reproducible build of ns-3 taking into account that this build may be composed of a number of interdependent projects. Bake was developed to simplify the assembly of these pieces of software in a coherent and useful way. It is a tool for coordinated software building from multiple repositories, developed for the ns-3 project.
 
-&lt;h3 id=&quot;existing-features-in-bake&quot;&gt;Existing Features in Bake&lt;/h3&gt;
+### Existing Features in Bake
 
-&lt;ul&gt;
-  &lt;li&gt;Automatic handling of dependencies&lt;/li&gt;
-  &lt;li&gt;Automatic download of the required sources&lt;/li&gt;
-  &lt;li&gt;Automatic correct build of the required modules&lt;/li&gt;
-  &lt;li&gt;Off-line installation and build capabilities&lt;/li&gt;
-&lt;/ul&gt;
+* Automatic handling of dependencies
+* Automatic download of the required sources
+* Automatic correct build of the required modules
+* Off-line installation and build capabilities
 
-&lt;h2 id=&quot;gsoc-project&quot;&gt;GSoC Project&lt;/h2&gt;
+## GSoC Project
 
-&lt;p&gt;ns-3 has certain modules into it’s core and quite of them are also made by researchers/developers, however to reduce the size of the core not all modules are merged into the mainline of the ns-3 and are maintained seperately with the flexibilty to use them by downloading the module in the &lt;code class=&quot;highlighter-rouge&quot;&gt;contrib/&lt;/code&gt; directory of the ns-3. The AppStore maintains the modules developed by the researchers/developers. Although the ns-3-AppStore and the Bake build system exists, both of them function independently. If the AppStore and the Bake build system start interacting with each other, it would make it easier for the developers to install the new modules. That’s the project goal! Make it easier for the ns-developers to install new modules. While install of a module is done other features such as update the module, search for a module, fetch the module configuration file also will be supported. For that the AppStore will be needed to send necessary configuration file and other details through REST APIs and then add command line features to bake which would eventually download the module repo, install the necessary dependencies and finally build the source tree.&lt;/p&gt;
+ns-3 has certain modules into it's core and quite of them are also made by researchers/developers, however to reduce the size of the core not all modules are merged into the mainline of the ns-3 and are maintained seperately with the flexibilty to use them by downloading the module in the ```contrib/``` directory of the ns-3. The AppStore maintains the modules developed by the researchers/developers. Although the ns-3-AppStore and the Bake build system exists, both of them function independently. If the AppStore and the Bake build system start interacting with each other, it would make it easier for the developers to install the new modules. That's the project goal! Make it easier for the ns-developers to install new modules. While install of a module is done other features such as update the module, search for a module, fetch the module configuration file also will be supported. For that the AppStore will be needed to send necessary configuration file and other details through REST APIs and then add command line features to bake which would eventually download the module repo, install the necessary dependencies and finally build the source tree.
 
-&lt;p&gt;Since the ns-3-AppStore uses Python2.7 and Django 1.8, one of the tasks will also be to upgrade it to the latest versions to keep up with the technology and also since Python2.7 support is going to end by January, 2020. Some additional features to the ns-3-AppStore such as multi-threaded comments and download statistics for the modules are also planned.&lt;/p&gt;
+Since the ns-3-AppStore uses Python2.7 and Django 1.8, one of the tasks will also be to upgrade it to the latest versions to keep up with the technology and also since Python2.7 support is going to end by January, 2020. Some additional features to the ns-3-AppStore such as multi-threaded comments and download statistics for the modules are also planned.
 
-&lt;h2 id=&quot;community-bonding-period&quot;&gt;Community Bonding Period&lt;/h2&gt;
+## Community Bonding Period
 
-&lt;p&gt;The community bonding period has ended and it mainly focused on setting up development environment and understanding the code base of the Bake build system, testing and understanding the existing functionalities, and the work flow. My mentor also suggested me to research about the various cases and build a strong plan, so that the coding period stays smooth. I also started documenting the ns-3-AppStore: user-workflow and the user-guide, which helped me better understand the exisiting functionalities of the AppStore.&lt;/p&gt;</content><author><name></name></author><summary type="html">Excerpt from the previous post: Got accepted for GSoC 2019 with the ns-3 organization.</summary></entry><entry><title type="html">Journey to GSoC 2019</title><link href="http://localhost:4000/journey-to-gsoc-2019/" rel="alternate" type="text/html" title="Journey to GSoC 2019" /><published>2019-05-07T21:32:40+05:30</published><updated>2019-05-07T21:32:40+05:30</updated><id>http://localhost:4000/journey-to-gsoc-2019</id><content type="html" xml:base="http://localhost:4000/journey-to-gsoc-2019/">6th May, 2019. I came back to home after playing cricket with my friends at around 10:45 pm, Took a quick shower and sat to check the results at 11:30 pm. Reloaded the dashboard at 11:30 pm and there was my name. Finally! I got selected as a Student Developer in Google Summer of Code, 2019 with [The ns-3 Network Simulator Project][ns3-gsoc]. The official mail came a bit late, but the website had the results on time.
+The community bonding period has ended and it mainly focused on setting up development environment and understanding the code base of the Bake build system, testing and understanding the existing functionalities, and the work flow. My mentor also suggested me to research about the various cases and build a strong plan, so that the coding period stays smooth. I also started documenting the ns-3-AppStore: user-workflow and the user-guide, which helped me better understand the exisiting functionalities of the AppStore.
+
+
+[ns3-gsoc]: https://summerofcode.withgoogle.com/organizations/4845767460651008/
+[gsoc-project]: https://summerofcode.withgoogle.com/projects/#5385832846852096
+[tcp-newvegas]: https://github.com/mishal23/Implementation-of-TCP-New-Vegas-in-ns3/
+[ns-3website]: http://nsnam.org/
+[ns-3project]: https://www.nsnam.org/wiki/GSOC2019Projects#Improving_the_ns-3_AppStore_and_linking_with_bake
+[tom]: http://www.tomh.org/
+[abhijith]: https://github.com/abhijithanilkumar/
+[ankit]: http://adeepkit01.github.io/</content><author><name></name></author><summary type="html">Excerpt from the previous post: Got accepted for GSoC 2019 with the ns-3 organization.</summary></entry><entry><title type="html">Journey to GSoC 2019</title><link href="http://localhost:4000/journey-to-gsoc-2019/" rel="alternate" type="text/html" title="Journey to GSoC 2019" /><published>2019-05-07T21:32:40+05:30</published><updated>2019-05-07T21:32:40+05:30</updated><id>http://localhost:4000/journey-to-gsoc-2019</id><content type="html" xml:base="http://localhost:4000/journey-to-gsoc-2019/">6th May, 2019. I came back to home after playing cricket with my friends at around 10:45 pm, Took a quick shower and sat to check the results at 11:30 pm. Reloaded the dashboard at 11:30 pm and there was my name. Finally! I got selected as a Student Developer in Google Summer of Code, 2019 with [The ns-3 Network Simulator Project][ns3-gsoc]. The official mail came a bit late, but the website had the results on time.
 
 ![GSoC 2019 Acceptance]({{&quot;/assets/img/gsoc/gsoc-acceptance.png&quot;}})
 
