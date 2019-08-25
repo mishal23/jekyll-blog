@@ -50,7 +50,7 @@ This section covers the actual work done during the GSoC Period in terms of cont
 ### Phase 3
 
 - [#53](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/53): This PR modified the Install API to POST Request to take the input parameters of the configured ns version and the module name and the version.
-- [#2](https://gitlab.com/nsnam/bake/merge_requests/2): This PR updated the bake `getconf`, `install` functionality to downnload the module only if the ns version is compatible with the module versions.
+- [#2](https://gitlab.com/nsnam/bake/merge_requests/2): This PR updated the bake `getconf`, `install` functionality to download the module only if the ns version is compatible with the module versions.
 - [#55](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/55): This PR added the Dependency Management to show the dependencies of the App from the bakefile of the latest version.
 - [#56](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/56): This PR fixed the busted rating UI by using a different package and with various features. Added average count and the number of ratings.
 - [#58](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/58): Fixed the issues in the GCI Tests and added tests for the Django REST APIs made.
