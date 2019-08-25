@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>ns-3 GSoC 2019 Report - Mishal Shah</title>
+	<meta name="description" content="Mishal Shah - B.Tech in Computer Science at NITK, Surathakal.">
+	<meta name="keywords" content="Mishal Shah, mishal23, GSoC, Google Summer of Code, ns-3, ns-3-AppStore, Chaos Engineering, Backend Developer, Alexa, IRIS NITK, IE NITK">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<meta property="og:title" content="Mishal Shah" />
+	<meta property="og:description" content="Mishal Shah - B.Tech in Computer Science at NITK, Surathakal" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://mishal23.github.io" />
+	<meta property="og:image" content="/assets/img/mishal23.jpeg">
+
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#2d2a2a">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#2d2a2a">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#2d2a2a">
+
+	<link href="https://fonts.googleapis.com/css?family=Finger+Paint|PT+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/css/main.css">
+
+	<script type="application/ld+json">
+		{
+			"@context": "https://mishal23.github.io",
+			"@type": "Person",
+			"url": "https://mishal23.github.io",
+			"name": "Mishal Shah",
+			"email": "shahmishal1998@gmail.com"
+		}
+	</script>
+</head>
+
+<body>
+
+  <aside class="sidebar">
+
+  <div class="sidebar-container">
+    <div class="sidebar-logo">
+      <a href="/" class="logo">Mishal Shah</a>
+    </div>
+
+    <menu class="sidebar-menu">
+      <li class="menu-items"><a class="menu-links" href="/">Home</a></li>
+      <li class="menu-items"><a class="menu-links" href="/about/">About</a></li>
+      <li class="menu-items"><a class="menu-links" href="/projects/">Projects</a></li>
+      <li class="menu-items"><a class="menu-links" href="/contact/">Contact</a></li>
+    </menu>
+
+    <div class="sidebar-social">
+      <li class="social-items"><a href="mailto:shahmishal1998@gmail.com" class="social-links"><i class="social-icons fa fa-envelope" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://github.com/mishal23" class="social-links"><i class="social-icons fa fa-github" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://linkedin.com/in/mishal23/" class="social-links"><i class="social-icons fa fa-linkedin" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://www.facebook.com/mishal.shah.7731" class="social-links"><i class="social-icons fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://twitter.com/1998Mishal" class="social-links"><i class="social-icons fa fa-twitter" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://plus.google.com/u/0/101714954506157781527" class="social-links"><i class="social-icons fa fa-google-plus" aria-hidden="true"></i></a></li>
+    </div>
+
+  </div>
+</aside>
+
+  <main role="main">
+    <div class="content">
+      <article class="page-article">
+  <div class="wrap-content">
+    <header class="page-header">
+      <h1 class="page-title">ns-3 GSoC 2019 Report</h1>
+      <div class="page-date"><span>2019, Aug 25&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+    </header>
+    <div class="page-content">
+      
+      <h1 id="introduction">Introduction</h1>
+
+<p>Google Summer of Code has been an amazing opportunity for me to be part of the open source culture and contribute to the community. It was an amazing journey with a lot of hurdles once the college started (placements, academics, extra-curricular), but the help and support from the mentors had been amazing and could pass through it. Super thankful to my mentors <a href="https://github.com/abhijithanilkumar/">@abhijithanilkumar</a> and <a href="https://github.com/adeepkit01">@adeepkit01</a> for their continuous guidance and help throughout the period. I would also like to thank <a href="http://www.tomh.org/">@tomh</a> sir - the ns-3 Organization Admin for his valuable guidance and suggestions.</p>
+
+<h1 id="project-outline">Project Outline</h1>
+
+<p><strong>Project:</strong> Improving the ns-3-AppStore and Linking with Bake.</p>
+
+<p>The project plan for each period was as follows:</p>
+
+<ol>
+  <li><strong>Community Bonding</strong> - Get familiar with the codebase of the AppStore and the Bake build system.</li>
+  <li><strong>Phase 1</strong> - Port the ns-3-AppStore to the latest version of Django &amp; to Python3, Build the REST API for install for bake to interact with the AppStore, and adding the <code class="highlighter-rouge">install</code> command to Bake.</li>
+  <li><strong>Phase 2</strong> - Adding the <code class="highlighter-rouge">update</code> command line option to Bake, Add OAuth support for Gitlab &amp; Github to the AppStore, download statistics for each extension.</li>
+  <li><strong>Phase 3</strong> - Multi Threaded Commenting, Dependency Management for the Apps, Improve the Ratings UI.</li>
+</ol>
+
+<h2 id="pull-requests">Pull Requests</h2>
+
+<p>This section covers the actual work done during the GSoC Period in terms of contributed code/documentation/tests.</p>
+
+<h3 id="community-bonding-period">Community Bonding Period</h3>
+
+<ul>
+  <li><a href="https://github.com/abhijithanilkumar/ns-3-AppStore/pull/45">#45</a>: This PR added documentation for the users on the ns-3-AppStore</li>
+</ul>
+
+<h3 id="phase-1">Phase 1</h3>
+
+<ul>
+  <li><a href="https://github.com/abhijithanilkumar/ns-3-AppStore/pull/47">#47</a>: This PR ported the ns-3-AppStore to the latest version of Django &amp; to Python 3.6, and code converted to follow PEP8 Guidelines</li>
+  <li><a href="https://github.com/abhijithanilkumar/ns-3-AppStore/pull/48">#48</a>: This PR added the install and search REST APIs for the bake command line to interact.</li>
+  <li><a href="https://github.com/abhijithanilkumar/ns-3-AppStore/pull/48">#48</a>: Documented the REST APIs, setup rate limiting for the APIs to avoid any attacks.</li>
+  <li><a href="https://gitlab.com/nsnam/bake/merge_requests/2">#2</a>: This PR added the <code class="highlighter-rouge">getconf</code>, <code class="highlighter-rouge">install</code> and <code class="highlighter-rouge">search</code> options to Bake build System.</li>
+</ul>
+
+<h3 id="phase-2">Phase 2</h3>
+
+<ul>
+  <li><a href="https://gitlab.com/nsnam/bake/merge_requests/2">#2</a>: Added regression tests for the command line capabilities added in Bake.</li>
+  <li><a href="https://docs.google.com/document/d/1GBUEQYbSuYFPxoKXJLZaqhRlh0xkNwizFPmNVWEmi5Y/edit?usp=sharing">Commenting Proposal</a>: Prepared a proposal for various commenting features suitable for the ns-3-AppStore.</li>
+  <li><a href="https://github.com/abhijithanilkumar/ns-3-AppStore/pull/48">#48</a>: This PR modified the Search API to use Pagination.</li>
+  <li><a href="https://github.com/abhijithanilkumar/ns-3-AppStore/pull/49">#49</a>: This PR added the filtering techniques with a minimal UI one-click for Fork/Modules/All.</li>
+  <li><a href="https://github.com/abhijithanilkumar/ns-3-AppStore/pull/52">#52</a>: Thus PR added the download count per release and per date for each app whenever a getconf/install option is triggered.</li>
+  <li><a href="https://github.com/abhijithanilkumar/ns-3-AppStore/pull/53">#53</a>: This PR updated the exisiting Search API to POST Request to take the input parameters of the configured ns versions and the keyword to search</li>
+  <li><a href="https://gitlab.com/nsnam/bake/merge_requests/2">#2</a>: This PR updated the bake search functionality to get the apps based on the currently enabled ns versions.</li>
+</ul>
+
+<h3 id="phase-3">Phase 3</h3>
+
+<ul>
+  <li><a href="https://github.com/abhijithanilkumar/ns-3-AppStore/pull/53">#53</a>: This PR modified the Install API to POST Request to take the input parameters of the configured ns version and the module name and the version.</li>
+  <li><a href="https://gitlab.com/nsnam/bake/merge_requests/2">#2</a>: This PR updated the bake <code class="highlighter-rouge">getconf</code>, <code class="highlighter-rouge">install</code> functionality to downnload the module only if the ns version is compatible with the module versions.</li>
+  <li><a href="https://github.com/abhijithanilkumar/ns-3-AppStore/pull/55">#55</a>: This PR added the Dependency Management to show the dependencies of the App from the bakefile of the latest version.</li>
+  <li><a href="https://github.com/abhijithanilkumar/ns-3-AppStore/pull/56">#56</a>: This PR fixed the busted rating UI by using a different package and with various features. Added average count and the number of ratings.</li>
+  <li><a href="https://github.com/abhijithanilkumar/ns-3-AppStore/pull/58">#58</a>: Fixed the issues in the GCI Tests and added tests for the Django REST APIs made.</li>
+</ul>
+
+<h3 id="miscellaneous-work">Miscellaneous Work</h3>
+
+<ul>
+  <li><a href="https://www.nsnam.org/wiki/GSOC2019AppStore">Wiki: Weekly Updates</a>: Weekly Updates of the work during the GSoC 2019 time period.</li>
+  <li><a href="https://mishal23.github.io/journey-to-gsoc-2019/">Blog: Journey to GSoC 2019</a>: A bit about my journey to getting accepted for GSoC 2019 with the ns-3 organization.</li>
+  <li><a href="https://mishal23.github.io/my-gsoc-project/">Blog: My GSoC Project</a>: A brief into the project, the organization and the gains out of the community bonding period.</li>
+  <li><a href="https://docs.google.com/document/d/1urES5k0sJl24u2RE7dkpNdGaISCSvdvEKEDp5h5lYgA/edit?usp=sharing">Phase 1 WorkFlow Document</a>: A workflow document for all the tasks done during Phase 1.</li>
+  <li><a href="https://docs.google.com/document/d/1PXJUNT2Er2s8jyFOE2VeAjlXGl7ZwUoQFuryH5VYfBE/edit?usp=sharing">Phase 2 WorkFlow Document</a>: A workflow document for all the tasks done during Phase 2.</li>
+</ul>
+
+<p>Inline code documentation was done for most of the codes, hence documentation was taken care.</p>
+
+<h3 id="what-is-left">What is left?</h3>
+
+<ul>
+  <li>Hosting Commento - A lot of effort was made to host commento locally both with nginx as well as docker, however wasn’t successfull enough to get it working perfectly (locally css &amp; js weren’t loading). Hopefully, when we setup the website on the server will be able to get commento hosted and get it working fully. Will be trying to host Commento on AWS Instance as well.</li>
+</ul>
+
+<h3 id="future-work">Future Work</h3>
+
+<p>After discussion with the mentor <a href="https://github.com/abhijithanilkumar/">@abhijithanilkumar</a>, the possible future work for the ns-3-AppStore is as follows:</p>
+<ul>
+  <li>Deploy the updated ns-3-AppStore on the new server.</li>
+  <li>Add code coverage for the AppStore and add tests for the missing code.</li>
+</ul>
+
+<p>Will be glad to help out in case any issues come up or any new feature requests are needed by the ns-3 Community.</p>
+
+<p>On the bake side, although the main part of <code class="highlighter-rouge">getconf</code>, <code class="highlighter-rouge">install</code>, <code class="highlighter-rouge">search</code> was done, there are a lot of other functionality expected on the Bake side which was out of scope for GSoC. Since, I’ve got familiar with the Bake codebase, I’ll be happy to contribute the feature requests from the ns-3 Community.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>An amazing journey comes to an end. I’m very thankful to all my friends, mentors and my parents and sister who helped and kept me motivated during the entire journey. Though GSoC 2019 comes to an end, I’m looking forward to contribute to Open Source and ns-3 Bake &amp; AppStore Project.</p>
+
+
+    </div>
+    
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    this.page.url = 'http://localhost:4000/gsoc19-report/';
+    this.page.identifier = 'http://localhost:4000/gsoc19-report/';
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://mishal23.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  </div>
+</article>
+
+    </div>
+  </main>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110715968-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>
