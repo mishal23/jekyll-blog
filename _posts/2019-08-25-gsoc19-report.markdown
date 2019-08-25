@@ -83,7 +83,7 @@ After discussion with my mentor [@abhijithanilkumar](https://github.com/abhijith
 
 Will be glad to help out in case any issues come up or any new feature requests are needed by the ns-3 Community.
 
-On the bake side, although the main part of `getconf`, `install`, `search` was done, there are a lot of other functionality expected on the Bake side which was out of scope for GSoC. Since, I've got familiar with the Bake codebase, I'll be happy to contribute the feature requests from the ns-3 Community.
+On the bake side, although the main part of `getconf`, `install`, `search` was done, there are a lot of other functionalities expected on the Bake side which was out of scope for GSoC. Since, I've got familiar with the Bake codebase, I'll be happy to contribute the feature requests from the ns-3 Community.
 
 ## Conclusion
 
