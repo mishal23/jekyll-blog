@@ -69,7 +69,7 @@ Inline code documentation was done for most of the codes, hence documentation wa
 
 - Hosting Commento - A lot of effort was made to host commento locally both with nginx as well as docker, however wasn't successfull enough to get it working perfectly (locally css & js weren't loading). Hopefully, when we setup the website on the server will be able to get commento hosted and get it working fully. Will be trying to host Commento on AWS Instance as well.
 
-### What extra was done?
+### Tasks done apart from the Proposed
 
 - On discussion with the mentors, they suggested to give priority to adding tests for the REST APIs, hence concentrated more on it and got it done alongwith fixing the GCI Tests since they were written in older version of Django, however for GSoC we migrated to the latest version of Django.
 - Filters for Fork/Modules/All was something needed by the community as per the discussions in the WNS3-2019, hence added a minimal one-click UI for that.
