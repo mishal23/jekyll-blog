@@ -77,7 +77,7 @@ Inline code documentation was done for most of the codes, hence documentation wa
 
 ### Future Work
 
-After discussion with the mentor [@abhijithanilkumar](https://github.com/abhijithanilkumar/), the possible future work for the ns-3-AppStore is as follows:
+After discussion with my mentor [@abhijithanilkumar](https://github.com/abhijithanilkumar/), the possible future work for the ns-3-AppStore is as follows:
 - Deploy the updated ns-3-AppStore on the new server.
 - Add code coverage for the AppStore and add tests for the missing code.
 
