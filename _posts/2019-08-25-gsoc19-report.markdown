@@ -39,7 +39,6 @@ This section covers the actual work done during the GSoC Period in terms of cont
 ### Phase 2
 
 - [#2](https://gitlab.com/nsnam/bake/merge_requests/2): Added regression tests for the command line capabilities added in Bake.
-- [Commenting Proposal](https://docs.google.com/document/d/1GBUEQYbSuYFPxoKXJLZaqhRlh0xkNwizFPmNVWEmi5Y/edit?usp=sharing): Prepared a proposal for various commenting features suitable for the ns-3-AppStore.
 - [#48](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/48): This PR modified the Search API to use Pagination.
 - [#49](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/49): This PR added the filtering techniques with a minimal UI one-click for Fork/Modules/All.
 - [#52](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/52): Thus PR added the download count per release and per date for each app whenever a getconf/install option is triggered.
@@ -58,6 +57,7 @@ This section covers the actual work done during the GSoC Period in terms of cont
 ### Miscellaneous Work
 
 - [Wiki: Weekly Updates](https://www.nsnam.org/wiki/GSOC2019AppStore): Weekly Updates of the work during the GSoC 2019 time period.
+- [Commenting Proposal](https://docs.google.com/document/d/1GBUEQYbSuYFPxoKXJLZaqhRlh0xkNwizFPmNVWEmi5Y/edit?usp=sharing): Prepared a proposal for various commenting features suitable for the ns-3-AppStore.
 - [Blog: Journey to GSoC 2019](https://mishal23.github.io/journey-to-gsoc-2019/): A bit about my journey to getting accepted for GSoC 2019 with the ns-3 organization. 
 - [Blog: My GSoC Project](https://mishal23.github.io/my-gsoc-project/): A brief into the project, the organization and the gains out of the community bonding period.
 - [Phase 1 WorkFlow Document](https://docs.google.com/document/d/1urES5k0sJl24u2RE7dkpNdGaISCSvdvEKEDp5h5lYgA/edit?usp=sharing): A workflow document for all the tasks done during Phase 1.
