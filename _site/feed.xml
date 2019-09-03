@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-26T01:21:48+05:30</updated><id>http://localhost:4000/</id><title type="html">Mishal Shah</title><subtitle>Mishal Shah</subtitle><entry><title type="html">ns-3 GSoC 2019 Report</title><link href="http://localhost:4000/gsoc19-report/" rel="alternate" type="text/html" title="ns-3 GSoC 2019 Report" /><published>2019-08-25T21:32:40+05:30</published><updated>2019-08-25T21:32:40+05:30</updated><id>http://localhost:4000/gsoc19-report</id><content type="html" xml:base="http://localhost:4000/gsoc19-report/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-03T22:53:07+05:30</updated><id>http://localhost:4000/</id><title type="html">Mishal Shah</title><subtitle>Mishal Shah</subtitle><entry><title type="html">ns-3 GSoC 2019 Report</title><link href="http://localhost:4000/gsoc19-report/" rel="alternate" type="text/html" title="ns-3 GSoC 2019 Report" /><published>2019-08-25T21:32:40+05:30</published><updated>2019-08-25T21:32:40+05:30</updated><id>http://localhost:4000/gsoc19-report</id><content type="html" xml:base="http://localhost:4000/gsoc19-report/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;Google Summer of Code has been an amazing opportunity for me to be part of the open source culture and contribute to the community. It was an amazing journey with a lot of hurdles once the college started (placements, academics, extra-curricular), but the help and support from the mentors had been amazing and could pass through it. Super thankful to my mentors &lt;a href=&quot;https://github.com/abhijithanilkumar/&quot;&gt;@abhijithanilkumar&lt;/a&gt; and &lt;a href=&quot;https://github.com/adeepkit01&quot;&gt;@adeepkit01&lt;/a&gt; for their continuous guidance and help throughout the period. I would also like to thank &lt;a href=&quot;http://www.tomh.org/&quot;&gt;@tomh&lt;/a&gt; sir - the ns-3 Organization Admin for his valuable guidance and suggestions.&lt;/p&gt;
 
@@ -50,7 +50,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/abhijithanilkumar/ns-3-AppStore/pull/53&quot;&gt;#53&lt;/a&gt;: This PR modified the Install API to POST Request to take the input parameters of the configured ns version and the module name and the version.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gitlab.com/nsnam/bake/merge_requests/2&quot;&gt;#2&lt;/a&gt;: This PR updated the bake &lt;code class=&quot;highlighter-rouge&quot;&gt;getconf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;install&lt;/code&gt; functionality to downnload the module only if the ns version is compatible with the module versions.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gitlab.com/nsnam/bake/merge_requests/2&quot;&gt;#2&lt;/a&gt;: This PR updated the bake &lt;code class=&quot;highlighter-rouge&quot;&gt;getconf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;install&lt;/code&gt; functionality to download the module only if the ns version is compatible with the module versions.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/abhijithanilkumar/ns-3-AppStore/pull/55&quot;&gt;#55&lt;/a&gt;: This PR added the Dependency Management to show the dependencies of the App from the bakefile of the latest version.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/abhijithanilkumar/ns-3-AppStore/pull/56&quot;&gt;#56&lt;/a&gt;: This PR fixed the busted rating UI by using a different package and with various features. Added average count and the number of ratings.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/abhijithanilkumar/ns-3-AppStore/pull/58&quot;&gt;#58&lt;/a&gt;: Fixed the issues in the GCI Tests and added tests for the Django REST APIs made.&lt;/li&gt;
@@ -74,9 +74,17 @@
   &lt;li&gt;Hosting Commento - A lot of effort was made to host commento locally both with nginx as well as docker, however wasn’t successfull enough to get it working perfectly (locally css &amp;amp; js weren’t loading). Hopefully, when we setup the website on the server will be able to get commento hosted and get it working fully. Will be trying to host Commento on AWS Instance as well.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h3 id=&quot;tasks-done-apart-from-the-proposed&quot;&gt;Tasks done apart from the Proposed&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;On discussion with the mentors, they suggested to give priority to adding tests for the REST APIs, hence concentrated more on it and got it done alongwith fixing the GCI Tests since they were written in older version of Django, however for GSoC we migrated to the latest version of Django.&lt;/li&gt;
+  &lt;li&gt;Filters for Fork/Modules/All was something needed by the community as per the discussions in the WNS3-2019, hence added a minimal one-click UI for that.&lt;/li&gt;
+  &lt;li&gt;Search Functionality in Bake wasn’t proposed, however we felt that it would be good to have the feature and hence added that to Bake.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h3 id=&quot;future-work&quot;&gt;Future Work&lt;/h3&gt;
 
-&lt;p&gt;After discussion with the mentor &lt;a href=&quot;https://github.com/abhijithanilkumar/&quot;&gt;@abhijithanilkumar&lt;/a&gt;, the possible future work for the ns-3-AppStore is as follows:&lt;/p&gt;
+&lt;p&gt;After discussion with my mentor &lt;a href=&quot;https://github.com/abhijithanilkumar/&quot;&gt;@abhijithanilkumar&lt;/a&gt;, the possible future work for the ns-3-AppStore is as follows:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Deploy the updated ns-3-AppStore on the new server.&lt;/li&gt;
   &lt;li&gt;Add code coverage for the AppStore and add tests for the missing code.&lt;/li&gt;
@@ -84,7 +92,7 @@
 
 &lt;p&gt;Will be glad to help out in case any issues come up or any new feature requests are needed by the ns-3 Community.&lt;/p&gt;
 
-&lt;p&gt;On the bake side, although the main part of &lt;code class=&quot;highlighter-rouge&quot;&gt;getconf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;install&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;search&lt;/code&gt; was done, there are a lot of other functionality expected on the Bake side which was out of scope for GSoC. Since, I’ve got familiar with the Bake codebase, I’ll be happy to contribute the feature requests from the ns-3 Community.&lt;/p&gt;
+&lt;p&gt;On the bake side, although the main part of &lt;code class=&quot;highlighter-rouge&quot;&gt;getconf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;install&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;search&lt;/code&gt; was done, there are a lot of other functionalities expected on the Bake side which was out of scope for GSoC. Since, I’ve got familiar with the Bake codebase, I’ll be happy to contribute the feature requests from the ns-3 Community.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 

@@ -62,7 +62,6 @@
       <li class="social-items"><a href="https://linkedin.com/in/mishal23/" class="social-links"><i class="social-icons fa fa-linkedin" aria-hidden="true"></i></a></li>
       <li class="social-items"><a href="https://www.facebook.com/mishal.shah.7731" class="social-links"><i class="social-icons fa fa-facebook" aria-hidden="true"></i></a></li>
       <li class="social-items"><a href="https://twitter.com/1998Mishal" class="social-links"><i class="social-icons fa fa-twitter" aria-hidden="true"></i></a></li>
-      <li class="social-items"><a href="https://plus.google.com/u/0/101714954506157781527" class="social-links"><i class="social-icons fa fa-google-plus" aria-hidden="true"></i></a></li>
     </div>
 
   </div>
@@ -130,7 +129,7 @@
 
 <ul>
   <li><a href="https://github.com/abhijithanilkumar/ns-3-AppStore/pull/53">#53</a>: This PR modified the Install API to POST Request to take the input parameters of the configured ns version and the module name and the version.</li>
-  <li><a href="https://gitlab.com/nsnam/bake/merge_requests/2">#2</a>: This PR updated the bake <code class="highlighter-rouge">getconf</code>, <code class="highlighter-rouge">install</code> functionality to downnload the module only if the ns version is compatible with the module versions.</li>
+  <li><a href="https://gitlab.com/nsnam/bake/merge_requests/2">#2</a>: This PR updated the bake <code class="highlighter-rouge">getconf</code>, <code class="highlighter-rouge">install</code> functionality to download the module only if the ns version is compatible with the module versions.</li>
   <li><a href="https://github.com/abhijithanilkumar/ns-3-AppStore/pull/55">#55</a>: This PR added the Dependency Management to show the dependencies of the App from the bakefile of the latest version.</li>
   <li><a href="https://github.com/abhijithanilkumar/ns-3-AppStore/pull/56">#56</a>: This PR fixed the busted rating UI by using a different package and with various features. Added average count and the number of ratings.</li>
   <li><a href="https://github.com/abhijithanilkumar/ns-3-AppStore/pull/58">#58</a>: Fixed the issues in the GCI Tests and added tests for the Django REST APIs made.</li>
@@ -154,9 +153,17 @@
   <li>Hosting Commento - A lot of effort was made to host commento locally both with nginx as well as docker, however wasn’t successfull enough to get it working perfectly (locally css &amp; js weren’t loading). Hopefully, when we setup the website on the server will be able to get commento hosted and get it working fully. Will be trying to host Commento on AWS Instance as well.</li>
 </ul>
 
+<h3 id="tasks-done-apart-from-the-proposed">Tasks done apart from the Proposed</h3>
+
+<ul>
+  <li>On discussion with the mentors, they suggested to give priority to adding tests for the REST APIs, hence concentrated more on it and got it done alongwith fixing the GCI Tests since they were written in older version of Django, however for GSoC we migrated to the latest version of Django.</li>
+  <li>Filters for Fork/Modules/All was something needed by the community as per the discussions in the WNS3-2019, hence added a minimal one-click UI for that.</li>
+  <li>Search Functionality in Bake wasn’t proposed, however we felt that it would be good to have the feature and hence added that to Bake.</li>
+</ul>
+
 <h3 id="future-work">Future Work</h3>
 
-<p>After discussion with the mentor <a href="https://github.com/abhijithanilkumar/">@abhijithanilkumar</a>, the possible future work for the ns-3-AppStore is as follows:</p>
+<p>After discussion with my mentor <a href="https://github.com/abhijithanilkumar/">@abhijithanilkumar</a>, the possible future work for the ns-3-AppStore is as follows:</p>
 <ul>
   <li>Deploy the updated ns-3-AppStore on the new server.</li>
   <li>Add code coverage for the AppStore and add tests for the missing code.</li>
@@ -164,7 +171,7 @@
 
 <p>Will be glad to help out in case any issues come up or any new feature requests are needed by the ns-3 Community.</p>
 
-<p>On the bake side, although the main part of <code class="highlighter-rouge">getconf</code>, <code class="highlighter-rouge">install</code>, <code class="highlighter-rouge">search</code> was done, there are a lot of other functionality expected on the Bake side which was out of scope for GSoC. Since, I’ve got familiar with the Bake codebase, I’ll be happy to contribute the feature requests from the ns-3 Community.</p>
+<p>On the bake side, although the main part of <code class="highlighter-rouge">getconf</code>, <code class="highlighter-rouge">install</code>, <code class="highlighter-rouge">search</code> was done, there are a lot of other functionalities expected on the Bake side which was out of scope for GSoC. Since, I’ve got familiar with the Bake codebase, I’ll be happy to contribute the feature requests from the ns-3 Community.</p>
 
 <h2 id="conclusion">Conclusion</h2>
 
