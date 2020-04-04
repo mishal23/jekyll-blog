@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Origination of National Level Hackathon at NITK, Surathkal"
-date:   2020-04-03 21:32:40 +0530
+date:   2020-04-04 21:32:40 +0530
 img:
 description: Story behind the idea of HackVerse at NITK, Surathkal
 ---
