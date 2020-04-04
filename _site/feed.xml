@@ -1,357 +1,384 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-03T22:53:07+05:30</updated><id>http://localhost:4000/</id><title type="html">Mishal Shah</title><subtitle>Mishal Shah</subtitle><entry><title type="html">ns-3 GSoC 2019 Report</title><link href="http://localhost:4000/gsoc19-report/" rel="alternate" type="text/html" title="ns-3 GSoC 2019 Report" /><published>2019-08-25T21:32:40+05:30</published><updated>2019-08-25T21:32:40+05:30</updated><id>http://localhost:4000/gsoc19-report</id><content type="html" xml:base="http://localhost:4000/gsoc19-report/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-04T20:59:58+05:30</updated><id>http://localhost:4000/</id><title type="html">Mishal Shah</title><subtitle>Mishal Shah</subtitle><entry><title type="html">Origination of National Level Hackathon at NITK, Surathkal</title><link href="http://localhost:4000/origination-of-national-level-hackathon-at-nitk/" rel="alternate" type="text/html" title="Origination of National Level Hackathon at NITK, Surathkal" /><published>2020-04-03T21:32:40+05:30</published><updated>2020-04-03T21:32:40+05:30</updated><id>http://localhost:4000/origination-of-national-level-hackathon-at-nitk</id><content type="html" xml:base="http://localhost:4000/origination-of-national-level-hackathon-at-nitk/">&lt;p&gt;I had attended various hackathons before - major ones being &lt;a href=&quot;https://www.codefundo.io/&quot;&gt;code.fun.do&lt;/a&gt;, &lt;a href=&quot;https://www.sih.gov.in/&quot;&gt;Smart India Hackathon&lt;/a&gt;, &lt;a href=&quot;https://hackinout.co/&quot;&gt;HackInOut&lt;/a&gt; and was part of organizing some small ones organized by the technical clubs in college. In the pre-final year, our team didn’t get selected for Smart India Hackathon, that’s when we came to know about student-run hackathons in India. Honestly, it was a new concept for all of us and seeing the sponsors, plan and all seemed very promising. We applied to various hackathons, got selected, however, we couldn’t attend any of those due to some or the other reasons.&lt;/p&gt;
 
-&lt;p&gt;Google Summer of Code has been an amazing opportunity for me to be part of the open source culture and contribute to the community. It was an amazing journey with a lot of hurdles once the college started (placements, academics, extra-curricular), but the help and support from the mentors had been amazing and could pass through it. Super thankful to my mentors &lt;a href=&quot;https://github.com/abhijithanilkumar/&quot;&gt;@abhijithanilkumar&lt;/a&gt; and &lt;a href=&quot;https://github.com/adeepkit01&quot;&gt;@adeepkit01&lt;/a&gt; for their continuous guidance and help throughout the period. I would also like to thank &lt;a href=&quot;http://www.tomh.org/&quot;&gt;@tomh&lt;/a&gt; sir - the ns-3 Organization Admin for his valuable guidance and suggestions.&lt;/p&gt;
+&lt;p&gt;Meanwhile, the semester was near the ending and Core Transfer happened for a Technical Club named &lt;a href=&quot;http://ie.nitk.ac.in&quot;&gt;IE NITK&lt;/a&gt; for which I was part of and we were discussing different possible solutions on how we could make a better impact with our events on the technical community of the college and possibly nation-wide. That’s when I remembered about the student-run hackathons. Definitely, hackathons were great means to make an impact in the lives of the students and the learning curve students get by hackathons is immense and not to forget the experience - one of a lifetime in students’ academics life!&lt;/p&gt;
 
-&lt;h1 id=&quot;project-outline&quot;&gt;Project Outline&lt;/h1&gt;
+&lt;p&gt;That’s when we pitched about the nationwide hackathon in college to the core members, One of the junior core members raised a question: “Isn’t this too much that you’re aiming?”. I replied saying “If so many other colleges could do, why not us?” That’s when we faintly discussed a nation-wide hackathon to happen in the college. The initial team was formed of diverse people in terms of skills needed for it to be a national level hackathon and not a small one. That was when I was reading a lot of blogs &amp;amp; resources online to organize hackathons of nation wide scale. Meanwhile, another member in the team, Namrata contacted various friends in other colleges who organized such hackathons to get an idea of the process.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Project:&lt;/strong&gt; Improving the ns-3-AppStore and Linking with Bake.&lt;/p&gt;
-
-&lt;p&gt;The project plan for each period was as follows:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Community Bonding&lt;/strong&gt; - Get familiar with the codebase of the AppStore and the Bake build system.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Phase 1&lt;/strong&gt; - Port the ns-3-AppStore to the latest version of Django &amp;amp; to Python3, Build the REST API for install for bake to interact with the AppStore, and adding the &lt;code class=&quot;highlighter-rouge&quot;&gt;install&lt;/code&gt; command to Bake.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Phase 2&lt;/strong&gt; - Adding the &lt;code class=&quot;highlighter-rouge&quot;&gt;update&lt;/code&gt; command line option to Bake, Add OAuth support for Gitlab &amp;amp; Github to the AppStore, download statistics for each extension.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Phase 3&lt;/strong&gt; - Multi Threaded Commenting, Dependency Management for the Apps, Improve the Ratings UI.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;pull-requests&quot;&gt;Pull Requests&lt;/h2&gt;
-
-&lt;p&gt;This section covers the actual work done during the GSoC Period in terms of contributed code/documentation/tests.&lt;/p&gt;
-
-&lt;h3 id=&quot;community-bonding-period&quot;&gt;Community Bonding Period&lt;/h3&gt;
-
+&lt;p&gt;We decided on the following things for HackVerse:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/abhijithanilkumar/ns-3-AppStore/pull/45&quot;&gt;#45&lt;/a&gt;: This PR added documentation for the users on the ns-3-AppStore&lt;/li&gt;
+  &lt;li&gt;Completely free for all hackers&lt;/li&gt;
+  &lt;li&gt;Host around 250 hackers from all over India&lt;/li&gt;
+  &lt;li&gt;Have some technical talks &amp;amp; workshops&lt;/li&gt;
+  &lt;li&gt;Judges &amp;amp; mentors from prominent industry/startups&lt;/li&gt;
+  &lt;li&gt;Goodies for all&lt;/li&gt;
+  &lt;li&gt;Huge Prizes&lt;/li&gt;
+  &lt;li&gt;Great Experience&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;phase-1&quot;&gt;Phase 1&lt;/h3&gt;
+&lt;p&gt;The aim was to make it the best technical event NITK has ever seen (beat the technical fest - Engineer too), make it the finest hackathon in India.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/abhijithanilkumar/ns-3-AppStore/pull/47&quot;&gt;#47&lt;/a&gt;: This PR ported the ns-3-AppStore to the latest version of Django &amp;amp; to Python 3.6, and code converted to follow PEP8 Guidelines&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/abhijithanilkumar/ns-3-AppStore/pull/48&quot;&gt;#48&lt;/a&gt;: This PR added the install and search REST APIs for the bake command line to interact.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/abhijithanilkumar/ns-3-AppStore/pull/48&quot;&gt;#48&lt;/a&gt;: Documented the REST APIs, setup rate limiting for the APIs to avoid any attacks.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gitlab.com/nsnam/bake/merge_requests/2&quot;&gt;#2&lt;/a&gt;: This PR added the &lt;code class=&quot;highlighter-rouge&quot;&gt;getconf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;install&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;search&lt;/code&gt; options to Bake build System.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Since, it’s going to be an event which would happen for the first time, it needed appropriate branding and hence we were pondering over the name and the logo. After discussing over 25+ names, trying out different designs in the logo, we settled up for the name &lt;strong&gt;HackVerse&lt;/strong&gt; and the following logo:&lt;/p&gt;
 
-&lt;h3 id=&quot;phase-2&quot;&gt;Phase 2&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/hackverse/hackverse-logo.png&quot; alt=&quot;HackVerse logo&quot; /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gitlab.com/nsnam/bake/merge_requests/2&quot;&gt;#2&lt;/a&gt;: Added regression tests for the command line capabilities added in Bake.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/1GBUEQYbSuYFPxoKXJLZaqhRlh0xkNwizFPmNVWEmi5Y/edit?usp=sharing&quot;&gt;Commenting Proposal&lt;/a&gt;: Prepared a proposal for various commenting features suitable for the ns-3-AppStore.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/abhijithanilkumar/ns-3-AppStore/pull/48&quot;&gt;#48&lt;/a&gt;: This PR modified the Search API to use Pagination.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/abhijithanilkumar/ns-3-AppStore/pull/49&quot;&gt;#49&lt;/a&gt;: This PR added the filtering techniques with a minimal UI one-click for Fork/Modules/All.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/abhijithanilkumar/ns-3-AppStore/pull/52&quot;&gt;#52&lt;/a&gt;: Thus PR added the download count per release and per date for each app whenever a getconf/install option is triggered.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/abhijithanilkumar/ns-3-AppStore/pull/53&quot;&gt;#53&lt;/a&gt;: This PR updated the exisiting Search API to POST Request to take the input parameters of the configured ns versions and the keyword to search&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gitlab.com/nsnam/bake/merge_requests/2&quot;&gt;#2&lt;/a&gt;: This PR updated the bake search functionality to get the apps based on the currently enabled ns versions.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;More about HackVerse at: https://hackverse.nitk.ac.in/&lt;/p&gt;
 
-&lt;h3 id=&quot;phase-3&quot;&gt;Phase 3&lt;/h3&gt;
+&lt;p&gt;The hackathon was supported by the &lt;a href=&quot;https://dj.nitk.ac.in/&quot;&gt;Diamond Jubilee Commitee&lt;/a&gt; of the college and happened to be an Institute Level Event. HackVerse was a huge success, and it defintely turned out to be one of the biggest and finest student-run hackathon across India. HackVerse offered prizes worth more than 1 crore, got support from 30+ national+international sponsors, 2400+ registrations, had amazing 6 technical talks, was judged by 10+ executives from various multinational companies and startups.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/abhijithanilkumar/ns-3-AppStore/pull/53&quot;&gt;#53&lt;/a&gt;: This PR modified the Install API to POST Request to take the input parameters of the configured ns version and the module name and the version.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gitlab.com/nsnam/bake/merge_requests/2&quot;&gt;#2&lt;/a&gt;: This PR updated the bake &lt;code class=&quot;highlighter-rouge&quot;&gt;getconf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;install&lt;/code&gt; functionality to download the module only if the ns version is compatible with the module versions.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/abhijithanilkumar/ns-3-AppStore/pull/55&quot;&gt;#55&lt;/a&gt;: This PR added the Dependency Management to show the dependencies of the App from the bakefile of the latest version.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/abhijithanilkumar/ns-3-AppStore/pull/56&quot;&gt;#56&lt;/a&gt;: This PR fixed the busted rating UI by using a different package and with various features. Added average count and the number of ratings.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/abhijithanilkumar/ns-3-AppStore/pull/58&quot;&gt;#58&lt;/a&gt;: Fixed the issues in the GCI Tests and added tests for the Django REST APIs made.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;The team was definitely in-experienced in all terms (marketing, publicity, operations, hospitality, etc) for such a big event but the zeal among the members and the aim for which the hackathon was happening kept all of them going and the success had to happen. Cheers to each member in the team for all their contributions!&lt;/p&gt;
 
-&lt;h3 id=&quot;miscellaneous-work&quot;&gt;Miscellaneous Work&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/hackverse/hackverse-team.JPG&quot; alt=&quot;HackVerse Team&quot; /&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.nsnam.org/wiki/GSOC2019AppStore&quot;&gt;Wiki: Weekly Updates&lt;/a&gt;: Weekly Updates of the work during the GSoC 2019 time period.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://mishal23.github.io/journey-to-gsoc-2019/&quot;&gt;Blog: Journey to GSoC 2019&lt;/a&gt;: A bit about my journey to getting accepted for GSoC 2019 with the ns-3 organization.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://mishal23.github.io/my-gsoc-project/&quot;&gt;Blog: My GSoC Project&lt;/a&gt;: A brief into the project, the organization and the gains out of the community bonding period.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/1urES5k0sJl24u2RE7dkpNdGaISCSvdvEKEDp5h5lYgA/edit?usp=sharing&quot;&gt;Phase 1 WorkFlow Document&lt;/a&gt;: A workflow document for all the tasks done during Phase 1.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/1PXJUNT2Er2s8jyFOE2VeAjlXGl7ZwUoQFuryH5VYfBE/edit?usp=sharing&quot;&gt;Phase 2 WorkFlow Document&lt;/a&gt;: A workflow document for all the tasks done during Phase 2.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Full team at: https://hackverse.nitk.ac.in/team&lt;/p&gt;</content><author><name></name></author><summary type="html">I had attended various hackathons before - major ones being code.fun.do, Smart India Hackathon, HackInOut and was part of organizing some small ones organized by the technical clubs in college. In the pre-final year, our team didn’t get selected for Smart India Hackathon, that’s when we came to know about student-run hackathons in India. Honestly, it was a new concept for all of us and seeing the sponsors, plan and all seemed very promising. We applied to various hackathons, got selected, however, we couldn’t attend any of those due to some or the other reasons.</summary></entry><entry><title type="html">ns-3 GSoC 2019 Report</title><link href="http://localhost:4000/gsoc19-report/" rel="alternate" type="text/html" title="ns-3 GSoC 2019 Report" /><published>2019-08-25T21:32:40+05:30</published><updated>2019-08-25T21:32:40+05:30</updated><id>http://localhost:4000/gsoc19-report</id><content type="html" xml:base="http://localhost:4000/gsoc19-report/"># Introduction
 
-&lt;p&gt;Inline code documentation was done for most of the codes, hence documentation was taken care.&lt;/p&gt;
+Google Summer of Code has been an amazing opportunity for me to be part of the open source culture and contribute to the community. It was an amazing journey with a lot of hurdles once the college started (placements, academics, extra-curricular), but the help and support from the mentors had been amazing and could pass through it. Super thankful to my mentors [@abhijithanilkumar](https://github.com/abhijithanilkumar/) and [@adeepkit01](https://github.com/adeepkit01) for their continuous guidance and help throughout the period. I would also like to thank [@tomh](http://www.tomh.org/) sir - the ns-3 Organization Admin for his valuable guidance and suggestions.
 
-&lt;h3 id=&quot;what-is-left&quot;&gt;What is left?&lt;/h3&gt;
+# Project Outline
 
-&lt;ul&gt;
-  &lt;li&gt;Hosting Commento - A lot of effort was made to host commento locally both with nginx as well as docker, however wasn’t successfull enough to get it working perfectly (locally css &amp;amp; js weren’t loading). Hopefully, when we setup the website on the server will be able to get commento hosted and get it working fully. Will be trying to host Commento on AWS Instance as well.&lt;/li&gt;
-&lt;/ul&gt;
+**Project:** Improving the ns-3-AppStore and Linking with Bake.
 
-&lt;h3 id=&quot;tasks-done-apart-from-the-proposed&quot;&gt;Tasks done apart from the Proposed&lt;/h3&gt;
+The project plan for each period was as follows:
 
-&lt;ul&gt;
-  &lt;li&gt;On discussion with the mentors, they suggested to give priority to adding tests for the REST APIs, hence concentrated more on it and got it done alongwith fixing the GCI Tests since they were written in older version of Django, however for GSoC we migrated to the latest version of Django.&lt;/li&gt;
-  &lt;li&gt;Filters for Fork/Modules/All was something needed by the community as per the discussions in the WNS3-2019, hence added a minimal one-click UI for that.&lt;/li&gt;
-  &lt;li&gt;Search Functionality in Bake wasn’t proposed, however we felt that it would be good to have the feature and hence added that to Bake.&lt;/li&gt;
-&lt;/ul&gt;
+1. **Community Bonding** - Get familiar with the codebase of the AppStore and the Bake build system.
+2. **Phase 1** - Port the ns-3-AppStore to the latest version of Django &amp; to Python3, Build the REST API for install for bake to interact with the AppStore, and adding the `install` command to Bake.
+3. **Phase 2** - Adding the `update` command line option to Bake, Add OAuth support for Gitlab &amp; Github to the AppStore, download statistics for each extension.
+4. **Phase 3** - Multi Threaded Commenting, Dependency Management for the Apps, Improve the Ratings UI.
 
-&lt;h3 id=&quot;future-work&quot;&gt;Future Work&lt;/h3&gt;
+## Pull Requests
 
-&lt;p&gt;After discussion with my mentor &lt;a href=&quot;https://github.com/abhijithanilkumar/&quot;&gt;@abhijithanilkumar&lt;/a&gt;, the possible future work for the ns-3-AppStore is as follows:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Deploy the updated ns-3-AppStore on the new server.&lt;/li&gt;
-  &lt;li&gt;Add code coverage for the AppStore and add tests for the missing code.&lt;/li&gt;
-&lt;/ul&gt;
+This section covers the actual work done during the GSoC Period in terms of contributed code/documentation/tests.
 
-&lt;p&gt;Will be glad to help out in case any issues come up or any new feature requests are needed by the ns-3 Community.&lt;/p&gt;
+### Community Bonding Period
 
-&lt;p&gt;On the bake side, although the main part of &lt;code class=&quot;highlighter-rouge&quot;&gt;getconf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;install&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;search&lt;/code&gt; was done, there are a lot of other functionalities expected on the Bake side which was out of scope for GSoC. Since, I’ve got familiar with the Bake codebase, I’ll be happy to contribute the feature requests from the ns-3 Community.&lt;/p&gt;
+- [#45](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/45): This PR added documentation for the users on the ns-3-AppStore
 
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+### Phase 1
 
-&lt;p&gt;An amazing journey comes to an end. I’m very thankful to all my friends, mentors and my parents and sister who helped and kept me motivated during the entire journey. Though GSoC 2019 comes to an end, I’m looking forward to contribute to Open Source and ns-3 Bake &amp;amp; AppStore Project.&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry><entry><title type="html">My GSoC Project</title><link href="http://localhost:4000/my-gsoc-project/" rel="alternate" type="text/html" title="My GSoC Project" /><published>2019-05-28T21:32:40+05:30</published><updated>2019-05-28T21:32:40+05:30</updated><id>http://localhost:4000/my-gsoc-project</id><content type="html" xml:base="http://localhost:4000/my-gsoc-project/">&lt;p&gt;Excerpt from the &lt;a href=&quot;../journey-to-gsoc-2019&quot;&gt;previous post&lt;/a&gt;: Got accepted for GSoC 2019 with the &lt;a href=&quot;https://summerofcode.withgoogle.com/organizations/4845767460651008/&quot;&gt;ns-3 organization&lt;/a&gt;.&lt;/p&gt;
+- [#47](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/47): This PR ported the ns-3-AppStore to the latest version of Django &amp; to Python 3.6, and code converted to follow PEP8 Guidelines
+- [#48](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/48): This PR added the install and search REST APIs for the bake command line to interact.
+- [#48](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/48): Documented the REST APIs, setup rate limiting for the APIs to avoid any attacks.
+- [#2](https://gitlab.com/nsnam/bake/merge_requests/2): This PR added the `getconf`, `install` and `search` options to Bake build System.
 
-&lt;p&gt;The previous post mainly covered about my journey to GSoC 2019, but didn’t speak anything about the organization and the project. This post is targetted to cover that.&lt;/p&gt;
+### Phase 2
 
-&lt;h2 id=&quot;what-is-ns-3&quot;&gt;What is ns-3?&lt;/h2&gt;
+- [#2](https://gitlab.com/nsnam/bake/merge_requests/2): Added regression tests for the command line capabilities added in Bake.
+- [#48](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/48): This PR modified the Search API to use Pagination.
+- [#49](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/49): This PR added the filtering techniques with a minimal UI one-click for Fork/Modules/All.
+- [#52](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/52): Thus PR added the download count per release and per date for each app whenever a getconf/install option is triggered.
+- [#53](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/53): This PR updated the exisiting Search API to POST Request to take the input parameters of the configured ns versions and the keyword to search
+- [#2](https://gitlab.com/nsnam/bake/merge_requests/2): This PR updated the bake search functionality to get the apps based on the currently enabled ns versions. 
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/gsoc/ns-3.png&quot; alt=&quot;ns-3 org logo&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;ns-3 is a discrete-event network simulator for Internet systems, targeted primarily for research and educational use. ns-3 is publicly available for research, development, and use.&lt;/p&gt;
+### Phase 3
 
-&lt;p&gt;The goal of the ns-3 project is to develop a preferred, open simulation environment for networking research: it should be aligned with the simulation needs of modern networking research and should encourage community contribution, peer review, and validation of the software.&lt;/p&gt;
+- [#53](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/53): This PR modified the Install API to POST Request to take the input parameters of the configured ns version and the module name and the version.
+- [#2](https://gitlab.com/nsnam/bake/merge_requests/2): This PR updated the bake `getconf`, `install` functionality to download the module only if the ns version is compatible with the module versions.
+- [#55](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/55): This PR added the Dependency Management to show the dependencies of the App from the bakefile of the latest version.
+- [#56](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/56): This PR fixed the busted rating UI by using a different package and with various features. Added average count and the number of ratings.
+- [#58](https://github.com/abhijithanilkumar/ns-3-AppStore/pull/58): Fixed the issues in the GCI Tests and added tests for the Django REST APIs made.
 
-&lt;p&gt;I had previously worked with ns-3 to implement &lt;a href=&quot;https://github.com/mishal23/Implementation-of-TCP-New-Vegas-in-ns3/&quot;&gt;TCP New Vegas in ns-3&lt;/a&gt; in the Computer Networks course project.&lt;/p&gt;
+### Miscellaneous Work
 
-&lt;p&gt;The project that I’ll be working on during GSoC is: &lt;a href=&quot;https://summerofcode.withgoogle.com/projects/#5385832846852096&quot;&gt;Improving the ns-3 AppStore and linking with Bake&lt;/a&gt;&lt;/p&gt;
+- [Wiki: Weekly Updates](https://www.nsnam.org/wiki/GSOC2019AppStore): Weekly Updates of the work during the GSoC 2019 time period.
+- [Commenting Proposal](https://docs.google.com/document/d/1GBUEQYbSuYFPxoKXJLZaqhRlh0xkNwizFPmNVWEmi5Y/edit?usp=sharing): Prepared a proposal for various commenting features suitable for the ns-3-AppStore.
+- [Blog: Journey to GSoC 2019](https://mishal23.github.io/journey-to-gsoc-2019/): A bit about my journey to getting accepted for GSoC 2019 with the ns-3 organization. 
+- [Blog: My GSoC Project](https://mishal23.github.io/my-gsoc-project/): A brief into the project, the organization and the gains out of the community bonding period.
+- [Phase 1 WorkFlow Document](https://docs.google.com/document/d/1urES5k0sJl24u2RE7dkpNdGaISCSvdvEKEDp5h5lYgA/edit?usp=sharing): A workflow document for all the tasks done during Phase 1.
+- [Phase 2 WorkFlow Document](https://docs.google.com/document/d/1PXJUNT2Er2s8jyFOE2VeAjlXGl7ZwUoQFuryH5VYfBE/edit?usp=sharing): A workflow document for all the tasks done during Phase 2.
 
-&lt;h2 id=&quot;what-is-ns-3-appstore&quot;&gt;What is ns-3 AppStore?&lt;/h2&gt;
+Inline code documentation was done for most of the codes, hence documentation was taken care.
 
-&lt;p&gt;The ns-3 AppStore is a supplemental web site allowing users to find and learn about extensions to the mainline ns-3 releases.&lt;/p&gt;
+### What is left?
 
-&lt;h3 id=&quot;motivations-for-the-ns-3-appstore&quot;&gt;Motivations for the ns-3 AppStore&lt;/h3&gt;
+- Hosting Commento - A lot of effort was made to host commento locally both with nginx as well as docker, however wasn't successfull enough to get it working perfectly (locally css &amp; js weren't loading). Hopefully, when we setup the website on the server will be able to get commento hosted and get it working fully. Will be trying to host Commento on AWS Instance as well.
 
-&lt;ul&gt;
-  &lt;li&gt;Provide a central place for structured information about ns-3 extensions,&lt;/li&gt;
-  &lt;li&gt;Move the ns-3 project towards a more federated development environment with a smaller core,&lt;/li&gt;
-  &lt;li&gt;Provide guidelines to reduce the software incompatibility between various extensions.&lt;/li&gt;
-&lt;/ul&gt;
+### Tasks done apart from the Proposed
 
-&lt;h2 id=&quot;what-is-bake&quot;&gt;What is Bake?&lt;/h2&gt;
+- On discussion with the mentors, they suggested to give priority to adding tests for the REST APIs, hence concentrated more on it and got it done alongwith fixing the GCI Tests since they were written in older version of Django, however for GSoC we migrated to the latest version of Django.
+- Filters for Fork/Modules/All was something needed by the community as per the discussions in the WNS3-2019, hence added a minimal one-click UI for that.
+- Search Functionality in Bake wasn't proposed, however we felt that it would be good to have the feature and hence added that to Bake.
 
-&lt;p&gt;Bake was developed to automate the reproducible build of ns-3 taking into account that this build may be composed of a number of interdependent projects. Bake was developed to simplify the assembly of these pieces of software in a coherent and useful way. It is a tool for coordinated software building from multiple repositories, developed for the ns-3 project.&lt;/p&gt;
+### Future Work
 
-&lt;h3 id=&quot;existing-features-in-bake&quot;&gt;Existing Features in Bake&lt;/h3&gt;
+After discussion with my mentor [@abhijithanilkumar](https://github.com/abhijithanilkumar/), the possible future work for the ns-3-AppStore is as follows:
+- Deploy the updated ns-3-AppStore on the new server.
+- Add code coverage for the AppStore and add tests for the missing code.
 
-&lt;ul&gt;
-  &lt;li&gt;Automatic handling of dependencies&lt;/li&gt;
-  &lt;li&gt;Automatic download of the required sources&lt;/li&gt;
-  &lt;li&gt;Automatic correct build of the required modules&lt;/li&gt;
-  &lt;li&gt;Off-line installation and build capabilities&lt;/li&gt;
-&lt;/ul&gt;
+Will be glad to help out in case any issues come up or any new feature requests are needed by the ns-3 Community.
 
-&lt;h2 id=&quot;gsoc-project&quot;&gt;GSoC Project&lt;/h2&gt;
+On the bake side, although the main part of `getconf`, `install`, `search` was done, there are a lot of other functionalities expected on the Bake side which was out of scope for GSoC. Since, I've got familiar with the Bake codebase, I'll be happy to contribute the feature requests from the ns-3 Community.
 
-&lt;p&gt;ns-3 has certain modules into it’s core and quite of them are also made by researchers/developers, however to reduce the size of the core not all modules are merged into the mainline of the ns-3 and are maintained seperately with the flexibilty to use them by downloading the module in the &lt;code class=&quot;highlighter-rouge&quot;&gt;contrib/&lt;/code&gt; directory of the ns-3. The AppStore maintains the modules developed by the researchers/developers. Although the ns-3-AppStore and the Bake build system exists, both of them function independently. If the AppStore and the Bake build system start interacting with each other, it would make it easier for the developers to install the new modules. That’s the project goal! Make it easier for the ns-developers to install new modules. While install of a module is done other features such as update the module, search for a module, fetch the module configuration file also will be supported. For that the AppStore will be needed to send necessary configuration file and other details through REST APIs and then add command line features to bake which would eventually download the module repo, install the necessary dependencies and finally build the source tree.&lt;/p&gt;
+## Conclusion
 
-&lt;p&gt;Since the ns-3-AppStore uses Python2.7 and Django 1.8, one of the tasks will also be to upgrade it to the latest versions to keep up with the technology and also since Python2.7 support is going to end by January, 2020. Some additional features to the ns-3-AppStore such as multi-threaded comments and download statistics for the modules are also planned.&lt;/p&gt;
+An amazing journey comes to an end. I'm very thankful to all my friends, mentors and my parents and sister who helped and kept me motivated during the entire journey. Though GSoC 2019 comes to an end, I'm looking forward to contribute to Open Source and ns-3 Bake &amp; AppStore Project.
 
-&lt;h2 id=&quot;community-bonding-period&quot;&gt;Community Bonding Period&lt;/h2&gt;
+[ns3-gsoc]: https://summerofcode.withgoogle.com/organizations/4845767460651008/
+[gsoc-project]: https://summerofcode.withgoogle.com/projects/#5385832846852096
+[ns-3website]: http://nsnam.org/
+[ns-3project]: https://www.nsnam.org/wiki/GSOC2019Projects#Improving_the_ns-3_AppStore_and_linking_with_bake</content><author><name></name></author><summary type="html">Introduction</summary></entry><entry><title type="html">My GSoC Project</title><link href="http://localhost:4000/my-gsoc-project/" rel="alternate" type="text/html" title="My GSoC Project" /><published>2019-05-28T21:32:40+05:30</published><updated>2019-05-28T21:32:40+05:30</updated><id>http://localhost:4000/my-gsoc-project</id><content type="html" xml:base="http://localhost:4000/my-gsoc-project/">Excerpt from the [previous post](../journey-to-gsoc-2019): Got accepted for GSoC 2019 with the [ns-3 organization][ns3-gsoc].
 
-&lt;p&gt;The community bonding period has ended and it mainly focused on setting up development environment and understanding the code base of the Bake build system, testing and understanding the existing functionalities, and the work flow. My mentor also suggested me to research about the various cases and build a strong plan, so that the coding period stays smooth. I also started documenting the ns-3-AppStore: user-workflow and the user-guide, which helped me better understand the exisiting functionalities of the AppStore.&lt;/p&gt;</content><author><name></name></author><summary type="html">Excerpt from the previous post: Got accepted for GSoC 2019 with the ns-3 organization.</summary></entry><entry><title type="html">Journey to GSoC 2019</title><link href="http://localhost:4000/journey-to-gsoc-2019/" rel="alternate" type="text/html" title="Journey to GSoC 2019" /><published>2019-05-07T21:32:40+05:30</published><updated>2019-05-07T21:32:40+05:30</updated><id>http://localhost:4000/journey-to-gsoc-2019</id><content type="html" xml:base="http://localhost:4000/journey-to-gsoc-2019/">&lt;p&gt;6th May, 2019. I came back to home after playing cricket with my friends at around 10:45 pm, Took a quick shower and sat to check the results at 11:30 pm. Reloaded the dashboard at 11:30 pm and there was my name. Finally! I got selected as a Student Developer in Google Summer of Code, 2019 with &lt;a href=&quot;https://summerofcode.withgoogle.com/organizations/4845767460651008/&quot;&gt;The ns-3 Network Simulator Project&lt;/a&gt;. The official mail came a bit late, but the website had the results on time.&lt;/p&gt;
+The previous post mainly covered about my journey to GSoC 2019, but didn't speak anything about the organization and the project. This post is targetted to cover that.
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/gsoc/gsoc-acceptance.png&quot; alt=&quot;GSoC 2019 Acceptance&quot; /&gt;&lt;/p&gt;
+## What is ns-3?
 
-&lt;p&gt;A bit about the major phases in this journey:&lt;/p&gt;
+![ns-3 org logo]({{&quot;/assets/img/gsoc/ns-3.png&quot;}})
 
-&lt;h2 id=&quot;how-did-it-start&quot;&gt;How did it start?&lt;/h2&gt;
-&lt;p&gt;I was looking forward to contributing to open source, so as to increase the skills and contribute to the community. I being a part of communities - &lt;a href=&quot;https://iris.nitk.ac.in/&quot;&gt;IRIS&lt;/a&gt;, &lt;a href=&quot;http://ie.nitk.ac.in/&quot;&gt;Institution of Engineers, NITK Chapter&lt;/a&gt;, &lt;a href=&quot;https://www.facebook.com/web.club.nitk/&quot;&gt;Web Enthusiasts’ Club&lt;/a&gt; at NITK Surathkal have contributed towards the college and the community, but had never got a chance to broaden and contribute towards the more larger commmunity and thus was looking for a headstart in the open source community and GSoC seemed to be the right place.&lt;/p&gt;
+ns-3 is a discrete-event network simulator for Internet systems, targeted primarily for research and educational use. ns-3 is publicly available for research, development, and use.
 
-&lt;h2 id=&quot;choosing-the-organization--project&quot;&gt;Choosing the Organization &amp;amp; Project&lt;/h2&gt;
+The goal of the ns-3 project is to develop a preferred, open simulation environment for networking research: it should be aligned with the simulation needs of modern networking research and should encourage community contribution, peer review, and validation of the software.
 
-&lt;p&gt;I started looking for previous years selected organizations for GSoC on basis of my interests, skills and technologies I knew in during the winter break in college (December 2018). I was particulary looking for organizations related to networking, security and systems.&lt;/p&gt;
+I had previously worked with ns-3 to implement [TCP New Vegas in ns-3][tcp-newvegas] in the Computer Networks course project. 
 
-&lt;p&gt;I started looking into the projects of OWASP initially, and started contributing to the their &lt;a href=&quot;https://github.com/OWASP/SecureTea-Project/&quot;&gt;SecureTea Project&lt;/a&gt; and got quite a few PRs merged. I was also a bit familiar with &lt;a href=&quot;http://nsnam.org/&quot;&gt;ns-3&lt;/a&gt; because of the course projects in Computer Networks and Advanced Computer Networks courses.&lt;/p&gt;
+The project that I'll be working on during GSoC is: [Improving the ns-3 AppStore and linking with Bake][gsoc-project]
 
-&lt;p&gt;When the list of selected organizations was released by Google, both OWASP and ns-3 were selected. I had now to make a choice which one to apply. It wasn’t going to be both since I wanted to focus on one properly rather than both. I chose to go ahead with ns-3 because:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;The project was very much aligining to my interests,&lt;/li&gt;
-  &lt;li&gt;I wanted to dive deeper into the networking field and systems.&lt;/li&gt;
-&lt;/ul&gt;
+## What is ns-3 AppStore?
 
-&lt;h2 id=&quot;involving-with-the-community&quot;&gt;Involving with the Community&lt;/h2&gt;
+The ns-3 AppStore is a supplemental web site allowing users to find and learn about extensions to the mainline ns-3 releases.
 
-&lt;p&gt;Once I made up my mind about applying to ns-3, I joined the developers mailing list for ns-3 and sent an introduction mail in March expressing interest to work on the &lt;a href=&quot;https://www.nsnam.org/wiki/GSOC2019Projects#Improving_the_ns-3_AppStore_and_linking_with_bake&quot;&gt;project&lt;/a&gt;. The mentors &lt;a href=&quot;http://www.tomh.org/&quot;&gt;Tom Henderson&lt;/a&gt;, &lt;a href=&quot;https://github.com/abhijithanilkumar/&quot;&gt;Abhijith Anilkumar&lt;/a&gt; welcomed and made clear about the goals for the project and the expectations. This helped me in laying out a clear plan for the project.&lt;/p&gt;
+### Motivations for the ns-3 AppStore
 
-&lt;h2 id=&quot;gsoc-student-application-period&quot;&gt;GSoC Student Application Period&lt;/h2&gt;
+* Provide a central place for structured information about ns-3 extensions,
+* Move the ns-3 project towards a more federated development environment with a smaller core,
+* Provide guidelines to reduce the software incompatibility between various extensions.
 
-&lt;p&gt;I had started preparing a draft of the proposal before the application period started, and had submitted a draft of the proposal as soon as the Application Period begin. The mentors &lt;a href=&quot;http://www.tomh.org/&quot;&gt;Tom Henderson&lt;/a&gt;, &lt;a href=&quot;https://github.com/abhijithanilkumar/&quot;&gt;Abhijith Anilkumar&lt;/a&gt;, &lt;a href=&quot;http://adeepkit01.github.io/&quot;&gt;Ankit Deepak&lt;/a&gt; provided quite lot of feedback on the proposal which helped me refine the proposal more. I recommend anyone applying for the same to submit your proposals early so that mentors can review and give feedback.&lt;/p&gt;
+## What is Bake?
 
-&lt;p&gt;I submitted the final proposal 30 minutes early(too late) of the deadline, and had a long wait of 27 days for the announcement of the results.&lt;/p&gt;
+Bake was developed to automate the reproducible build of ns-3 taking into account that this build may be composed of a number of interdependent projects. Bake was developed to simplify the assembly of these pieces of software in a coherent and useful way. It is a tool for coordinated software building from multiple repositories, developed for the ns-3 project.
 
-&lt;hr /&gt;
+### Existing Features in Bake
 
-&lt;p&gt;Great thanks to my mentors, seniors and friends - &lt;a href=&quot;https://github.com/mohittahiliani&quot;&gt;Mohit P. Tahiliani&lt;/a&gt;, &lt;a href=&quot;https://hrily.github.io/&quot;&gt;Hrishikesh Hiraskar&lt;/a&gt;, &lt;a href=&quot;https://pvgupta24.github.io/&quot;&gt;Praveen Gupta&lt;/a&gt; who supported and encouraged to apply for GSoC, reviewed the proposal and provided their feedback. Much thankful to my parents and sister for supporting me always with all the decisions I made. Thankful to some of the closest friends/seniors - Salman Shah, Manish Kumar B, Siddhanth Pillay, Vilas M, Shreyas Shankar, Pavan Vachhani, Pavankumar Koratikere, Dhvanil Parikh, Bobby Patil, Samyak Jain, Namrata Ladda, Mehnaz Yunus and my childhood friend Kushal Majmundar who were their during the journey and have helped in each of the possible way without whom this wouldn’t have been possible.&lt;/p&gt;
+* Automatic handling of dependencies
+* Automatic download of the required sources
+* Automatic correct build of the required modules
+* Off-line installation and build capabilities
 
-&lt;p&gt;The journey wasn’t as easy as it may sound. It comprised of almost everything: learning, failure, success, sleepless nights, self-doubt, sacrifices, excitement and what not.&lt;/p&gt;
+## GSoC Project
 
-&lt;p&gt;The journey ahead isn’t easy either, now that the community bonding period has begin, looking forward to a great learning experience and contributing to the ns-3 community and interacting with the mentors and learning from them.&lt;/p&gt;</content><author><name></name></author><summary type="html">6th May, 2019. I came back to home after playing cricket with my friends at around 10:45 pm, Took a quick shower and sat to check the results at 11:30 pm. Reloaded the dashboard at 11:30 pm and there was my name. Finally! I got selected as a Student Developer in Google Summer of Code, 2019 with The ns-3 Network Simulator Project. The official mail came a bit late, but the website had the results on time.</summary></entry><entry><title type="html">Alexa Fact Skill</title><link href="http://localhost:4000/alexa-fact-skill/" rel="alternate" type="text/html" title="Alexa Fact Skill" /><published>2018-07-25T21:32:40+05:30</published><updated>2018-07-25T21:32:40+05:30</updated><id>http://localhost:4000/alexa-fact-skill</id><content type="html" xml:base="http://localhost:4000/alexa-fact-skill/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Learning to build voice user interface is a great skill to have as devices like the Amazon Echo and Google Home are gaining popularity. Amazon is currently running an incentive program this July(2018) for people developing Alexa Skills. You develop a new skill and get a limited-edition Alexa developer T-shirt! If more than 100 customers enable and use your skill in the first 30 days of publication, you could also receive an Echo Dot.&lt;/p&gt;
+ns-3 has certain modules into it's core and quite of them are also made by researchers/developers, however to reduce the size of the core not all modules are merged into the mainline of the ns-3 and are maintained seperately with the flexibilty to use them by downloading the module in the ```contrib/``` directory of the ns-3. The AppStore maintains the modules developed by the researchers/developers. Although the ns-3-AppStore and the Bake build system exists, both of them function independently. If the AppStore and the Bake build system start interacting with each other, it would make it easier for the developers to install the new modules. That's the project goal! Make it easier for the ns-developers to install new modules. While install of a module is done other features such as update the module, search for a module, fetch the module configuration file also will be supported. For that the AppStore will be needed to send necessary configuration file and other details through REST APIs and then add command line features to bake which would eventually download the module repo, install the necessary dependencies and finally build the source tree.
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/july-incentive.png&quot; alt=&quot;July Incentive&quot; /&gt;&lt;/p&gt;
+Since the ns-3-AppStore uses Python2.7 and Django 1.8, one of the tasks will also be to upgrade it to the latest versions to keep up with the technology and also since Python2.7 support is going to end by January, 2020. Some additional features to the ns-3-AppStore such as multi-threaded comments and download statistics for the modules are also planned.
 
-&lt;p&gt;Sounds pretty cool right? Apart from the T-shirt or Echo Dot, you’ll also learn developing something for voice assistant. If this seems like a good opportunity, read ahead!&lt;/p&gt;
+## Community Bonding Period
 
-&lt;h2 id=&quot;what-is-alexa-and-how-does-it-work&quot;&gt;What is Alexa and how does it work?&lt;/h2&gt;
+The community bonding period has ended and it mainly focused on setting up development environment and understanding the code base of the Bake build system, testing and understanding the existing functionalities, and the work flow. My mentor also suggested me to research about the various cases and build a strong plan, so that the coding period stays smooth. I also started documenting the ns-3-AppStore: user-workflow and the user-guide, which helped me better understand the exisiting functionalities of the AppStore.
 
-&lt;p&gt;Alexa is a cloud-based voice service that powers millions of voice experiences in the home. Devices Alexa powers includes Amazon Echo, Echo Dot, Amazon Tap and Amazon Fire TV.&lt;/p&gt;
 
-&lt;p&gt;What is a &lt;strong&gt;skill&lt;/strong&gt;? They are basically apps(programs) that extend Echo’s functionality and features. There are lot of amazing skills already being developed by Alexa developers from over the world. Check them out &lt;a href=&quot;https://www.amazon.com/alexa-skills/b?ie=UTF8&amp;amp;node=13727921011&quot;&gt;here&lt;/a&gt;. They can answer questions, play trivia games, play music, set alarms, tell jokes and many more. Here is how it works:&lt;/p&gt;
+[ns3-gsoc]: https://summerofcode.withgoogle.com/organizations/4845767460651008/
+[gsoc-project]: https://summerofcode.withgoogle.com/projects/#5385832846852096
+[tcp-newvegas]: https://github.com/mishal23/Implementation-of-TCP-New-Vegas-in-ns3/
+[ns-3website]: http://nsnam.org/
+[ns-3project]: https://www.nsnam.org/wiki/GSOC2019Projects#Improving_the_ns-3_AppStore_and_linking_with_bake
+[tom]: http://www.tomh.org/
+[abhijith]: https://github.com/abhijithanilkumar/
+[ankit]: http://adeepkit01.github.io/</content><author><name></name></author><summary type="html">Excerpt from the previous post: Got accepted for GSoC 2019 with the ns-3 organization.</summary></entry><entry><title type="html">Journey to GSoC 2019</title><link href="http://localhost:4000/journey-to-gsoc-2019/" rel="alternate" type="text/html" title="Journey to GSoC 2019" /><published>2019-05-07T21:32:40+05:30</published><updated>2019-05-07T21:32:40+05:30</updated><id>http://localhost:4000/journey-to-gsoc-2019</id><content type="html" xml:base="http://localhost:4000/journey-to-gsoc-2019/">6th May, 2019. I came back to home after playing cricket with my friends at around 10:45 pm, Took a quick shower and sat to check the results at 11:30 pm. Reloaded the dashboard at 11:30 pm and there was my name. Finally! I got selected as a Student Developer in Google Summer of Code, 2019 with [The ns-3 Network Simulator Project][ns3-gsoc]. The official mail came a bit late, but the website had the results on time.
 
-&lt;ul&gt;
-  &lt;li&gt;User speaks something&lt;/li&gt;
-  &lt;li&gt;The skill(defined on the Amazon Developer Site) matches the question(keywords) with an Intent(what the user is trying to ask) and then sends this Intent to an endpoint(an API call to the server like AWS Lambda)&lt;/li&gt;
-  &lt;li&gt;Lambda or your own server is where the data is stored. It has code to take the Intent and return the relevant response, taken from the data.&lt;/li&gt;
-  &lt;li&gt;Echo speaks back this response to the user.&lt;/li&gt;
-&lt;/ul&gt;
+![GSoC 2019 Acceptance]({{&quot;/assets/img/gsoc/gsoc-acceptance.png&quot;}})
 
-&lt;h2 id=&quot;what-do-you-need-to-start&quot;&gt;What do you need to start?&lt;/h2&gt;
+A bit about the major phases in this journey:
 
-&lt;ul&gt;
-  &lt;li&gt;An &lt;a href=&quot;https://developer.amazon.com/&quot;&gt;Amazon Developer account&lt;/a&gt;, to create a skill.&lt;/li&gt;
-  &lt;li&gt;An &lt;a href=&quot;https://developer.amazon.com/&quot;&gt;Amazon AWS account&lt;/a&gt;, to create a Lambda function.&lt;/li&gt;
-  &lt;li&gt;An idea! The skill you create is an app, and just like any other app in the market your app should have a good use case.&lt;/li&gt;
-&lt;/ul&gt;
+## How did it start?
+I was looking forward to contributing to open source, so as to increase the skills and contribute to the community. I being a part of communities - [IRIS][iris], [Institution of Engineers, NITK Chapter][ienitk], [Web Enthusiasts' Club][webclub-nitk] at NITK Surathkal have contributed towards the college and the community, but had never got a chance to broaden and contribute towards the more larger commmunity and thus was looking for a headstart in the open source community and GSoC seemed to be the right place.
 
-&lt;h2 id=&quot;creating-the-skill&quot;&gt;Creating the skill&lt;/h2&gt;
+## Choosing the Organization &amp; Project
 
-&lt;p&gt;I’ll explain how to create a fact skill in this blog post, you can dive into deeper to create some awesome skills. At the end, there is a list of amazing tutorials for you to learn more.&lt;/p&gt;
+I started looking for previous years selected organizations for GSoC on basis of my interests, skills and technologies I knew in during the winter break in college (December 2018). I was particulary looking for organizations related to networking, security and systems.
 
-&lt;p&gt;Go to &lt;a href=&quot;https://developer.amazon.com/&quot;&gt;Amazon Developer Account&lt;/a&gt; and sign in, and select Alexa.
-&lt;img src=&quot;/assets/img/alexa-amazon.png&quot; alt=&quot;Alexa Amazon&quot; /&gt;&lt;/p&gt;
+I started looking into the projects of OWASP initially, and started contributing to the their [SecureTea Project][securetea] and got quite a few PRs merged. I was also a bit familiar with [ns-3][ns-3website] because of the course projects in Computer Networks and Advanced Computer Networks courses.
 
-&lt;p&gt;On the Alexa Page, on the top-right, hover over the &lt;code class=&quot;highlighter-rouge&quot;&gt;Your Alexa Consoles&lt;/code&gt; and click Skills.
-&lt;img src=&quot;/assets/img/skill.png&quot; alt=&quot;Alexa Skills&quot; /&gt;&lt;/p&gt;
+When the list of selected organizations was released by Google, both OWASP and ns-3 were selected. I had now to make a choice which one to apply. It wasn't going to be both since I wanted to focus on one properly rather than both. I chose to go ahead with ns-3 because:
+* The project was very much aligining to my interests,
+* I wanted to dive deeper into the networking field and systems.
 
-&lt;p&gt;Click on the &lt;code class=&quot;highlighter-rouge&quot;&gt;Create Skill&lt;/code&gt; button.
-&lt;img src=&quot;/assets/img/create-skill.png&quot; alt=&quot;Alexa Create Skill&quot; /&gt;&lt;/p&gt;
+## Involving with the Community
 
-&lt;p&gt;Fill out the information,&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Skill Name: Number Fact&lt;/li&gt;
-  &lt;li&gt;Skill Model: Custom&lt;/li&gt;
-  &lt;li&gt;Skill Language: English(U.S.)&lt;/li&gt;
-&lt;/ul&gt;
+Once I made up my mind about applying to ns-3, I joined the developers mailing list for ns-3 and sent an introduction mail in March expressing interest to work on the [project][ns-3project]. The mentors [Tom Henderson][tom], [Abhijith Anilkumar][abhijith] welcomed and made clear about the goals for the project and the expectations. This helped me in laying out a clear plan for the project.
 
-&lt;p&gt;Click, Create Skill and you’ll see a page similar to this.&lt;/p&gt;
+## GSoC Student Application Period
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/skill-home.png&quot; alt=&quot;Alexa Home&quot; /&gt;&lt;/p&gt;
+I had started preparing a draft of the proposal before the application period started, and had submitted a draft of the proposal as soon as the Application Period begin. The mentors [Tom Henderson][tom], [Abhijith Anilkumar][abhijith], [Ankit Deepak][ankit] provided quite lot of feedback on the proposal which helped me refine the proposal more. I recommend anyone applying for the same to submit your proposals early so that mentors can review and give feedback.
 
-&lt;p&gt;Now click Invocation in the left hand navigation panel, and set the Invocation Name. Invocation Name is what your user will need to say to start the skill. As the skill is number facts, setting the Invocation Name to: Number Facts, Click on Save Model and move to JSON Editor for the Interaction Model.&lt;/p&gt;
+I submitted the final proposal 30 minutes early(too late) of the deadline, and had a long wait of 27 days for the announcement of the results.
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/skill-invocation.png&quot; alt=&quot;Skill Invocation&quot; /&gt;&lt;/p&gt;
+&lt;hr&gt;
 
-&lt;p&gt;This is now the core of the skill, Here we define,&lt;/p&gt;
+Great thanks to my mentors, seniors and friends - [Mohit P. Tahiliani][mohit-sir], [Hrishikesh Hiraskar][hrily], [Praveen Gupta][praveen] who supported and encouraged to apply for GSoC, reviewed the proposal and provided their feedback. Much thankful to my parents and sister for supporting me always with all the decisions I made. Thankful to some of the closest friends/seniors - Salman Shah, Manish Kumar B, Siddhanth Pillay, Vilas M, Shreyas Shankar, Pavan Vachhani, Pavankumar Koratikere, Dhvanil Parikh, Bobby Patil, Samyak Jain, Namrata Ladda, Mehnaz Yunus and my childhood friend Kushal Majmundar who were their during the journey and have helped in each of the possible way without whom this wouldn't have been possible.
 
-&lt;ul&gt;
-  &lt;li&gt;an Intent Schema&lt;/li&gt;
-  &lt;li&gt;Custom Slot Types&lt;/li&gt;
-  &lt;li&gt;Sample Utterances&lt;/li&gt;
-&lt;/ul&gt;
+The journey wasn't as easy as it may sound. It comprised of almost everything: learning, failure, success, sleepless nights, self-doubt, sacrifices, excitement and what not.
 
-&lt;h3 id=&quot;intent-schema&quot;&gt;Intent Schema&lt;/h3&gt;
+The journey ahead isn't easy either, now that the community bonding period has begin, looking forward to a great learning experience and contributing to the ns-3 community and interacting with the mentors and learning from them.
 
-&lt;p&gt;These are the “intents” of the Skill, which define the “intent” or purpose of something the user says to the Skill. So we may have a &lt;code class=&quot;highlighter-rouge&quot;&gt;GetNewFactIntent&lt;/code&gt; intent, which signifies that the user wants to know an fact. They are defined in this format:&lt;/p&gt;
+[ns3-gsoc]: https://summerofcode.withgoogle.com/organizations/4845767460651008/
+[iris]: https://iris.nitk.ac.in/
+[ienitk]: http://ie.nitk.ac.in/
+[webclub-nitk]: https://www.facebook.com/web.club.nitk/
+[securetea]: https://github.com/OWASP/SecureTea-Project/
+[ns-3website]: http://nsnam.org/
+[ns-3project]: https://www.nsnam.org/wiki/GSOC2019Projects#Improving_the_ns-3_AppStore_and_linking_with_bake
+[tom]: http://www.tomh.org/
+[abhijith]: https://github.com/abhijithanilkumar/
+[ankit]: http://adeepkit01.github.io/
+[praveen]: https://pvgupta24.github.io/
+[hrily]: https://hrily.github.io/
+[mohit-sir]: https://github.com/mohittahiliani</content><author><name></name></author><summary type="html">6th May, 2019. I came back to home after playing cricket with my friends at around 10:45 pm, Took a quick shower and sat to check the results at 11:30 pm. Reloaded the dashboard at 11:30 pm and there was my name. Finally! I got selected as a Student Developer in Google Summer of Code, 2019 with The ns-3 Network Simulator Project. The official mail came a bit late, but the website had the results on time.</summary></entry><entry><title type="html">Alexa Fact Skill</title><link href="http://localhost:4000/alexa-fact-skill/" rel="alternate" type="text/html" title="Alexa Fact Skill" /><published>2018-07-25T21:32:40+05:30</published><updated>2018-07-25T21:32:40+05:30</updated><id>http://localhost:4000/alexa-fact-skill</id><content type="html" xml:base="http://localhost:4000/alexa-fact-skill/">## Introduction
+Learning to build voice user interface is a great skill to have as devices like the Amazon Echo and Google Home are gaining popularity. Amazon is currently running an incentive program this July(2018) for people developing Alexa Skills. You develop a new skill and get a limited-edition Alexa developer T-shirt! If more than 100 customers enable and use your skill in the first 30 days of publication, you could also receive an Echo Dot.
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;intents&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-          &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;AMAZON.CancelIntent&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-          &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;AMAZON.HelpIntent&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-          &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;AMAZON.StopIntent&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-          &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;AMAZON.FallbackIntent&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-          &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;GetNewFactIntent&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
- &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+![July Incentive]({{&quot;/assets/img/july-incentive.png&quot;}})
 
-&lt;p&gt;The AMAZON.HelpIntent is a default Amazon intent that you can use to handle any &lt;strong&gt;Help&lt;/strong&gt; type questions. Likewise, AMAZON.StopIntent is a inbuilt intent to handle “stop” intents.&lt;/p&gt;
+Sounds pretty cool right? Apart from the T-shirt or Echo Dot, you'll also learn developing something for voice assistant. If this seems like a good opportunity, read ahead!
 
-&lt;h3 id=&quot;custom-slot-types&quot;&gt;Custom Slot Types&lt;/h3&gt;
+## What is Alexa and how does it work?
 
-&lt;p&gt;Here we give examples of “utterances” - what the user may say for each intent. Each utterance goes on its own line and starts with the intent it is associated with e.g.&lt;/p&gt;
+Alexa is a cloud-based voice service that powers millions of voice experiences in the home. Devices Alexa powers includes Amazon Echo, Echo Dot, Amazon Tap and Amazon Fire TV.
 
-&lt;blockquote&gt;
-  &lt;p&gt;a fact&lt;/p&gt;
-&lt;/blockquote&gt;
+What is a **skill**? They are basically apps(programs) that extend Echo's functionality and features. There are lot of amazing skills already being developed by Alexa developers from over the world. Check them out [here](https://www.amazon.com/alexa-skills/b?ie=UTF8&amp;node=13727921011). They can answer questions, play trivia games, play music, set alarms, tell jokes and many more. Here is how it works:
 
-&lt;p&gt;For each intent, we list the maximum possible ways that users may say it:&lt;/p&gt;
+* User speaks something
+* The skill(defined on the Amazon Developer Site) matches the question(keywords) with an Intent(what the user is trying to ask) and then sends this Intent to an endpoint(an API call to the server like AWS Lambda)
+* Lambda or your own server is where the data is stored. It has code to take the Intent and return the relevant response, taken from the data.
+* Echo speaks back this response to the user.
 
-&lt;blockquote&gt;
-  &lt;p&gt;“a fact”,&lt;br /&gt;
-“a number fact”,&lt;br /&gt;
-“tell me a fact”,&lt;br /&gt;
-“tell me a number fact”,&lt;br /&gt;
-“give me a fact”,&lt;br /&gt;
-“give me a number fact”,&lt;br /&gt;
-“give me some number information”&lt;/p&gt;
-&lt;/blockquote&gt;
+## What do you need to start?
 
-&lt;p&gt;We put all this in the JSON Editor and hit Save Model, and then Build Model. Your JSON should look similar to this. You’ll see a message like:&lt;/p&gt;
+* An [Amazon Developer account](https://developer.amazon.com/), to create a skill.
+* An [Amazon AWS account](https://developer.amazon.com/), to create a Lambda function.
+* An idea! The skill you create is an app, and just like any other app in the market your app should have a good use case.
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/build-progress.png&quot; alt=&quot;Build Progress&quot; /&gt;&lt;/p&gt;
+## Creating the skill
 
-&lt;p&gt;then&lt;/p&gt;
+I'll explain how to create a fact skill in this blog post, you can dive into deeper to create some awesome skills. At the end, there is a list of amazing tutorials for you to learn more.
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/build-success.png&quot; alt=&quot;Build Success&quot; /&gt;&lt;/p&gt;
+Go to [Amazon Developer Account](https://developer.amazon.com/) and sign in, and select Alexa.
+![Alexa Amazon]({{&quot;/assets/img/alexa-amazon.png&quot;}})
 
-&lt;p&gt;Now, it’s time to set the endpoint, Click on &lt;code class=&quot;highlighter-rouge&quot;&gt;Endpoint&lt;/code&gt; button in the left navigation bar. This where we specify where the Intent information goes when the user asks a question. The options are:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;AWS Lambda - a Lambda endpoint&lt;/li&gt;
-  &lt;li&gt;HTTPS - your own endpoint&lt;/li&gt;
-&lt;/ul&gt;
+On the Alexa Page, on the top-right, hover over the `Your Alexa Consoles` and click Skills.
+![Alexa Skills]({{&quot;/assets/img/skill.png&quot;}})
 
-&lt;p&gt;We’ll be using AWS Lambda here.&lt;/p&gt;
+Click on the `Create Skill` button.
+![Alexa Create Skill]({{&quot;/assets/img/create-skill.png&quot;}})
 
-&lt;h2 id=&quot;aws-lambda&quot;&gt;AWS Lambda&lt;/h2&gt;
+Fill out the information,
+* Skill Name: Number Fact
+* Skill Model: Custom
+* Skill Language: English(U.S.)
 
-&lt;p&gt;If you haven’t used AWS Lambda before, it’s a service that allows you to host code with its own endpoint, without a server. More info here. Heard of Serverless apps?&lt;/p&gt;
+Click, Create Skill and you'll see a page similar to this.
 
-&lt;p&gt;Go to &lt;a href=&quot;https://aws.amazon.com/&quot;&gt;Amazon Web Services&lt;/a&gt; and sign in the portal, and go to Lambda service.&lt;/p&gt;
+![Alexa Home]({{&quot;/assets/img/skill-home.png&quot;}})
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/aws-home.png&quot; alt=&quot;AWS Home&quot; /&gt;&lt;/p&gt;
+Now click Invocation in the left hand navigation panel, and set the Invocation Name. Invocation Name is what your user will need to say to start the skill. As the skill is number facts, setting the Invocation Name to: Number Facts, Click on Save Model and move to JSON Editor for the Interaction Model.
 
-&lt;p&gt;Once on Lambda home page, click on the orange button to create the Lambda function.&lt;/p&gt;
+![Skill Invocation]({{&quot;/assets/img/skill-invocation.png&quot;}})
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/create-lambda.png&quot; alt=&quot;Create Lambda&quot; /&gt;&lt;/p&gt;
+This is now the core of the skill, Here we define,
 
-&lt;p&gt;Choose &lt;code class=&quot;highlighter-rouge&quot;&gt;Author from Scratch&lt;/code&gt;, and then name your function in camelCase, for me, &lt;strong&gt;numberFactFunction&lt;/strong&gt;.
-Choose, RunTime as Node.js 8.10, and in Role dropdown, choose, &lt;strong&gt;Create a Custom Role&lt;/strong&gt;. This will open a new window, in that click on Allow. Read more about IAM Roles &lt;a href=&quot;https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+* an Intent Schema
+* Custom Slot Types
+* Sample Utterances
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/custom-role.png&quot; alt=&quot;Custom Roles&quot; /&gt;&lt;/p&gt;
+### Intent Schema
 
-&lt;p&gt;Then on the back on Lambda Page, select &lt;strong&gt;lambda_basic_execution&lt;/strong&gt; in the Existing Role, and click &lt;code class=&quot;highlighter-rouge&quot;&gt;Create Function&lt;/code&gt;.&lt;/p&gt;
+These are the &quot;intents&quot; of the Skill, which define the &quot;intent&quot; or purpose of something the user says to the Skill. So we may have a `GetNewFactIntent` intent, which signifies that the user wants to know an fact. They are defined in this format:
 
-&lt;p&gt;Now, we need to add Trigger, for we are developing Alexa Skill Kit, click on Alexa Skill Kit in the left navigation.&lt;/p&gt;
+{% highlight json %}
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/trigger.png&quot; alt=&quot;Trigger&quot; /&gt;&lt;/p&gt;
+ {
+      &quot;intents&quot;: [
+        {
+          &quot;name&quot;: &quot;AMAZON.CancelIntent&quot;
+        },
+        {
+          &quot;name&quot;: &quot;AMAZON.HelpIntent&quot;
+        },
+        {
+          &quot;name&quot;: &quot;AMAZON.StopIntent&quot;
+        },
+        {
+          &quot;name&quot;: &quot;AMAZON.FallbackIntent&quot;
+        },
+        {
+          &quot;name&quot;: &quot;GetNewFactIntent&quot;
+        }
+      ]
+ }
 
-&lt;p&gt;In Configure trigger, copy the Skill ID from the Developer Console, and paste it here, and click on Add. Skill ID will be in the form &lt;strong&gt;amzn1.ask.skill……&lt;/strong&gt; After this is done, click on the numberFactFunction where we added the trigger, this will show the Function Code at the bottom.&lt;/p&gt;
+{% endhighlight %}
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/function-code.png&quot; alt=&quot;Function code&quot; /&gt;&lt;/p&gt;
+The AMAZON.HelpIntent is a default Amazon intent that you can use to handle any **Help** type questions. Likewise, AMAZON.StopIntent is a inbuilt intent to handle &quot;stop&quot; intents.
 
-&lt;p&gt;Add the &lt;code class=&quot;highlighter-rouge&quot;&gt;index.js&lt;/code&gt; code from &lt;a href=&quot;https://gist.github.com/mishal23/4499d20a24e3e5ce6f5db11bd02277a9&quot;&gt;here&lt;/a&gt;, also add the &lt;code class=&quot;highlighter-rouge&quot;&gt;AlexaSkill.js&lt;/code&gt; from the same link in the function code by creating a new file.&lt;/p&gt;
+### Custom Slot Types
 
-&lt;p&gt;File &lt;code class=&quot;highlighter-rouge&quot;&gt;AlexaSkill.js&lt;/code&gt; has specific event handlers. It specifies the output, prompt and speech. The Index.js file lets you customize meet the needs of your Skill. Click on Save.&lt;/p&gt;
+Here we give examples of &quot;utterances&quot; - what the user may say for each intent. Each utterance goes on its own line and starts with the intent it is associated with e.g.
 
-&lt;p&gt;From the right-top of the page, copy the ARN value, it’s of the form &lt;code class=&quot;highlighter-rouge&quot;&gt;arn:aws:lambda:region:function:nameOfFunction&lt;/code&gt;. Go to Amazon Developer Console, Select your skill and click on Endpoint	in the left navigation bar. Select AWS Lambda ARN and paste the ARN code copied in the default region input box. Click on Save Endpoints. And you’ll see a popup similar to the below image saying Skill Manifest Saved Successfully.&lt;/p&gt;
+&gt; a fact
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/skill-save.png&quot; alt=&quot;Skill save&quot; /&gt;&lt;/p&gt;
+For each intent, we list the maximum possible ways that users may say it:
 
-&lt;p&gt;In the top navigation bar, click on Test tab. If the test is disabled, enable it and either speak or type the Open Invocation Name , for this skill, &lt;code class=&quot;highlighter-rouge&quot;&gt;Open Number Facts&lt;/code&gt;, and watch Alexa speaking the fact. :D&lt;/p&gt;
+&gt; &quot;a fact&quot;,&lt;br&gt;
+&gt; &quot;a number fact&quot;,&lt;br&gt;
+&gt; &quot;tell me a fact&quot;,&lt;br&gt;
+&gt; &quot;tell me a number fact&quot;,&lt;br&gt;
+&gt; &quot;give me a fact&quot;,&lt;br&gt;
+&gt; &quot;give me a number fact&quot;,&lt;br&gt;
+&gt; &quot;give me some number information&quot;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/test-skill.png&quot; alt=&quot;Skill Test&quot; /&gt;&lt;/p&gt;
+We put all this in the JSON Editor and hit Save Model, and then Build Model. Your JSON should look similar to this. You'll see a message like:
 
-&lt;p&gt;Enter the distribution and Certification details as required, and submit the skill for certification. It takes a few days to hear back from the Amazon Developer Team. If your Skill is approved then everything works and all of the information is agreeing to their standards. Your Skill will be certified and published and available for others to use. If not, you will receive feedback and suggestions on what you need to to to resolve any issues so you can re-submit.&lt;/p&gt;
+![Build Progress]({{&quot;/assets/img/build-progress.png&quot;}}) 
 
-&lt;p&gt;If your skill is unique across the alexa skills present, you’ll also receive the limited edition T-Shirt.&lt;/p&gt;
+then 
 
-&lt;p&gt;Hope you learned on how to build skills, if you develop more you’ll have more familiarity with JavaScript and Node.js. It’s very different creating something that is voice activated by an end user as compared to reading on a screen. Hoping to see more Alexa developers, feel free to contact in case there is any issue developing a skill.&lt;/p&gt;
+![Build Success]({{&quot;/assets/img/build-success.png&quot;}})
+
+Now, it's time to set the endpoint, Click on `Endpoint` button in the left navigation bar. This where we specify where the Intent information goes when the user asks a question. The options are:
+* AWS Lambda - a Lambda endpoint
+* HTTPS - your own endpoint
+
+We'll be using AWS Lambda here.
+
+## AWS Lambda
+
+If you haven’t used AWS Lambda before, it’s a service that allows you to host code with its own endpoint, without a server. More info here. Heard of Serverless apps?
+
+Go to [Amazon Web Services](https://aws.amazon.com/) and sign in the portal, and go to Lambda service.
+
+![AWS Home]({{&quot;/assets/img/aws-home.png&quot;}})
+
+Once on Lambda home page, click on the orange button to create the Lambda function.
+
+![Create Lambda]({{&quot;/assets/img/create-lambda.png&quot;}})
+
+Choose `Author from Scratch`, and then name your function in camelCase, for me, **numberFactFunction**.
+Choose, RunTime as Node.js 8.10, and in Role dropdown, choose, **Create a Custom Role**. This will open a new window, in that click on Allow. Read more about IAM Roles [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html).
+
+![Custom Roles]({{&quot;/assets/img/custom-role.png&quot;}})
+
+Then on the back on Lambda Page, select **lambda_basic_execution** in the Existing Role, and click `Create Function`.
+
+Now, we need to add Trigger, for we are developing Alexa Skill Kit, click on Alexa Skill Kit in the left navigation.
+
+![Trigger]({{&quot;/assets/img/trigger.png&quot;}})
+
+In Configure trigger, copy the Skill ID from the Developer Console, and paste it here, and click on Add. Skill ID will be in the form **amzn1.ask.skill......** After this is done, click on the numberFactFunction where we added the trigger, this will show the Function Code at the bottom.
+
+![Function code]({{&quot;/assets/img/function-code.png&quot;}})
+
+Add the `index.js` code from [here](https://gist.github.com/mishal23/4499d20a24e3e5ce6f5db11bd02277a9), also add the `AlexaSkill.js` from the same link in the function code by creating a new file.
+
+File `AlexaSkill.js` has specific event handlers. It specifies the output, prompt and speech. The Index.js file lets you customize meet the needs of your Skill. Click on Save.
+
+From the right-top of the page, copy the ARN value, it's of the form `arn:aws:lambda:region:function:nameOfFunction`. Go to Amazon Developer Console, Select your skill and click on Endpoint	in the left navigation bar. Select AWS Lambda ARN and paste the ARN code copied in the default region input box. Click on Save Endpoints. And you'll see a popup similar to the below image saying Skill Manifest Saved Successfully.
+
+![Skill save]({{&quot;/assets/img/skill-save.png&quot;}})	
+
+In the top navigation bar, click on Test tab. If the test is disabled, enable it and either speak or type the Open Invocation Name , for this skill, `Open Number Facts`, and watch Alexa speaking the fact. :D
+
+![Skill Test]({{&quot;/assets/img/test-skill.png&quot;}})	
+
+Enter the distribution and Certification details as required, and submit the skill for certification. It takes a few days to hear back from the Amazon Developer Team. If your Skill is approved then everything works and all of the information is agreeing to their standards. Your Skill will be certified and published and available for others to use. If not, you will receive feedback and suggestions on what you need to to to resolve any issues so you can re-submit.
+
+If your skill is unique across the alexa skills present, you'll also receive the limited edition T-Shirt.
+
+Hope you learned on how to build skills, if you develop more you'll have more familiarity with JavaScript and Node.js. It’s very different creating something that is voice activated by an end user as compared to reading on a screen. Hoping to see more Alexa developers, feel free to contact in case there is any issue developing a skill.
 
 &lt;!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
@@ -359,88 +386,84 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 Jekyll also offers powerful support for code snippets:
 
+{% highlight ruby %}
+def print_hi(name)
+  puts &quot;Hi, #{name}&quot;
+end
+print_hi('Tom')
+#=&gt; prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk]. --&gt;
 
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/</content><author><name></name></author><summary type="html">Introduction Learning to build voice user interface is a great skill to have as devices like the Amazon Echo and Google Home are gaining popularity. Amazon is currently running an incentive program this July(2018) for people developing Alexa Skills. You develop a new skill and get a limited-edition Alexa developer T-shirt! If more than 100 customers enable and use your skill in the first 30 days of publication, you could also receive an Echo Dot.</summary></entry><entry><title type="html">Chaos Engineering</title><link href="http://localhost:4000/chaos-engineering/" rel="alternate" type="text/html" title="Chaos Engineering" /><published>2017-12-19T21:32:40+05:30</published><updated>2017-12-19T21:32:40+05:30</updated><id>http://localhost:4000/chaos-engineering</id><content type="html" xml:base="http://localhost:4000/chaos-engineering/">## Introduction
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk]. --&gt;</content><author><name></name></author><summary type="html">Introduction Learning to build voice user interface is a great skill to have as devices like the Amazon Echo and Google Home are gaining popularity. Amazon is currently running an incentive program this July(2018) for people developing Alexa Skills. You develop a new skill and get a limited-edition Alexa developer T-shirt! If more than 100 customers enable and use your skill in the first 30 days of publication, you could also receive an Echo Dot.</summary></entry><entry><title type="html">Chaos Engineering</title><link href="http://localhost:4000/chaos-engineering/" rel="alternate" type="text/html" title="Chaos Engineering" /><published>2017-12-19T21:32:40+05:30</published><updated>2017-12-19T21:32:40+05:30</updated><id>http://localhost:4000/chaos-engineering</id><content type="html" xml:base="http://localhost:4000/chaos-engineering/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+Many of us would have heard about the two major WhatsApp outages recently when it was down for about an hour each time. For the general public, WhatsApp was down for an hour. But for software engineers, WhatsApp was back within an hour. This made me wonder what it was, that enabled the engineers working at WhatsApp to restore the services so fast.
 
-&lt;p&gt;Many of us would have heard about the two major WhatsApp outages recently when it was down for about an hour each time. For the general public, WhatsApp was down for an hour. But for software engineers, WhatsApp was back within an hour. This made me wonder what it was, that enabled the engineers working at WhatsApp to restore the services so fast.&lt;/p&gt;
+![WhatsApp Outage]({{&quot;/assets/img/whatsapp-outage.png&quot;}})
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/whatsapp-outage.png&quot; alt=&quot;WhatsApp Outage&quot; /&gt;&lt;/p&gt;
+What if I tell you, it was a very **normal** turbulent production failure for them. Yes, huge companies like [Netflix](https://www.netflix.com/in/), [Facebook](https://www.facebook.com/) and [Google](https://www.google.co.in/) use a method of engineering called **Chaos Engineering**.
 
-&lt;p&gt;What if I tell you, it was a very &lt;strong&gt;normal&lt;/strong&gt; turbulent production failure for them. Yes, huge companies like &lt;a href=&quot;https://www.netflix.com/in/&quot;&gt;Netflix&lt;/a&gt;, &lt;a href=&quot;https://www.facebook.com/&quot;&gt;Facebook&lt;/a&gt; and &lt;a href=&quot;https://www.google.co.in/&quot;&gt;Google&lt;/a&gt; use a method of engineering called &lt;strong&gt;Chaos Engineering&lt;/strong&gt;.&lt;/p&gt;
+To explain Chaos Engineering in layman terms :
+To be good at something , if one practices it in extreme conditions then it would get easier for the person to perform in normal conditions. Similarly if a software engineer has seen extreme conditions in production, it becomes a challenge for him/her to code in such a way that their service fails if such an extreme condition occurs. If at all it comes, they would have experienced it before and so it becomes easy to bring the services back.
 
-&lt;p&gt;To explain Chaos Engineering in layman terms :
-To be good at something , if one practices it in extreme conditions then it would get easier for the person to perform in normal conditions. Similarly if a software engineer has seen extreme conditions in production, it becomes a challenge for him/her to code in such a way that their service fails if such an extreme condition occurs. If at all it comes, they would have experienced it before and so it becomes easy to bring the services back.&lt;/p&gt;
+![Chaos Engineering]({{&quot;/assets/img/chaos-engineering.png&quot;}})
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/chaos-engineering.png&quot; alt=&quot;Chaos Engineering&quot; /&gt;&lt;/p&gt;
+## Principle of Chaos Engineering
 
-&lt;h2 id=&quot;principle-of-chaos-engineering&quot;&gt;Principle of Chaos Engineering&lt;/h2&gt;
+The main idea of Chaos Engineering is to intentionally inject failures so as to be prepared for the worst conditions.
+A formal definition for Chaos Engineering given by Netflix:
+&gt; Chaos Engineering is the discipline of experimenting on a distributed system in order to build confidence in the system’s capability to withstand turbulent conditions in production.
 
-&lt;p&gt;The main idea of Chaos Engineering is to intentionally inject failures so as to be prepared for the worst conditions.
-A formal definition for Chaos Engineering given by Netflix:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Chaos Engineering is the discipline of experimenting on a distributed system in order to build confidence in the system’s capability to withstand turbulent conditions in production.&lt;/p&gt;
-&lt;/blockquote&gt;
+Chaos Engineering can be thought of as the facilitation of experiments to uncover systemic weaknesses. These experiments follow four steps:
 
-&lt;p&gt;Chaos Engineering can be thought of as the facilitation of experiments to uncover systemic weaknesses. These experiments follow four steps:&lt;/p&gt;
+1. Start by defining ‘steady state’ as some measurable output of a system that indicates normal behavior.
+2. Hypothesize that this steady state will continue in both the control group and the experimental group.
+3. Introduce variables that reflect real world events like servers that crash, hard drives that malfunction, network connections that are severed, etc.
+4. Try to disprove the hypothesis by looking for a difference in steady state between the control group and the experimental group.
 
-&lt;ol&gt;
-  &lt;li&gt;Start by defining ‘steady state’ as some measurable output of a system that indicates normal behavior.&lt;/li&gt;
-  &lt;li&gt;Hypothesize that this steady state will continue in both the control group and the experimental group.&lt;/li&gt;
-  &lt;li&gt;Introduce variables that reflect real world events like servers that crash, hard drives that malfunction, network connections that are severed, etc.&lt;/li&gt;
-  &lt;li&gt;Try to disprove the hypothesis by looking for a difference in steady state between the control group and the experimental group.&lt;/li&gt;
-&lt;/ol&gt;
+The harder it is to disrupt the steady state, the more confidence we have in the behavior of the system. If a weakness is uncovered, we now have a target for improvement before that behavior manifests in the system at large.
+In layman terms: Break your system, see the difference between steady state and experimental state, lesser the difference, lesser it will break in production. If the difference is more, you have a target for improvement before actually experiencing it in production.
+	
+## Practical Use
 
-&lt;p&gt;The harder it is to disrupt the steady state, the more confidence we have in the behavior of the system. If a weakness is uncovered, we now have a target for improvement before that behavior manifests in the system at large.
-In layman terms: Break your system, see the difference between steady state and experimental state, lesser the difference, lesser it will break in production. If the difference is more, you have a target for improvement before actually experiencing it in production.&lt;/p&gt;
+Netflix, a pioneer in the field of Chaos Engineering, uses a tool called Chaos Monkey. It randomly picks a server from production deployment on AWS (Amazon Web Services) and kills it. Executives at Netflix knew that server failures are guaranteed to happen and they wanted servers to fail during working-hours so that it could be fixed it in the presence of their engineers. They knew that they could rely on engineers to build resilient solutions if they were given context to expect servers to fail. If they could align their engineers to build services that survive a server failure, then when it actually happened, it wouldn’t be a big deal.
 
-&lt;h2 id=&quot;practical-use&quot;&gt;Practical Use&lt;/h2&gt;
+## How can it help you?
 
-&lt;p&gt;Netflix, a pioneer in the field of Chaos Engineering, uses a tool called Chaos Monkey. It randomly picks a server from production deployment on AWS (Amazon Web Services) and kills it. Executives at Netflix knew that server failures are guaranteed to happen and they wanted servers to fail during working-hours so that it could be fixed it in the presence of their engineers. They knew that they could rely on engineers to build resilient solutions if they were given context to expect servers to fail. If they could align their engineers to build services that survive a server failure, then when it actually happened, it wouldn’t be a big deal.&lt;/p&gt;
+Suppose your team has built the next wave of advancement the whole world has been waiting for. You are to launch your service but there are questions rumbling in your mind:
 
-&lt;h2 id=&quot;how-can-it-help-you&quot;&gt;How can it help you?&lt;/h2&gt;
+* Is your application ready for production?
+* Will the system survive the failures of other companies you are dependent on?
+* Will the system survive the failure of your own configurations?
 
-&lt;p&gt;Suppose your team has built the next wave of advancement the whole world has been waiting for. You are to launch your service but there are questions rumbling in your mind:&lt;/p&gt;
+The truth is : You can never be sure . There will always be something that can be wrong or will go wrong. Some things aren’t in your control like denial-of-service attacks or network failures. Sometimes, bad things just happen.
 
-&lt;ul&gt;
-  &lt;li&gt;Is your application ready for production?&lt;/li&gt;
-  &lt;li&gt;Will the system survive the failures of other companies you are dependent on?&lt;/li&gt;
-  &lt;li&gt;Will the system survive the failure of your own configurations?&lt;/li&gt;
-&lt;/ul&gt;
+Possibly The only solution for it is to build quality software that is resilient to failures. As the saying goes - *&quot;Hope for the best, prepare for the worst&quot;*
+But how can your team be sure that your system is ready for production and is ready to face all difficulties/failures? *This is where Chaos Engineering comes into picture.*
 
-&lt;p&gt;The truth is : You can never be sure . There will always be something that can be wrong or will go wrong. Some things aren’t in your control like denial-of-service attacks or network failures. Sometimes, bad things just happen.&lt;/p&gt;
+## Does this seem like testing?
 
-&lt;p&gt;Possibly The only solution for it is to build quality software that is resilient to failures. As the saying goes - &lt;em&gt;“Hope for the best, prepare for the worst”&lt;/em&gt;
-But how can your team be sure that your system is ready for production and is ready to face all difficulties/failures? &lt;em&gt;This is where Chaos Engineering comes into picture.&lt;/em&gt;&lt;/p&gt;
+It may indeed sound like it, but it definitely isn’t testing. Chaos Engineering is an experiment on the production environment and there is certainly no way to accurately duplicate production environment at scale (as in testing). The experiment itself is going to have a systemic effect that could change your results, so the only way to accurately build conflict in the system that you have now is to experiment on it.
 
-&lt;h2 id=&quot;does-this-seem-like-testing&quot;&gt;Does this seem like testing?&lt;/h2&gt;
+## Conclusion
 
-&lt;p&gt;It may indeed sound like it, but it definitely isn’t testing. Chaos Engineering is an experiment on the production environment and there is certainly no way to accurately duplicate production environment at scale (as in testing). The experiment itself is going to have a systemic effect that could change your results, so the only way to accurately build conflict in the system that you have now is to experiment on it.&lt;/p&gt;
+The purpose of Chaos Engineering is to experience disastrous conditions. This might sound like a difficult task and it does require a lot of creativity but the extra effort is worth it. You must inject failures in your system such that certain part of your infrastructure becomes unavailable. Some examples are : terminate cluster machines, kill worker processes, delete database tables, cut off access to internal-external services, etc. Later you can also simulate events capable of disrupting steady state like high latency due to slow networks.
 
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+These experiments are a bit difficult but whatever you decide to do, you’ll be surprised at how much you can learn from chaos.
+There are a lot of tools worth mentioning :
 
-&lt;p&gt;The purpose of Chaos Engineering is to experience disastrous conditions. This might sound like a difficult task and it does require a lot of creativity but the extra effort is worth it. You must inject failures in your system such that certain part of your infrastructure becomes unavailable. Some examples are : terminate cluster machines, kill worker processes, delete database tables, cut off access to internal-external services, etc. Later you can also simulate events capable of disrupting steady state like high latency due to slow networks.&lt;/p&gt;
+* [Chaos Monkey](https://github.com/Netflix/chaosmonkey) - A resiliency tool that helps applications tolerate random instance failures
+* [The Simian Army](https://github.com/Netflix/SimianArmy) - A suite of tools for keeping your cloud operating in top form
+* [kube-monkey](https://github.com/asobti/kube-monkey) - An implementation of Netflix's Chaos Monkey for Kubernetes clusters
+* [Gremlin Inc.](https://www.gremlin.com/) - Failure as a Service
+* [Pumba](https://github.com/alexei-led/pumba) - Chaos testing and network emulation for Docker containers (and clusters)
+* [Chaos Toolkit](https://github.com/chaostoolkit/chaostoolkit) - A chaos engineering toolkit to help you build confidence in your software system
+* [orchestrator](https://github.com/github/orchestrator) - MySQL replication topology management and HA
 
-&lt;p&gt;These experiments are a bit difficult but whatever you decide to do, you’ll be surprised at how much you can learn from chaos.
-There are a lot of tools worth mentioning :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/Netflix/chaosmonkey&quot;&gt;Chaos Monkey&lt;/a&gt; - A resiliency tool that helps applications tolerate random instance failures&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/Netflix/SimianArmy&quot;&gt;The Simian Army&lt;/a&gt; - A suite of tools for keeping your cloud operating in top form&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/asobti/kube-monkey&quot;&gt;kube-monkey&lt;/a&gt; - An implementation of Netflix’s Chaos Monkey for Kubernetes clusters&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.gremlin.com/&quot;&gt;Gremlin Inc.&lt;/a&gt; - Failure as a Service&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/alexei-led/pumba&quot;&gt;Pumba&lt;/a&gt; - Chaos testing and network emulation for Docker containers (and clusters)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/chaostoolkit/chaostoolkit&quot;&gt;Chaos Toolkit&lt;/a&gt; - A chaos engineering toolkit to help you build confidence in your software system&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/github/orchestrator&quot;&gt;orchestrator&lt;/a&gt; - MySQL replication topology management and HA&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I hope you got an idea about Chaos Engineering - a powerful approach to build resilient systems!&lt;/p&gt;
+I hope you got an idea about Chaos Engineering - a powerful approach to build resilient systems!
 
 &lt;!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
@@ -448,13 +471,13 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 
 Jekyll also offers powerful support for code snippets:
 
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
+{% highlight ruby %}
+def print_hi(name)
+  puts &quot;Hi, #{name}&quot;
+end
+print_hi('Tom')
+#=&gt; prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
