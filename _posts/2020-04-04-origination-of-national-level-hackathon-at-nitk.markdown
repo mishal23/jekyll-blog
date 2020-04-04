@@ -17,7 +17,7 @@ We decided on the following things for HackVerse:
 - Host around 250 hackers from all over India
 - Have some technical talks & workshops
 - Judges & mentors from prominent industry/startups
-- Goodies for all
+- Lots of Goodies for all
 - Huge Prizes
 - Great Experience
 
@@ -27,7 +27,7 @@ Since, it's going to be an event which would happen for the first time, it neede
 
 ![HackVerse logo]({{"/assets/img/hackverse/hackverse-logo.png"}})
 
-More about HackVerse at: https://hackverse.nitk.ac.in/
+More about HackVerse at: [https://hackverse.nitk.ac.in/](https://hackverse.nitk.ac.in/)
 
 The hackathon was supported by the [Diamond Jubilee Commitee](https://dj.nitk.ac.in/) of the college and happened to be an Institute Level Event. HackVerse was a huge success, and it defintely turned out to be one of the biggest and finest student-run hackathon across India. HackVerse offered prizes worth more than 1 crore, got support from 30+ national+international sponsors, 2400+ registrations, had amazing 6 technical talks, was judged by 10+ executives from various multinational companies and startups.
 
@@ -35,4 +35,4 @@ The team was definitely in-experienced in all terms (marketing, publicity, opera
 
 ![HackVerse Team]({{"/assets/img/hackverse/hackverse-team.JPG"}})
 
-Full team at: https://hackverse.nitk.ac.in/team
+Full team at: [https://hackverse.nitk.ac.in/team](https://hackverse.nitk.ac.in/team)
