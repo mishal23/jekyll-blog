@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Origination of National Level Hackathon at NITK, Surathkal"
+title:  "Origination of HackVerse at NITK, Surathkal"
 date:   2020-04-04 21:32:40 +0530
 img:
-description: Story behind the idea of HackVerse at NITK, Surathkal
+description: Story behind the idea of a National Level Hackathon (HackVerse) at NITK, Surathkal which became one of India's finest and biggest student run hackathon
 ---
 
 I had attended various hackathons before - major ones being [code.fun.do](https://www.codefundo.io/), [Smart India Hackathon](https://www.sih.gov.in/), [HackInOut](https://hackinout.co/) and was part of organizing some small ones organized by the technical clubs in college. In the pre-final year, our team didn’t get selected for Smart India Hackathon, that’s when we came to know about student-run hackathons in India. Honestly, it was a new concept for all of us and seeing the sponsors, plan and all seemed very promising. We applied to various hackathons, got selected, however, we couldn’t attend any of those due to some or the other reasons.
