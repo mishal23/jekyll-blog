@@ -1,0 +1,50 @@
+.navbtn {
+	background-color: #4a4545;
+	border: 1px;
+	font-weight: 700;
+	font-size: 16px;
+	color: #fff;
+	border-radius: .2em;
+	padding: 10px 10px 10px 10px;
+	margin-top: 2px;
+	cursor: pointer;
+}
+
+.navbtn:not(:last-child) {
+ 	border-right: none; 
+}
+
+.navbtn:hover {
+	background-color: #15F3A8;
+ 	color: #4a4545;
+}
+
+li.active {
+	background-color: #15F3A8;
+	color: #4a4545 !important;
+}
+
+a.active {
+	background-color: #15F3A8;
+	color: #4a4545 !important;
+}
+
+button.active {
+	background-color: #15F3A8;
+	color: #4a4545;
+}
+
+@media only screen and (max-width: 700px) {
+	.sidebar-menu {
+		display: none;
+	}
+	.btn-group {
+		display: block !important;
+	}
+}
+
+@media only screen and (max-width: 3700px) {
+	.btn-group {
+		display: none;
+	}
+}

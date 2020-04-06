@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Origination of National Level Hackathon at NITK, Surathkal - Mishal Shah</title>
+	<title>Origination of HackVerse - Mishal Shah</title>
 	<meta name="description" content="Mishal Shah - B.Tech in Computer Science at NITK, Surathakal.">
-	<meta name="keywords" content="Mishal Shah, mishal23, GSoC, Google Summer of Code, ns-3, ns-3-AppStore, Chaos Engineering, Backend Developer, Alexa, IRIS NITK, IE NITK">
+	<meta name="keywords" content="Mishal Shah, mishal23, GSoC, Google Summer of Code, ns-3, ns-3-AppStore, Chaos Engineering, Backend Developer, Full Stack Developer, Alexa, IRIS NITK, IE NITK, HackVerse">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
@@ -25,9 +25,14 @@
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#2d2a2a">
 
-	<link href="https://fonts.googleapis.com/css?family=Finger+Paint|PT+Sans:400,700" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Finger+Paint|PT+Sans:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/mobile.css">
+
+	<script src="//code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"></script>
 
 	<script type="application/ld+json">
 		{
@@ -56,6 +61,13 @@
       <li class="menu-items"><a class="menu-links" href="/contact/">Contact</a></li>
     </menu>
 
+    <div class="btn-group">
+      <a href="/" class="mob-menu-items"><button class="navbtn">Home</button></a>
+      <a href="/about/" class="mob-menu-items"><button class="navbtn">About</button></a>
+      <a href="/projects/" class="mob-menu-items"><button class="navbtn">Projects</button></a>
+      <a href="/contact/" class="mob-menu-items"><button class="navbtn">Contact</button></a>
+    </div> 
+
     <div class="sidebar-social">
       <li class="social-items"><a href="mailto:shahmishal1998@gmail.com" class="social-links"><i class="social-icons fa fa-envelope" aria-hidden="true"></i></a></li>
       <li class="social-items"><a href="https://github.com/mishal23" class="social-links"><i class="social-icons fa fa-github" aria-hidden="true"></i></a></li>
@@ -67,13 +79,30 @@
   </div>
 </aside>
 
+<script type="text/javascript">
+  $(function(){
+    // this will get the full URL at the address bar
+    var url = window.location.href; 
+    // passes on every "a" tag 
+    $(".menu-items a").each(function() {
+        if(url == (this.href)) { 
+            $(this).addClass("active");
+        }
+    });
+    $(".mob-menu-items").each(function() {
+        if(url == (this.href)) { 
+            $(this).children("button").addClass("active");
+        }
+    });
+});
+</script>
   <main role="main">
     <div class="content">
       <article class="page-article">
   <div class="wrap-content">
     <header class="page-header">
-      <h1 class="page-title">Origination of National Level Hackathon at NITK, Surathkal</h1>
-      <div class="page-date"><span>2020, Apr 03&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      <h1 class="page-title">Origination of HackVerse</h1>
+      <div class="page-date"><span>2020, Apr 04&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
     </header>
     <div class="page-content">
       
@@ -89,7 +118,7 @@
   <li>Host around 250 hackers from all over India</li>
   <li>Have some technical talks &amp; workshops</li>
   <li>Judges &amp; mentors from prominent industry/startups</li>
-  <li>Goodies for all</li>
+  <li>Lots of Goodies for all</li>
   <li>Huge Prizes</li>
   <li>Great Experience</li>
 </ul>
@@ -100,7 +129,7 @@
 
 <p><img src="/assets/img/hackverse/hackverse-logo.png" alt="HackVerse logo" /></p>
 
-<p>More about HackVerse at: https://hackverse.nitk.ac.in/</p>
+<p>More about HackVerse at: <a href="https://hackverse.nitk.ac.in/">https://hackverse.nitk.ac.in/</a></p>
 
 <p>The hackathon was supported by the <a href="https://dj.nitk.ac.in/">Diamond Jubilee Commitee</a> of the college and happened to be an Institute Level Event. HackVerse was a huge success, and it defintely turned out to be one of the biggest and finest student-run hackathon across India. HackVerse offered prizes worth more than 1 crore, got support from 30+ national+international sponsors, 2400+ registrations, had amazing 6 technical talks, was judged by 10+ executives from various multinational companies and startups.</p>
 
@@ -108,15 +137,15 @@
 
 <p><img src="/assets/img/hackverse/hackverse-team.JPG" alt="HackVerse Team" /></p>
 
-<p>Full team at: https://hackverse.nitk.ac.in/team</p>
+<p>Full team at: <a href="https://hackverse.nitk.ac.in/team">https://hackverse.nitk.ac.in/team</a></p>
 
     </div>
     
 <div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
-    this.page.url = 'http://localhost:4000/origination-of-national-level-hackathon-at-nitk/';
-    this.page.identifier = 'http://localhost:4000/origination-of-national-level-hackathon-at-nitk/';
+    this.page.url = 'http://localhost:4000/origination-of-hackverse/';
+    this.page.identifier = 'http://localhost:4000/origination-of-hackverse/';
   };
   (function() {
     var d = document, s = d.createElement('script');
